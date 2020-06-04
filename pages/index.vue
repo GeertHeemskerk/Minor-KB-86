@@ -6,7 +6,7 @@
         Minor-KB-86
       </h1>
       <h2 class="subtitle">
-        My doozie Nuxt.js project
+        Minor KB-86 van Geert
       </h2>
       <div class="links">
         <a

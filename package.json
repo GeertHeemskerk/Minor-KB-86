@@ -11,7 +11,11 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/style-resources": "^1.0.0",
     "nuxt": "^2.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2"
+  }
 }

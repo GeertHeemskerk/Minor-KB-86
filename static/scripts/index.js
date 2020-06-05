@@ -1,0 +1,1 @@
+console.log('Static folder static/scripts/index.js initiated');

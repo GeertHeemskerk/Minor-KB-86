@@ -1,0 +1,21 @@
+//Typography
+$f-heading: 'Playfair Display', serif;
+$f-body: 'Comfortaa', cursive;
+
+//Colors
+$c-primary: red;
+$c-secondary: yellow;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: $f-body;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $f-heading;
+}

@@ -76,11 +76,13 @@ a {
   img {
     transition: 1.3s;
     opacity: 0;
+    transform: scale(0.8)
   }
 
   img:hover{
+    animation: zoomIn 1.3s;
     opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1.0);
   }
 
   a {
@@ -99,7 +101,7 @@ a {
     position: absolute;
     height: 0;
     overflow: hidden;
-    transition: 1s;
+    transition: 0.8s;
     word-break: keep-all;
   }
 

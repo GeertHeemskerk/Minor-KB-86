@@ -72,6 +72,19 @@ a {
 }
 
 @media only screen and (min-width: $mq-slaptop) {
+
+  img {
+    transition: 1.3s;
+    opacity: 0;
+    transform: scale(0.8)
+  }
+
+  img:hover{
+    animation: zoomIn 1.3s;
+    opacity: 1;
+    transform: scale(1.0);
+  }
+
   a {
     color: rgba($c-text, 0.5);
     text-decoration: none;
@@ -88,9 +101,8 @@ a {
     position: absolute;
     height: 0;
     overflow: hidden;
-    transition: 0.6s;
+    transition: 0.8s;
     word-break: keep-all;
-
   }
 
   a:hover:before {
@@ -115,10 +127,6 @@ a {
     visibility: visible;
     display: block;
     margin: 0rem 0rem 0rem 2rem;
-  }
-
-  img {
-    box-shadow: inset 30px 0px 27px #000000
   }
 }
 

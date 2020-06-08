@@ -5,6 +5,17 @@ $f-body: 'Comfortaa', cursive;
 //Colors
 $c-primary: red;
 $c-secondary: yellow;
+$c-background: black;
+$c-text: white;
+
+//decoration
+$d-text-opacity: rgba(255, 255, 255, 0.5);
+
+//media queries
+$mq-slaptop: 1024px;
+$mq-llaptop: 1440px;
+$mq-desktop: 1920px;
+$mq-4k: 2560px;
 
 * {
     margin: 0;
@@ -18,4 +29,5 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $f-heading;
+    font-weight: normal;
 }

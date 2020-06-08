@@ -1,27 +1,25 @@
 <template>
   <div class="container">
-    <div class="wrapper">
-      <div class="menu_items">
-
-      <nuxt-link to="/sanne" data-text="Sanne van Zeijl">
-        Sanne van Zeijl
-      </nuxt-link>
-      <nuxt-link to="/steven" data-text="Steven Wu">
-        Steven Wu
-      </nuxt-link>
-      <nuxt-link to="/" data-text="KB-86 SSDG">
-        KB-86 SSDG
-      </nuxt-link>
-      <nuxt-link to="/djenna" data-text="Djenna Bakker">
-        Djenna Bakker
-      </nuxt-link>
-      <nuxt-link to="/geert" data-text="Geert Heemskerk">
-        Geert Heemskerk
-      </nuxt-link>
+    <div class="container__wrapper">
+      <div class="menu__items">
+        <nuxt-link to="/sanne" data-text="Sanne van Zeijl">
+          Sanne van Zeijl
+        </nuxt-link>
+        <nuxt-link to="/steven" data-text="Steven Wu">
+          Steven Wu
+        </nuxt-link>
+        <nuxt-link to="/" data-text="KB-86 SSDG">
+          KB-86 SSDG
+        </nuxt-link>
+        <nuxt-link to="/djenna" data-text="Djenna Bakker">
+          Djenna Bakker
+        </nuxt-link>
+        <nuxt-link to="/geert" data-text="Geert Heemskerk">
+          Geert Heemskerk
+        </nuxt-link>
       </div>
-
     </div>
-    <div class="image-holder">
+    <div class="image__holder">
       <figure>
         <img id="sanne" src="~/assets/images/imgTest.png" alt="imgTest">
       </figure>
@@ -40,8 +38,10 @@
     </div>
   </div>
 </template>
-
 <script>
+export default {
+  
+}
 </script>
 
 <style scoped lang="scss">
@@ -65,14 +65,12 @@ a {
   font-size: 1.6rem;
 }
 
-
-.image-holder {
+.image__holder {
   visibility: hidden;
   display: none;
 }
 
-@media only screen and (min-width: $mq-slaptop) {
-
+@media only screen and (min-width: $mq-s-laptop) {
   img {
     transition: 1.3s;
     opacity: 0;
@@ -86,11 +84,6 @@ a {
   }
 
   a {
-    color: rgba($c-text, 0.5);
-    text-decoration: none;
-    display: block;
-    margin: 2.5rem 0rem;
-    font-family: $f-heading;
     font-size: 2rem;
     height: 2rem;
   }
@@ -113,16 +106,16 @@ a {
     justify-content: center;
     align-items: left;
     text-align: left;
+
+    &__wrapper {
+      position: absolute;
+      margin: 0rem 4.5rem;
+      left: 0;
+      z-index: 1;
+    }
   }
 
-  .wrapper{
-    position: absolute;
-    margin: 0rem 4.5rem;
-    left: 0;
-    z-index: 1;
-  }
-
-  .image-holder {
+  .image__holder {
     position: absolute;
     visibility: visible;
     display: block;
@@ -130,7 +123,7 @@ a {
   }
 }
 
-@media only screen and (min-width: $mq-llaptop) {
+@media only screen and (min-width: $mq-l-laptop) {
   a {
     font-size: 2.4rem;
   }
@@ -139,11 +132,13 @@ a {
     height: 2.9rem;
   }
 
-  .wrapper{
-    margin: 0rem 5.5rem;
+  .container {
+    &__wrapper {
+      margin: 0rem 5.5rem;
+    }
   }
 
-  .image-holder {
+  .image__holder {
     margin: 0rem 0rem 0rem 2rem;
   }
 }
@@ -153,11 +148,13 @@ a {
     height: 4rem;
   }
 
-  .wrapper{
-    margin: 0rem 8.5rem;
+  .container {
+    &__wrapper {
+      margin: 0rem 8.5rem;
+    }
   }
 
-  .image-holder {
+  .image__holder {
     width: 1240px;
     height: auto;
     margin: 0rem;
@@ -168,5 +165,4 @@ a {
     height: 100%;
   }
 }
-
 </style>

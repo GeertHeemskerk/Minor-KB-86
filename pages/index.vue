@@ -2,10 +2,19 @@
   <main class="main">
     <Header />
     <section class="content">
-      <h1 class="intro__title">SSDG</h1>
-      <figure class="intro__figure">
-        <img class="intro__media" src="~/assets/images/intro-image.png" alt="verf die samenkomt">
-      </figure>
+      <div class="content__wrapper">
+        <div class="title__group">
+          <nuxt-link to="/sanne" class="title__single title__single--hide">Sanne van Zeijl</nuxt-link>
+          <nuxt-link to="/steven" class="title__single title__single--hide">Steven Wu</nuxt-link>
+          <nuxt-link to="/" class="title__single title__single--title">SSDG</nuxt-link>
+          <nuxt-link to="/geert" class="title__single title__single--hide">Geert Heemskerk</nuxt-link>
+          <nuxt-link to="/djenna" class="title__single title__single--hide">Djenna Bakker</nuxt-link>
+        </div>
+        <figure class="intro__figure">
+          <img class="intro__media" src="~/assets/images/intro-image.png" alt="verf die samenkomt">
+        </figure>
+        <p class="intro__text">De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+      </div>
     </section>
   </main>
 </template>
@@ -24,37 +33,155 @@ export default {
   background-color: black; //TODO: USE VARIABLE
   width: 100vw;
   height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
-// .container {
-//   margin: 0 auto;
-//   min-height: 100vh;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   text-align: center;
-// }
 
-// .title {
-//   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-//     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-//   display: block;
-//   font-weight: 300;
-//   font-size: 100px;
-//   color: #35495e;
-//   letter-spacing: 1px;
-//   font-family: $f-heading;
-// }
+.content {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
 
-// .subtitle {
-//   font-weight: 300;
-//   font-size: 42px;
-//   color: #526488;
-//   word-spacing: 5px;
-//   padding-bottom: 15px;
-//   font-family: $f-heading;
-// }
+  p, h1, h2, h3, h4, h5, h6 {
+    color: $c-text;
+  }
 
-// .links {
-//   padding-top: 15px;
-// }
+  &__wrapper {
+    position: relative;
+  }
+}
+
+.title {
+  &__group {
+    position: absolute;
+    top: -1.4rem;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__single {
+    font-family: $f-heading;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+
+    &--hide {
+      display: none;
+    }
+  }
+}
+
+.intro {
+  &__figure {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  &__media {
+    width: 100%;
+    height: 414px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__text {
+    position: absolute;
+    bottom: -5rem;
+    width: 60%;
+    text-align: center;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 1px;
+    font-size: 0.625rem;
+    line-height: 185%;
+  }
+}
+
+@media(min-width: $mq-tablet) {
+  .title {
+    &__group {
+      position: static;
+      text-align: center;
+      left: unset;
+      transform: none;
+    }
+  }
+
+  .intro {
+    &__figure {
+      margin: 2rem auto;
+    }
+
+    &__text {
+      position: static;
+      bottom: unset;
+      transform: none;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media(min-width: $mq-s-laptop) {
+  .content {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    &__wrapper {
+      margin: 0 4.5rem;
+    }
+  }
+
+  .title {
+    &__group {
+      text-align: left;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &__single {
+      margin-bottom: 2rem;
+      display: block;
+      font-size: 3rem;
+      color: rgba(white, .3);
+
+      &--hide {
+        display: block;
+      }
+
+      &--title {
+        color: white;
+      }
+    }
+  }
+
+  .intro {
+    &__text {
+      position: absolute;
+      font-size: 1rem;
+      text-align: right;
+      bottom: -5rem;
+      right: 0;
+      left: unset;
+      transform: none;
+      width: 50%;
+    }
+
+    &__figure {
+      width: 75%;
+    }
+
+    &__media {
+      height: 500px;
+    }
+  }
+}
+
 </style>

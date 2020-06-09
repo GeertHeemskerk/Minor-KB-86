@@ -3,17 +3,20 @@ $f-heading: 'Playfair Display', serif;
 $f-body: 'Comfortaa', cursive;
 
 //Colors
-$c-primary: red;
-$c-secondary: yellow;
 $c-background: black;
 $c-text: white;
 
-//decoration
-$d-text-opacity: rgba(255, 255, 255, 0.5);
+$c-djenna: #0066FF; 
+$c-geert: #BD00FF;
+$c-sanne: #FF5C00;
+$c-steven: #FFE600;
 
 //media queries
-$mq-slaptop: 1024px;
-$mq-llaptop: 1440px;
+$mq-tablet: 768px;
+$mq-s-laptop: 1024px;
+// $mq-l-laptop: 1440px;
+// $mq-l-laptop: 1366px;
+$mq-l-laptop: 1280px;
 $mq-desktop: 1920px;
 $mq-4k: 2560px;
 

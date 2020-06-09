@@ -30,7 +30,7 @@ export default {
 
 <style scoped lang="scss">
 .main {
-  background-color: black; //TODO: USE VARIABLE
+  background-color: $c-background;
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -132,6 +132,7 @@ export default {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+
     &__wrapper {
       margin: 0 4.5rem;
     }
@@ -159,6 +160,10 @@ export default {
       &--title {
         color: white;
       }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -184,4 +189,32 @@ export default {
   }
 }
 
+@media(min-width: $mq-l-laptop) {
+  .content {
+    &__wrapper {
+      width: 85%;
+      max-width: 1300px;
+    }
+  }
+
+  .title {
+    &__single {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .intro {
+    &__text {
+      bottom: -3rem;
+    }
+  }
+}
+
+@media(min-width: $mq-desktop) {
+  .title {
+    &__single {
+      margin-bottom: 5rem;
+    }
+  }
+}
 </style>

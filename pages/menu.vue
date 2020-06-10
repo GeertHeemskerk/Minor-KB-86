@@ -2,45 +2,56 @@
   <div class="container">
     <div class="container__wrapper">
       <div class="menu__items">
-        <nuxt-link to="/sanne" data-text="Sanne van Zeijl">
+        <nuxt-link to="/sanne" data-text="Sanne van Zeijl" @mouseover.native="sanne = true; kb = false"  @mouseleave.native="sanne = false; kb = true" >
           Sanne van Zeijl
         </nuxt-link>
-        <nuxt-link to="/steven" data-text="Steven Wu">
+        <nuxt-link to="/steven" data-text="Steven Wu" @mouseover.native="steven = true; kb = false"  @mouseleave.native="steven = false; kb = true">
           Steven Wu
         </nuxt-link>
         <nuxt-link to="/" data-text="KB-86 SSDG">
           KB-86 SSDG
         </nuxt-link>
-        <nuxt-link to="/djenna" data-text="Djenna Bakker">
+        <nuxt-link to="/djenna" data-text="Djenna Bakker" @mouseover.native="djenna = true; kb = false"  @mouseleave.native="djenna = false; kb = true">
           Djenna Bakker
         </nuxt-link>
-        <nuxt-link to="/geert" data-text="Geert Heemskerk">
+        <nuxt-link to="/geert" data-text="Geert Heemskerk" @mouseover.native="geert = true; kb = false"  @mouseleave.native="geert = false; kb = true">
           Geert Heemskerk
         </nuxt-link>
       </div>
     </div>
     <div class="image__holder">
       <figure>
-        <img id="sanne" src="~/assets/images/imgTest.png" alt="imgTest">
-      </figure>
-      <!-- <figure>
-        <img id="steven" src="~/assets/images/imgTest.png" alt="imgTest">
+        <img  v-bind:class="{ active: sanne }" id="sanne" src="~/assets/images/imgTest.png" alt="imgTest">
       </figure>
       <figure>
-        <img id="kb" src="~/assets/images/imgTest.png" alt="imgTest">
+        <img v-bind:class="{ active: steven }" id="steven" src="~/assets/images/placeholder.png" alt="imgTest">
       </figure>
       <figure>
-        <img id="djenna" src="~/assets/images/imgTest.png" alt="imgTest">
+        <img v-bind:class="{ active: kb }" id="kb" src="~/assets/images/intro-image.png" alt="imgTest">
       </figure>
       <figure>
-        <img id="geert" src="~/assets/images/imgTest.png" alt="imgTest">
-      </figure> -->
+        <img v-bind:class="{ active: djenna }" id="djenna" src="~/assets/images/imgTest.png" alt="imgTest">
+      </figure>
+      <figure>
+        <img v-bind:class="{ active: geert }" id="geert" src="~/assets/images/placeholder.png" alt="imgTest">
+      </figure>
     </div>
   </div>
 </template>
 <script>
 export default {
-  
+  data() {
+    return {
+      sanne: false,
+      steven: false,
+      kb: true,
+      djenna: false,
+      geert: false,
+    }
+  },
+  methods: {
+
+  }
 }
 </script>
 
@@ -71,13 +82,18 @@ a {
 }
 
 @media only screen and (min-width: $mq-s-laptop) {
+  figure {
+    position: absolute;
+  }
+
   img {
     transition: 1.3s;
     opacity: 0;
     transform: scale(0.8)
   }
 
-  img:hover{
+  img.active{
+    transition-delay: 0.55s;
     animation: zoomIn 1.3s;
     opacity: 1;
     transform: scale(1.0);
@@ -119,6 +135,8 @@ a {
     position: absolute;
     visibility: visible;
     display: block;
+    width: 880px;
+    height: 540px;
     margin: 0rem 0rem 0rem 2rem;
   }
 }
@@ -139,6 +157,8 @@ a {
   }
 
   .image__holder {
+      width: 1040px;
+      height: 580px;
     margin: 0rem 0rem 0rem 2rem;
   }
 }
@@ -156,7 +176,7 @@ a {
 
   .image__holder {
     width: 1240px;
-    height: auto;
+    height: 780px;
     margin: 0rem;
   }
 

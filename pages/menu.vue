@@ -1,3 +1,4 @@
+<!-- Can be deleted, Use components/Header.vue instead -->
 <template>
   <div class="container">
     <div class="container__wrapper">

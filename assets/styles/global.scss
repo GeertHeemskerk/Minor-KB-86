@@ -34,3 +34,11 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $f-heading;
     font-weight: normal;
 }
+
+.button {
+    &--clean {
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+}

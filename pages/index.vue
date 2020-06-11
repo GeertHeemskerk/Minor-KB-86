@@ -1,14 +1,14 @@
 <template>
   <main class="main">
-    <Header />
+    <Header class-name="header--home" />
     <section class="content">
       <div class="content__wrapper">
         <div class="title__group">
-          <nuxt-link to="/sanne" class="title__single title__single--hide">Sanne van Zeijl</nuxt-link>
-          <nuxt-link to="/steven" class="title__single title__single--hide">Steven Wu</nuxt-link>
-          <nuxt-link to="/" class="title__single title__single--title">SSDG</nuxt-link>
-          <nuxt-link to="/geert" class="title__single title__single--hide">Geert Heemskerk</nuxt-link>
-          <nuxt-link to="/djenna" class="title__single title__single--hide">Djenna Bakker</nuxt-link>
+          <nuxt-link to="/sanne" class="title__single title__single--hide"><span data-content="Sanne van Zeijl" aria-hidden="true"></span>Sanne van Zeijl</nuxt-link>
+          <nuxt-link to="/steven" class="title__single title__single--hide"><span data-content="Steven Wu" aria-hidden="true"></span>Steven Wu</nuxt-link>
+          <nuxt-link to="/" class="title__single title__single--title"><span data-content="SSDG" aria-hidden="true"></span>SSDG</nuxt-link>
+          <nuxt-link to="/geert" class="title__single title__single--hide"><span data-content="Geert Heemskerk" aria-hidden="true"></span>Geert Heemskerk</nuxt-link>
+          <nuxt-link to="/djenna" class="title__single title__single--hide"><span data-content="Djenna Bakker" aria-hidden="true"></span>Djenna Bakker</nuxt-link>
         </div>
         <figure class="intro__figure">
           <img class="intro__media" src="~/assets/images/intro-image.png" alt="verf die samenkomt">

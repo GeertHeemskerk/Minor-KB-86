@@ -1,18 +1,18 @@
 <template>
   <div>
-    <header class="header">
+    <header class="header" :class="[className, { 'header--open': open }]">
       <div class="header__wrapper">
           <transition name="slide-fade">
             <button class="menu__button button--clean" v-if="!open" key="on" @click="open = true">
               <div class="menu">
                 <p class="menu__text">Menu</p>
-                <Icons class-name="menu__icon icons--white" type="menu" />
+                <Icons class-name="menu__icon" type="menu" />
               </div>
             </button>
             <button class="menu__button button--clean" v-else key="off" @click="open = false">
               <div class="menu">
                 <p class="menu__text">Close Menu</p>
-                <Icons class-name="menu__icon icons--white" type="menu-close" />
+                <Icons class-name="menu__icon" type="menu-close" />
               </div>
             </button>
           </transition>
@@ -75,6 +75,9 @@ export default {
   components: {
     Icons,
   },
+  props: {
+    className: String
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -93,6 +96,40 @@ export default {
     margin: 0 auto;
     height: 100%;
   }
+
+  &--home {
+    .menu {
+      color: white;
+
+      &__icon {
+        stroke: white;
+      }
+    }
+  }
+
+  &--personal {
+    position: sticky;
+    
+    .menu {
+      color: black;
+
+      &__icon {
+        stroke: black;
+      }
+    }
+  }
+
+  &--open {
+    position: absolute;
+
+    .menu {
+      color: white;
+
+      &__icon {
+        stroke: white;
+      }
+    }
+  }
 }
 
 .menu {
@@ -105,7 +142,6 @@ export default {
 
   &__text {
     font-family: $f-heading;
-    color: white;
     font-size: 0.625rem;
     letter-spacing: 1px;
     padding-right: 1rem;

@@ -38,9 +38,4 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.icons {
-  &--white {
-    stroke: white;
-  }
-}
 </style>

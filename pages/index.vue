@@ -4,14 +4,51 @@
     <section class="content">
       <div class="content__wrapper">
         <div class="title__group">
-          <nuxt-link to="/sanne" class="title__single title__single--hide"><span data-content="Sanne van Zeijl" aria-hidden="true"></span>Sanne van Zeijl</nuxt-link>
-          <nuxt-link to="/steven" class="title__single title__single--hide"><span data-content="Steven Wu" aria-hidden="true"></span>Steven Wu</nuxt-link>
-          <nuxt-link to="/" class="title__single title__single--title"><span data-content="SSDG" aria-hidden="true"></span>SSDG</nuxt-link>
-          <nuxt-link to="/geert" class="title__single title__single--hide"><span data-content="Geert Heemskerk" aria-hidden="true"></span>Geert Heemskerk</nuxt-link>
-          <nuxt-link to="/djenna" class="title__single title__single--hide"><span data-content="Djenna Bakker" aria-hidden="true"></span>Djenna Bakker</nuxt-link>
+          <nuxt-link 
+            to="/sanne"
+            class="title__single title__single--hide"
+            @mouseover.native="sanne = true; kb = false"
+            @mouseleave.native="sanne = false; kb = true"
+          >
+            <span data-content="Sanne van Zeijl" aria-hidden="true"></span>Sanne van Zeijl
+          </nuxt-link>
+          <nuxt-link 
+            to="/steven"
+            class="title__single title__single--hide"
+            @mouseover.native="steven = true; kb = false"
+            @mouseleave.native="steven = false; kb = true"
+          >
+            <span data-content="Steven Wu" aria-hidden="true"></span>Steven Wu
+          </nuxt-link>
+          <nuxt-link 
+            to="/"
+            class="title__single title__single--title"
+          >
+            <span data-content="SSDG" aria-hidden="true"></span>SSDG
+          </nuxt-link>
+          <nuxt-link 
+            to="/geert"
+            class="title__single title__single--hide"
+            @mouseover.native="geert = true; kb = false"
+            @mouseleave.native="geert = false; kb = true"
+          >
+            <span data-content="Geert Heemskerk" aria-hidden="true"></span>Geert Heemskerk
+          </nuxt-link>
+          <nuxt-link 
+            to="/djenna"
+            class="title__single title__single--hide"
+            @mouseover.native="djenna = true; kb = false"
+            @mouseleave.native="djenna = false; kb = true"
+          >
+            <span data-content="Djenna Bakker" aria-hidden="true"></span>Djenna Bakker
+          </nuxt-link>
         </div>
         <figure class="intro__figure">
-          <img class="intro__media" src="~/assets/images/intro-image.png" alt="verf die samenkomt">
+          <img class="intro__media" :class="{ 'intro__media--hover': sanne }" src="~/assets/images/placeholder.png" alt="Foto van Sanne">
+          <img class="intro__media" :class="{ 'intro__media--hover': steven }" src="~/assets/images/placeholder-landscape.jpg" alt="Foto van Steven">
+          <img class="intro__media" :class="{ 'intro__media--hover': kb }" src="~/assets/images/intro-image.png" alt="verf die samenkomt">
+          <img class="intro__media" :class="{ 'intro__media--hover': geert }" src="~/assets/images/placeholder-portrait.jpg" alt="Foto van Geert">
+          <img class="intro__media" :class="{ 'intro__media--hover': djenna }" src="~/assets/images/placeholder-portrait-girl.jpg" alt="Foto van Djenna">
         </figure>
         <p class="intro__text">De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
       </div>
@@ -22,6 +59,15 @@
 <script>
 import Header from '~/components/Header.vue';
 export default {
+  data() {
+    return {
+      sanne: false,
+      steven: false,
+      kb: true,
+      djenna: false,
+      geert: false,
+    }
+  },
   components: {
     Header,
   }
@@ -44,6 +90,7 @@ export default {
   justify-content: center;
   top: 50%;
   transform: translateY(-50%);
+  width: 100%;
 
   p, h1, h2, h3, h4, h5, h6 {
     color: $c-text;
@@ -58,19 +105,49 @@ export default {
   &__group {
     position: absolute;
     top: -1.4rem;
-    z-index: 1;
+    z-index: 2;
     left: 50%;
     transform: translateX(-50%);
   }
 
   &__single {
+    position: relative;
     font-family: $f-heading;
     font-size: 2rem;
     text-decoration: none;
     color: white;
-
+    transition: transform .8s cubic-bezier(.23, 1, .32, 1);
+    
     &--hide {
       display: none;
+    }
+
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      transform: translateY(100%);
+      transition: transform .8s cubic-bezier(.23, 1, .32, 1);
+      
+      &::before {
+        display: inline-block;
+        content: attr(data-content);
+        color: white;
+        transform: translateY(-100%);
+        transition: transform .8s cubic-bezier(.23, 1, .32, 1);
+      }
+    }
+
+    &:hover {
+      transform: translateY(8%) translateX(-3%);
+
+      span {
+        transform: translateY(0);
+        &::before {
+          transform: translateY(0);
+        }
+      }
     }
   }
 }
@@ -79,6 +156,7 @@ export default {
   &__figure {
     width: 75%;
     margin: 0 auto;
+    position: relative;
   }
 
   &__media {
@@ -135,6 +213,7 @@ export default {
 
     &__wrapper {
       margin: 0 4.5rem;
+      width: 80%;
     }
   }
 
@@ -149,9 +228,10 @@ export default {
 
     &__single {
       margin-bottom: 2rem;
-      display: block;
+      display: inline-block;
       font-size: 3rem;
       color: rgba(white, .3);
+      overflow: hidden;
 
       &--hide {
         display: block;
@@ -181,10 +261,25 @@ export default {
 
     &__figure {
       width: 75%;
+      width: 60vw;
+      max-width: 820px;
+      height: 530px;
     }
 
     &__media {
-      height: 500px;
+      position: absolute;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      transition: all .8s cubic-bezier(.23, 1, .32, 1);
+      opacity: 0;
+      transform: scale(0.7) translateX(-15%);
+
+      &--hover {
+        z-index: 1;
+        opacity: 1;
+        transform: scale(1.0) translateX(0);
+      }
     }
   }
 }
@@ -205,9 +300,18 @@ export default {
 
   .intro {
     &__text {
-      bottom: -3rem;
+      bottom: -1rem;
     }
   }
+}
+
+@media(min-width: $mq-xl-laptop) {
+  .intro {
+    &__figure {
+      height: 550px;
+    }
+  }
+
 }
 
 @media(min-width: $mq-desktop) {

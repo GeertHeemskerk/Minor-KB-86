@@ -51,11 +51,11 @@
           <img class="intro__media" :class="{ 'intro__media--hover': hover == 'djenna'}" src="~/assets/images/placeholder-portrait-girl.jpg" alt="Foto van Djenna">
         </figure>
         <section class="intro__text">
-          <p class="intro__text-content" :class={}>1 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
-          <p class="intro__text-content">2 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
-          <p class="intro__text-content">3 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
-          <p class="intro__text-content">4 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
-          <p class="intro__text-content">5 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'sanne' }">1 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'steven' }">2 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == null }">3 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'geert' }">4 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'djenna' }">5 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
         </section>
       </div>
     </section>
@@ -184,10 +184,14 @@ export default {
     letter-spacing: 1px;
     font-size: 0.625rem;
     line-height: 185%;
-  }
 
-  &__content {
+    &-content {
+      display: none;
 
+      &--hover {
+        display: block;
+      }
+    }
   }
 }
 
@@ -268,6 +272,23 @@ export default {
       left: unset;
       transform: none;
       width: 50%;
+
+      &-content {
+        display: initial;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        transform: translate(8%, 8%) skewY(4deg);
+        transition: all .8s cubic-bezier(.23, 1, .32, 1);
+
+        &--hover {
+          display: initial;
+          opacity: 1;
+          transform: translate(0%) skewY(0deg);
+          transition-delay: .3s;
+        }
+      }
     }
 
     &__figure {
@@ -291,6 +312,7 @@ export default {
         display: initial;
         z-index: 1;
         opacity: 1;
+        transition-delay: .2s;
         transform: scale(1.0) translateX(0);
       }
     }

@@ -50,7 +50,9 @@
           <img class="intro__media" :class="{ 'intro__media--hover': geert }" src="~/assets/images/placeholder-portrait.jpg" alt="Foto van Geert">
           <img class="intro__media" :class="{ 'intro__media--hover': djenna }" src="~/assets/images/placeholder-portrait-girl.jpg" alt="Foto van Djenna">
         </figure>
-        <p class="intro__text">De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+        <section class="intro__text">
+          <p class="intro__content">De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+        </section>
       </div>
     </section>
   </main>
@@ -164,6 +166,11 @@ export default {
     height: 414px;
     object-fit: cover;
     object-position: center;
+    display: none;
+
+    &--hover {
+      display: block;
+    }
   }
 
   &__text {
@@ -267,6 +274,7 @@ export default {
     }
 
     &__media {
+      display: initial;
       position: absolute;
       height: 100%;
       object-fit: contain;
@@ -276,6 +284,7 @@ export default {
       transform: scale(0.7) translateX(-15%);
 
       &--hover {
+        display: initial;
         z-index: 1;
         opacity: 1;
         transform: scale(1.0) translateX(0);

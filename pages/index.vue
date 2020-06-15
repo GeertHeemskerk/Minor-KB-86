@@ -7,16 +7,16 @@
           <nuxt-link 
             to="/sanne"
             class="title__single title__single--hide"
-            @mouseover.native="sanne = true; kb = false"
-            @mouseleave.native="sanne = false; kb = true"
+            @mouseover.native="hover = 'sanne'; kb = false"
+            @mouseleave.native="hover = null; kb = true"
           >
             <span data-content="Sanne van Zeijl" aria-hidden="true"></span>Sanne van Zeijl
           </nuxt-link>
           <nuxt-link 
             to="/steven"
             class="title__single title__single--hide"
-            @mouseover.native="steven = true; kb = false"
-            @mouseleave.native="steven = false; kb = true"
+            @mouseover.native="hover = 'steven'; kb = false"
+            @mouseleave.native="hover = null; kb = true"
           >
             <span data-content="Steven Wu" aria-hidden="true"></span>Steven Wu
           </nuxt-link>
@@ -29,28 +29,34 @@
           <nuxt-link 
             to="/geert"
             class="title__single title__single--hide"
-            @mouseover.native="geert = true; kb = false"
-            @mouseleave.native="geert = false; kb = true"
+            @mouseover.native="hover = 'geert'; kb = false"
+            @mouseleave.native="hover = null; kb = true"
           >
             <span data-content="Geert Heemskerk" aria-hidden="true"></span>Geert Heemskerk
           </nuxt-link>
           <nuxt-link 
             to="/djenna"
             class="title__single title__single--hide"
-            @mouseover.native="djenna = true; kb = false"
-            @mouseleave.native="djenna = false; kb = true"
+            @mouseover.native="hover = 'djenna'; kb = false"
+            @mouseleave.native="hover = null; kb = true"
           >
             <span data-content="Djenna Bakker" aria-hidden="true"></span>Djenna Bakker
           </nuxt-link>
         </div>
         <figure class="intro__figure">
-          <img class="intro__media" :class="{ 'intro__media--hover': sanne }" src="~/assets/images/placeholder.png" alt="Foto van Sanne">
-          <img class="intro__media" :class="{ 'intro__media--hover': steven }" src="~/assets/images/placeholder-landscape.jpg" alt="Foto van Steven">
-          <img class="intro__media" :class="{ 'intro__media--hover': kb }" src="~/assets/images/intro-image.png" alt="verf die samenkomt">
-          <img class="intro__media" :class="{ 'intro__media--hover': geert }" src="~/assets/images/placeholder-portrait.jpg" alt="Foto van Geert">
-          <img class="intro__media" :class="{ 'intro__media--hover': djenna }" src="~/assets/images/placeholder-portrait-girl.jpg" alt="Foto van Djenna">
+          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'sanne' }" src="~/assets/images/placeholder.png" alt="Foto van Sanne">
+          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'steven' }" src="~/assets/images/placeholder-landscape.jpg" alt="Foto van Steven">
+          <img class="intro__media" :class="{ 'intro__media--hover': hover == null }" src="~/assets/images/intro-image.png" alt="verf die samenkomt">
+          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'geert' }" src="~/assets/images/placeholder-portrait.jpg" alt="Foto van Geert">
+          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'djenna'}" src="~/assets/images/placeholder-portrait-girl.jpg" alt="Foto van Djenna">
         </figure>
-        <p class="intro__text">De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+        <section class="intro__text">
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'sanne' }">1 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'steven' }">2 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == null }">3 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'geert' }">4 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'djenna' }">5 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+        </section>
       </div>
     </section>
   </main>
@@ -61,11 +67,7 @@ import Header from '~/components/Header.vue';
 export default {
   data() {
     return {
-      sanne: false,
-      steven: false,
-      kb: true,
-      djenna: false,
-      geert: false,
+      hover: null,
     }
   },
   components: {
@@ -164,6 +166,11 @@ export default {
     height: 414px;
     object-fit: cover;
     object-position: center;
+    display: none;
+
+    &--hover {
+      display: block;
+    }
   }
 
   &__text {
@@ -177,6 +184,14 @@ export default {
     letter-spacing: 1px;
     font-size: 0.625rem;
     line-height: 185%;
+
+    &-content {
+      display: none;
+
+      &--hover {
+        display: block;
+      }
+    }
   }
 }
 
@@ -257,6 +272,23 @@ export default {
       left: unset;
       transform: none;
       width: 50%;
+
+      &-content {
+        display: initial;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        transform: translate(8%, 8%) skewY(4deg);
+        transition: all .8s cubic-bezier(.23, 1, .32, 1);
+
+        &--hover {
+          display: initial;
+          opacity: 1;
+          transform: translate(0%) skewY(0deg);
+          transition-delay: .3s;
+        }
+      }
     }
 
     &__figure {
@@ -267,6 +299,7 @@ export default {
     }
 
     &__media {
+      display: initial;
       position: absolute;
       height: 100%;
       object-fit: contain;
@@ -276,8 +309,10 @@ export default {
       transform: scale(0.7) translateX(-15%);
 
       &--hover {
+        display: initial;
         z-index: 1;
         opacity: 1;
+        transition-delay: .2s;
         transform: scale(1.0) translateX(0);
       }
     }

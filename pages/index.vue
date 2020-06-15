@@ -7,16 +7,16 @@
           <nuxt-link 
             to="/sanne"
             class="title__single title__single--hide"
-            @mouseover.native="sanne = true; kb = false"
-            @mouseleave.native="sanne = false; kb = true"
+            @mouseover.native="hover = 'sanne'; kb = false"
+            @mouseleave.native="hover = null; kb = true"
           >
             <span data-content="Sanne van Zeijl" aria-hidden="true"></span>Sanne van Zeijl
           </nuxt-link>
           <nuxt-link 
             to="/steven"
             class="title__single title__single--hide"
-            @mouseover.native="steven = true; kb = false"
-            @mouseleave.native="steven = false; kb = true"
+            @mouseover.native="hover = 'steven'; kb = false"
+            @mouseleave.native="hover = null; kb = true"
           >
             <span data-content="Steven Wu" aria-hidden="true"></span>Steven Wu
           </nuxt-link>
@@ -29,29 +29,33 @@
           <nuxt-link 
             to="/geert"
             class="title__single title__single--hide"
-            @mouseover.native="geert = true; kb = false"
-            @mouseleave.native="geert = false; kb = true"
+            @mouseover.native="hover = 'geert'; kb = false"
+            @mouseleave.native="hover = null; kb = true"
           >
             <span data-content="Geert Heemskerk" aria-hidden="true"></span>Geert Heemskerk
           </nuxt-link>
           <nuxt-link 
             to="/djenna"
             class="title__single title__single--hide"
-            @mouseover.native="djenna = true; kb = false"
-            @mouseleave.native="djenna = false; kb = true"
+            @mouseover.native="hover = 'djenna'; kb = false"
+            @mouseleave.native="hover = null; kb = true"
           >
             <span data-content="Djenna Bakker" aria-hidden="true"></span>Djenna Bakker
           </nuxt-link>
         </div>
         <figure class="intro__figure">
-          <img class="intro__media" :class="{ 'intro__media--hover': sanne }" src="~/assets/images/placeholder.png" alt="Foto van Sanne">
-          <img class="intro__media" :class="{ 'intro__media--hover': steven }" src="~/assets/images/placeholder-landscape.jpg" alt="Foto van Steven">
-          <img class="intro__media" :class="{ 'intro__media--hover': kb }" src="~/assets/images/intro-image.png" alt="verf die samenkomt">
-          <img class="intro__media" :class="{ 'intro__media--hover': geert }" src="~/assets/images/placeholder-portrait.jpg" alt="Foto van Geert">
-          <img class="intro__media" :class="{ 'intro__media--hover': djenna }" src="~/assets/images/placeholder-portrait-girl.jpg" alt="Foto van Djenna">
+          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'sanne' }" src="~/assets/images/placeholder.png" alt="Foto van Sanne">
+          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'steven' }" src="~/assets/images/placeholder-landscape.jpg" alt="Foto van Steven">
+          <img class="intro__media" :class="{ 'intro__media--hover': hover == null }" src="~/assets/images/intro-image.png" alt="verf die samenkomt">
+          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'geert' }" src="~/assets/images/placeholder-portrait.jpg" alt="Foto van Geert">
+          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'djenna'}" src="~/assets/images/placeholder-portrait-girl.jpg" alt="Foto van Djenna">
         </figure>
         <section class="intro__text">
-          <p class="intro__content">De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+          <p class="intro__text-content" :class={}>1 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+          <p class="intro__text-content">2 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+          <p class="intro__text-content">3 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+          <p class="intro__text-content">4 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+          <p class="intro__text-content">5 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
         </section>
       </div>
     </section>
@@ -63,11 +67,7 @@ import Header from '~/components/Header.vue';
 export default {
   data() {
     return {
-      sanne: false,
-      steven: false,
-      kb: true,
-      djenna: false,
-      geert: false,
+      hover: null,
     }
   },
   components: {
@@ -184,6 +184,10 @@ export default {
     letter-spacing: 1px;
     font-size: 0.625rem;
     line-height: 185%;
+  }
+
+  &__content {
+
   }
 }
 

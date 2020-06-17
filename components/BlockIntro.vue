@@ -28,7 +28,7 @@ h2.sanne, a.sanne {
 }
 
 h2.steven, a.steven {
-  color: $c-steven--darker;
+  color: $c-steven-darker;
 }
 
 h2.geert, a.geert {

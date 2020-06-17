@@ -1,0 +1,69 @@
+<template>
+  <div>
+    <div class="section__wrapper">
+      <h1>{{ title }}</h1>
+      <p> {{ text }}</p>
+      <p :class="author" class="subject"> {{ subject }}</p>
+    </div>
+  </div>
+</template>
+<script>
+import Icons from '~/components/Icons.vue';
+
+export default {
+  components: {
+
+  },
+  props: {
+    title: String,
+    text: String,
+    subject: String,
+    author: String,
+  }
+}
+</script>
+<style lang="scss" scoped>
+  .section__wrapper {
+    text-align: center;
+    padding: 0.2rem 2rem 1rem 2rem;
+    max-width: 815px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 4rem;
+    margin: 0 0 2rem 0;
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.15rem;
+    margin: 0 0 2rem 0;
+  }
+
+  .subject {
+    font-weight: bold;
+  }
+
+  .subcolor--steven {
+    color: $c-steven;
+  }
+
+  .subcolor--sanne {
+    color: $c-sanne;
+  }
+
+  .subcolor--geert {
+    color: $c-geert;
+  }
+
+  .subcolor--djenna {
+    color: $c-djenna;
+  }
+
+  @media only screen and (min-width: $mq-tablet) {
+    .section__wrapper {
+      padding: 0.3rem 4rem 1.4rem 4rem;
+    }
+  }
+</style>

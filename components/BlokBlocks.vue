@@ -58,7 +58,7 @@ export default {
   }
 
   .subcolor--djenna {
-    background-color: $c-djenna;
+    background-color: $c-djenna-light;
   }
 
   @media only screen and (min-width: $mq-tablet) {

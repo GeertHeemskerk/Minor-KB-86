@@ -12,18 +12,25 @@
       blok-image="/images/geert/shoppingbag.png"
       alt-image="shoppingbag"
     />
+    <MovieBlock
+    author="subcolor--geert"
+    movie="/images/geert/examplevideo.png"
+    alt-movie="shoppingbag"
+    />
   </section>
 </template>
 <script>
 import Header from '~/components/Header.vue'
 import ProjectIntro from '~/components/ProjectIntro.vue'
 import BlokBlocks from '~/components/BlokBlocks.vue'
+import MovieBlock from '~/components/MovieBlock.vue'
 
 export default {
   components: {
     Header,
     ProjectIntro,
-    BlokBlocks
+    BlokBlocks,
+    MovieBlock
   }
 }
 </script>

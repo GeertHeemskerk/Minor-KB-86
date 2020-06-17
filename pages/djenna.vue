@@ -13,18 +13,25 @@
       blok-image="/images/djenna/oog.png"
       alt-image="netlify"
     />
+    <MovieBlock
+    author="subcolor--djenna"
+    movie="/images/djenna/examplevideo.png"
+    alt-movie="examplevideo"
+    />
   </section>
 </template>
 <script>
 import Header from '~/components/Header.vue'
 import ProjectIntro from '~/components/ProjectIntro.vue'
 import BlokBlocks from '~/components/BlokBlocks.vue'
+import MovieBlock from '~/components/MovieBlock.vue'
 
 export default {
   components: {
     Header,
     ProjectIntro,
-    BlokBlocks
+    BlokBlocks,
+    MovieBlock
   }
 }
 </script>

@@ -6,10 +6,11 @@ $f-body: 'Comfortaa', cursive;
 $c-background: black;
 $c-text: white;
 
-$c-djenna: #0066FF; 
-$c-geert: #BD00FF;
+$c-djenna: #BD00FF;
+$c-geert: #0066FF; 
 $c-sanne: #FF5C00;
 $c-steven: #FFE600;
+$c-steven--darker: #C9B500;
 
 //media queries
 $mq-tablet: 768px;
@@ -43,3 +44,11 @@ h1, h2, h3, h4, h5, h6 {
         outline: none;
     }
 }
+
+// To Copy and Paste
+// @media(min-width: $mq-tablet) {}
+// @media(min-width: $mq-s-laptop) {}
+// @media(min-width: $mq-l-laptop) {}
+// @media(min-width: $mq-xl-laptop) {}
+// @media(min-width: $mq-desktop) {}
+

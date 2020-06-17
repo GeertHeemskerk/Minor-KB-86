@@ -25,7 +25,7 @@ export default {
 <style lang="scss" scoped>
   .section__wrapper {
     text-align: center;
-    padding: 0.2rem 1.3rem 1rem 1.3rem;
+    padding: 0.2rem 2rem 1rem 2rem;
     max-width: 815px;
     margin: 0 auto;
   }
@@ -63,7 +63,7 @@ export default {
 
   @media only screen and (min-width: $mq-tablet) {
     .section__wrapper {
-      padding: 0.3rem 3.5rem 1.4rem 3.5rem;
+      padding: 0.3rem 4rem 1.4rem 4rem;
     }
   }
 </style>

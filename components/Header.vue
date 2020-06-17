@@ -113,6 +113,10 @@ export default {
     .menu {
       color: black;
 
+      &__button {
+        display: block;
+      }
+
       &__icon {
         stroke: black;
       }
@@ -254,6 +258,12 @@ a {
     width: 880px;
     height: 540px;
     margin: 0rem 0rem 0rem 2rem;
+  }
+
+  .menu {
+    &__button {
+      display: none;
+    }
   }
 }
 

@@ -15,7 +15,7 @@ import ProjectIntro from '~/components/ProjectIntro.vue'
 export default {
   components: {
     Header,
-    ProjectIntro
+    ProjectIntro,
   },
 }
 </script>

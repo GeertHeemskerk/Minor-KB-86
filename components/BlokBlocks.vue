@@ -61,6 +61,11 @@ export default {
     background-color: $c-djenna-light;
   }
 
+  p {
+    font-size: .7rem;
+    line-height: 1.3rem;
+  }
+
   @media only screen and (min-width: $mq-tablet) {
     .section__wrapper {
       margin: 4rem 0rem;
@@ -75,6 +80,11 @@ export default {
 
     img {
       width: 250px;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.85rem;
     }
   }
 

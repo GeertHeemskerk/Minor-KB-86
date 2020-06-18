@@ -12,6 +12,12 @@
       title="Blok 1"
       text="In dit blok ga ik de OSIRIS dashboard van de Haagse Hogeschool herontwerpen in Figma, een ontwerp programma. Ik heb nooit ontwerp gemaakt van een dashboard dus eerst heb ik in wat theorieën gedoken over het ontwerpen van dashboard. Vervolgens heb ik inspiraties gezocht op dashboard designs. Deze inspiraties gaf me een idee hoe ik de layout van de dashboard moet opstellen."
     />
+    <BlockText
+      author="steven"
+      text="Ik heb uiteindelijk vijf logo’s gemaakt, twee daarvan waren voor echte bedrijven en de andere drie waren voor fictieve bedrijven. Als ik weet voor wat voor bedrijf ik een logo moet maken, waar zij voor staan en wat zij willen uitstralen, is het voor mij voor makkelijker om daarmee aan de slag te gaan. Uiteindelijk ben ik super trots op de logo’s die ik gemaakt heb, en de twee bedrijven wa  arvoor ik logo’s maakte waren er ook blij en tevreden mee. Na veel feedback sessies met onze docenten heb de herontwerp van de OSIRIS dashboard afgerond. Dit blok heb ik veel geleerd over het ontwerpen van dashboard en het inrichten van belangrijke data maar ook het gebruiken van verschillende kleuren. Ik ben heel trots op mijn designs en hoeveel ik heb geleerd binnen dit blok."
+      link="http://hhs-kb-86.000webhostapp.com/"
+      linkText="Ga naar website"
+    />
     <BlockIntro
       author="steven"
       title="Blok 2"
@@ -35,6 +41,7 @@ import Header from '~/components/Header.vue';
 import BlockIntro from '~/components/BlockIntro.vue';
 import ProjectIntro from '~/components/ProjectIntro.vue';
 import BlokBlocks from '~/components/BlokBlocks.vue';
+import BlockText from '~/components/BlockText.vue';
 
 export default {
   components: {
@@ -42,6 +49,7 @@ export default {
     ProjectIntro,
     BlokBlocks,
     BlockIntro,
+    BlockText,
   },
 }
 </script>

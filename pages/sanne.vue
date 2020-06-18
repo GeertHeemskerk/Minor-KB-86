@@ -28,6 +28,11 @@
       title="Blok 3"
       text="In blok 3 ben ik opnieuw verder gegaan met 3D. Dit keer om meer te leren over texturen. Hier had ik nog niet veel mee gewerkt. Ik heb in dit blok gewerkt met UV-mapping en heb ook eigen texturen gemaakt door middel van foto’s bewerken. Het blad is een eigen gemaakte textuur."
     />
+    <Triplets
+      left="/images/sanne/left.png"
+      middle="/images/sanne/middle.png"
+      right="/images/sanne/right.png"
+    />
     <Footer
       author="subcolor--sanne"
     />
@@ -39,6 +44,7 @@ import BlockIntro from '~/components/BlockIntro.vue';
 import ProjectIntro from '~/components/ProjectIntro.vue';
 import BlokBlocks from '~/components/BlokBlocks.vue';
 import MovieBlock from '~/components/MovieBlock.vue';
+import Triplets from '~/components/Triplets.vue';
 import Footer from '~/components/Footer.vue';
 
 export default {
@@ -48,6 +54,7 @@ export default {
     MovieBlock,
     BlockIntro,
     BlokBlocks,
+    Triplets,
     Footer
   }
 }

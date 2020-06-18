@@ -36,8 +36,8 @@ export default {
   }
 
   p {
-    font-size: 0.9rem;
-    line-height: 1.15rem;
+    font-size: 0.7rem;
+    line-height: 1.3rem;
     margin: 0 0 2rem 0;
   }
 
@@ -64,6 +64,12 @@ export default {
   @media only screen and (min-width: $mq-tablet) {
     .section__wrapper {
       padding: 0.3rem 4rem 1.4rem 4rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.85rem;
+      margin: 0 0 2rem 0;
     }
   }
 </style>

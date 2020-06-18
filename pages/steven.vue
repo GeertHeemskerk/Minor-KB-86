@@ -28,6 +28,9 @@
       title="Blok 3"
       text="Er zijn verschillende tools die je kan gebruiken voor het implementatie van JAMstack, ik heb gekozen om met Nuxt.js een framework van Vue en DatoCMS te gebruiken als CMS. Vroeger heb ik een paar cursussen van Vue.js gevolgd. Voor de ontwerp ik gekozen om de website van mijn vorige blok te gebruiken. Hierdoor besteed ik dus meer tijd in de technieken dan in het layout van de website."
     />
+    <Footer
+      author="subcolor--steven"
+    />
   </section>
 </template>
 <script>
@@ -35,6 +38,7 @@ import Header from '~/components/Header.vue';
 import BlockIntro from '~/components/BlockIntro.vue';
 import ProjectIntro from '~/components/ProjectIntro.vue';
 import BlokBlocks from '~/components/BlokBlocks.vue';
+import Footer from '~/components/Footer.vue';
 
 export default {
   components: {
@@ -42,6 +46,7 @@ export default {
     ProjectIntro,
     BlokBlocks,
     BlockIntro,
+    Footer
   },
 }
 </script>

@@ -28,6 +28,11 @@
       title="Blok 2"
       text="Ik merkte in blok 2 dat er nog veel meer over animaties te leren viel, maar dat ik er toen niet genoeg tijd voor had. Daardoor heb ik de keuze gemaakt om verder te gaan met het leren coderen van animaties voor op websites, zodat ik mijn kennis nog meer kan verbreden en dus nog veel meer kan leren over dit onderwerp. Ik had het doel om aan de website van het vorige doel een aantal animaties toe te voegen, met de focus op moeilijkere animaties dan bij het vorige blok. Om mezelf echt verder te kunnen ontwikkelen, moest ik op een niveau hoger gaan werken. De deliverables voor dit blok waren het volgen van tutorials inclusief mogelijke uitwerkingen en drie animaties toevoegen aan de website."
     />
+    <BlockImage
+      :full="false"
+      image="/images/djenna/landingpage-porfolio.png"
+      alt-image="landingpage pagina"
+    />
     <BlockIntro
       author="djenna"
       title="Blok 3"
@@ -44,6 +49,7 @@ import BlockIntro from '~/components/BlockIntro.vue';
 import BlokBlocks from '~/components/BlokBlocks.vue';
 import ProjectIntro from '~/components/ProjectIntro.vue';
 import MovieBlock from '~/components/MovieBlock.vue';
+import BlockImage from '~/components/BlockImage.vue';
 import Footer from '~/components/Footer.vue';
 
 export default {
@@ -53,7 +59,8 @@ export default {
     BlokBlocks,
     MovieBlock,
     BlockIntro,
-    Footer
+    BlockImage,
+    Footer,
   }
 }
 </script>

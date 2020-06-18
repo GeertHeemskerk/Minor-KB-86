@@ -1,7 +1,5 @@
 <template>
   <div class="section__wrapper">
-    <h2 class="block__title" :class="author">{{ title }}</h2>
-    <div class="block__divider"></div>
     <p class="block__text">{{ text }}</p>
     <a class="block__link" :class="author" v-if="link" :href="link" target="_blank">
       <span v-if="linkText">
@@ -14,7 +12,6 @@
 export default {
   props: {
     author: String,
-    title: String,
     text: String,
     link: String,
     linkText: String
@@ -23,19 +20,22 @@ export default {
 </script>
 <style lang="scss" scoped>
 
-h2.sanne, a.sanne {
+a.sanne {
   color: $c-sanne;
 }
 
-h2.steven, a.steven {
+
+a.steven {
   color: $c-steven-darker;
 }
 
-h2.geert, a.geert {
+
+a.geert {
   color: $c-geert;
 }
 
-h2.djenna, a.djenna {
+
+a.djenna {
  color: $c-djenna;
 }
 
@@ -46,18 +46,6 @@ h2.djenna, a.djenna {
 }
 
 .block {
-  &__title {
-    font-size: 1.875rem;
-    text-align: center;
-  }
-
-  &__divider {
-    margin: 1rem auto;
-    width: 2px;
-    height: 1.2rem;
-    background-color: black;
-  }
-
   &__text {
     text-align: center;
     font-size: .7rem;
@@ -95,16 +83,6 @@ h2.djenna, a.djenna {
       max-width: 820px;
     }
   }
-
-  .block {
-    &__title {
-      font-size: 2.5rem;
-    }
-
-    &__divider {
-      height: 2.2rem;
-    }
-  }
 }
 
 @media(min-width: $mq-l-laptop) {}
@@ -112,6 +90,5 @@ h2.djenna, a.djenna {
 @media(min-width: $mq-xl-laptop) {}
 
 @media(min-width: $mq-desktop) {}
-
 
 </style>

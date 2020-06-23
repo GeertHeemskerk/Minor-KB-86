@@ -2,7 +2,9 @@
   <div>
     <div class="section__wrapper">
       <div class="movie__holder" :class="author">
-        <img :src="movie" :alt="altMovie">
+        <video controls>
+          <source :src="movie" :alt="altMovie">
+        </video>
       </div>
     </div>
   </div>
@@ -31,9 +33,13 @@ export default {
     height: 380px;
   }
 
-  img {
+  video {
     width: 80%;
     height: 50%;
+    object-fit: fill;
+    &:focus {
+      outline: none;
+    }
   }
 
   .subcolor--steven {
@@ -58,14 +64,14 @@ export default {
       height: 400px;
     }
 
-    img {
+    video {
       width: 70%;
       height: 70%;
     }
   }
 
   @media only screen and (min-width: $mq-s-laptop) {
-    img {
+    video {
       width: 60%;
       height: 75%;
     }
@@ -77,7 +83,7 @@ export default {
       height: 550px;
     }
 
-    img {
+    video {
       width: 55%;
       height: 80%;
     }
@@ -89,7 +95,7 @@ export default {
       height: 750px;
     }
 
-    img {
+    video {
       width: 55%;
       height: 80%;
     }

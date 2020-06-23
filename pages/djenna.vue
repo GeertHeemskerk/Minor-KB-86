@@ -9,13 +9,28 @@
     />
     <MovieBlock
       author="subcolor--djenna"
-      movie="/images/djenna/examplevideo.png"
-      alt-movie="examplevideo"
+      movie="/videos/djenna/preloader.mov"
+      alt-movie="preloader"
     />
     <BlockIntro
       author="djenna"
       title="Blok 1"
       text="Voor het eerste blok van deze minor heb ik gekomen om logo’s te maken en meer leren over de theorie en technieken erachter. Eerst ben ik op zoek gegaan naar verschillende theorieën en trend bij het maken van logo’s. Er waren veel regels die ik nog niet wist over het maken, zoals bijvoorbeeld kleurgebruik, positie en betekenis. Met deze nieuwe kennis heb ik, naar mijn mening, veel betere logo’s kunnen maken. Mijn deliverables voor dit blok was het volgen van tutorials inclusief de uitwerkingen ervan en het vijf uitgewerkte logo’s."
+    />
+    <BlockImage
+      image="/images/djenna/logotypefaces.png"
+      alt-image="landingpage pagina"
+    />
+    <blockText
+      author="djenna"
+      text="Ik heb uiteindelijk vijf logo’s gemaakt, twee daarvan waren voor echte bedrijven en de andere drie waren voor fictieve bedrijven. Als ik weet voor wat voor bedrijf ik een logo moet maken, waar zij voor staan en wat zij willen uitstralen,
+      is het voor mij voor makkelijker om daarmee aan de slag te gaan. Uiteindelijk ben ik super trots op de logo’s die ik gemaakt heb, en de twee bedrijven wa  arvoor ik logo’s maakte waren er ook blij en tevreden mee."
+
+    />
+    <BlockImage
+      :full="false"
+      image="/images/djenna/logos.png"
+      alt-image="landingpage pagina"
     />
     <BlokBlocks
       intro-text="In blok 2 wou ik meer leren over animeren. Ik wou een scene maken waarin verschillende animaties te zien zijn. Hier heb ik dit blok veel over geleerd, maar ook heb ik nog heel veel bij geleerd over modellen."
@@ -51,6 +66,7 @@ import ProjectIntro from '~/components/ProjectIntro.vue';
 import MovieBlock from '~/components/MovieBlock.vue';
 import BlockImage from '~/components/BlockImage.vue';
 import Footer from '~/components/Footer.vue';
+import BlockText from '~/components/BlockText.vue';
 
 export default {
   components: {
@@ -61,6 +77,7 @@ export default {
     BlockIntro,
     BlockImage,
     Footer,
+    BlockText,
   }
 }
 </script>

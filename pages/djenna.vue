@@ -25,7 +25,6 @@
       author="djenna"
       text="Ik heb uiteindelijk vijf logo’s gemaakt, twee daarvan waren voor echte bedrijven en de andere drie waren voor fictieve bedrijven. Als ik weet voor wat voor bedrijf ik een logo moet maken, waar zij voor staan en wat zij willen uitstralen,
       is het voor mij voor makkelijker om daarmee aan de slag te gaan. Uiteindelijk ben ik super trots op de logo’s die ik gemaakt heb, en de twee bedrijven wa  arvoor ik logo’s maakte waren er ook blij en tevreden mee."
-
     />
     <BlockImage
       :full="false"
@@ -42,6 +41,8 @@
       author="djenna"
       title="Blok 2"
       text="Ik merkte in blok 2 dat er nog veel meer over animaties te leren viel, maar dat ik er toen niet genoeg tijd voor had. Daardoor heb ik de keuze gemaakt om verder te gaan met het leren coderen van animaties voor op websites, zodat ik mijn kennis nog meer kan verbreden en dus nog veel meer kan leren over dit onderwerp. Ik had het doel om aan de website van het vorige doel een aantal animaties toe te voegen, met de focus op moeilijkere animaties dan bij het vorige blok. Om mezelf echt verder te kunnen ontwikkelen, moest ik op een niveau hoger gaan werken. De deliverables voor dit blok waren het volgen van tutorials inclusief mogelijke uitwerkingen en drie animaties toevoegen aan de website."
+      link="https://djennabakker.github.io/codes/"
+      linkText="Ga naar website"
     />
     <BlockImage
       :full="false"
@@ -52,6 +53,17 @@
       author="djenna"
       title="Blok 3"
       text="Ik merkte in blok 2 dat er nog veel meer over animaties te leren viel, maar dat ik er toen niet genoeg tijd voor had. Daardoor heb ik de keuze gemaakt om verder te gaan met het leren coderen van animaties voor op websites, zodat ik mijn kennis nog meer kan verbreden en dus nog veel meer kan leren over dit onderwerp. Ik had het doel om aan de website van het vorige doel een aantal animaties toe te voegen, met de focus op moeilijkere animaties dan bij het vorige blok. Om mezelf echt verder te kunnen ontwikkelen, moest ik op een niveau hoger gaan werken. De deliverables voor dit blok waren het volgen van tutorials inclusief mogelijke uitwerkingen en drie animaties toevoegen aan de website."
+    />
+    <MovieBlock
+      author="subcolor--djenna"
+      movie="/videos/djenna/preloader.mov"
+      alt-movie="preloader"
+    />
+    <blockText
+      author="djenna"
+      text="Mijn doel was om een laadscherm te animeren, dus wanneer iemand op de website komt ziet hij eerst een laadscherm terwijl de hele pagina wordt ingeladen. Daarna wilde ik een grote achtergrond animatie toevoegen, maar ik kon geen tutorial vinden voor een animatie die toegevoegde waarde aan de website zou geven. Dus in plaats daarvan heb ik een aan de eerste sectie een typemachine animatie toegevoegd, waarmee ik de gebruiker begroet met verschillende termen. Tot slot wilde ik graag de progressie balken animeren, zodat ze van 0% naar het desbetreffende percentage zouden ‘schuiven’. Met behulp van een docent is dit uiteindelijk goed gelukt!"
+      link="https://djennabakker.github.io/code/"
+      linkText="Ga naar website"
     />
     <Footer
       author="subcolor--djenna"

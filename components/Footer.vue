@@ -18,12 +18,7 @@
   </div>
 </template>
 <script>
-import Icons from '~/components/Icons.vue';
-
 export default {
-  components: {
-
-  },
   props: {
     author: String,
   }
@@ -35,6 +30,22 @@ export default {
     text-align: center;
     width: 100%;
     padding: 2rem;
+
+    &.sanne {
+      background-color: $c-sanne;
+    }
+
+    &.steven {
+      background-color: $c-steven;
+    }
+
+    &.geert {
+      background-color: $c-geert;
+    }
+
+    &.djenna {
+      background-color: $c-djenna;
+    }
   }
 
   a, h1{
@@ -51,28 +62,8 @@ export default {
     margin: 0 0.2rem;
   }
 
-  h1.subcolor--steven {
+  h1.steven, a.steven {
    color: black;
-  }
-
-  a.subcolor--steven {
-   color: black;
-  }
-
-  .subcolor--steven {
-    background-color: $c-steven;
-  }
-
-  .subcolor--sanne {
-    background-color: $c-sanne;
-  }
-
-  .subcolor--geert {
-    background-color: $c-geert;
-  }
-
-  .subcolor--djenna {
-    background-color: $c-djenna;
   }
 
   @media only screen and (min-width: $mq-tablet) {

@@ -45,7 +45,7 @@
       alt-movie="shoppingbag"
     />
     <Footer
-      author="subcolor--geert"
+      author="geert"
     />
   </section>
 </template>

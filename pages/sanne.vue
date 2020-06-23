@@ -41,7 +41,7 @@
       right-alt="render of 3d lips"
     />
     <Footer
-      author="subcolor--sanne"
+      author="sanne"
     />
   </section>
 </template>

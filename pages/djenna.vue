@@ -81,7 +81,7 @@
       video="/videos/djenna/typewriter-animation.mov"
     />
     <Footer
-      author="subcolor--djenna"
+      author="djenna"
     />
   </section>
 </template>

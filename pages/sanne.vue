@@ -8,7 +8,6 @@
       subject="Cinema 4D - After Effects"
     />
     <BlockImage
-      :full="false"
       image="/images/sanne/intro-block-image.png"
       alt-image="3d render model face"
     />

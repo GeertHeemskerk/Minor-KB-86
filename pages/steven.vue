@@ -12,6 +12,10 @@
       title="Blok 1"
       text="In dit blok ga ik de OSIRIS dashboard van de Haagse Hogeschool herontwerpen in Figma, een ontwerp programma. Ik heb nooit ontwerp gemaakt van een dashboard dus eerst heb ik in wat theorieën gedoken over het ontwerpen van dashboard. Vervolgens heb ik inspiraties gezocht op dashboard designs. Deze inspiraties gaf me een idee hoe ik de layout van de dashboard moet opstellen."
     />
+    <BlockGallery
+      author="steven"
+      :images="gallery"
+    />
     <BlockText
       author="steven"
       text="Ik heb uiteindelijk vijf logo’s gemaakt, twee daarvan waren voor echte bedrijven en de andere drie waren voor fictieve bedrijven. Als ik weet voor wat voor bedrijf ik een logo moet maken, waar zij voor staan en wat zij willen uitstralen, is het voor mij voor makkelijker om daarmee aan de slag te gaan. Uiteindelijk ben ik super trots op de logo’s die ik gemaakt heb, en de twee bedrijven wa  arvoor ik logo’s maakte waren er ook blij en tevreden mee. Na veel feedback sessies met onze docenten heb de herontwerp van de OSIRIS dashboard afgerond. Dit blok heb ik veel geleerd over het ontwerpen van dashboard en het inrichten van belangrijke data maar ook het gebruiken van verschillende kleuren. Ik ben heel trots op mijn designs en hoeveel ik heb geleerd binnen dit blok."
@@ -46,15 +50,44 @@ import ProjectIntro from '~/components/ProjectIntro.vue';
 import BlokBlocks from '~/components/BlokBlocks.vue';
 import BlockText from '~/components/BlockText.vue';
 import Footer from '~/components/Footer.vue';
+import BlockGallery from '~/components/BlockGallery.vue';
 
 export default {
+  //Used voor BlockGallery
+  data() {
+    return {
+      gallery: [
+        {
+          src: '/images/steven/sketch-layout.png',
+          alt: 'sketch of layout'
+        },
+        {
+          src: '/images/steven/sketch-details.png',
+          alt: 'sketch of details page'
+        },
+        {
+          src: '/images/steven/sketch-catalogus.png',
+          alt: 'sketch of catalogus page'
+        },
+        {
+          src: '/images/steven/sketch-results.png',
+          alt: 'sketch of results page'
+        },
+        {
+          src: '/images/steven/sketch-results.png',
+          alt: 'sketch of results page'
+        },
+      ]
+    }
+  },
   components: {
     Header,
     ProjectIntro,
     BlokBlocks,
     BlockIntro,
     BlockText,
-    Footer
+    Footer,
+    BlockGallery
   },
 }
 </script>

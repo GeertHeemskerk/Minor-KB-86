@@ -4,7 +4,7 @@
     <ProjectIntro
       author="subcolor--geert"
       title= "Geert"
-      text="Hi, mijn naam is Geert en ik ben 22 jaar. Tijdens mijn stage hoorde ik veel over 3D motion design en dit wekte intresse. Toen ik moest gaan zoeken naar een minor was ik dan ook druk opzoeken naar een 3D minor. Binnen Nederland kon ik hier niet veel over vinden. Tot ik hoorde dat er bij mij op school een pilot minor kwam waarin de leerlingen zelf mochten bepalen wat hun leerdoelen waren. In deze minor waren 4 blokken, en elk blok mocht anders worden ingevuld. In het eerste blok was dat voor mij natuurlijk 3D. Ik vond dit uiteindelijk zo leuk, dat ik van de minor een 3D minor heb gemaakt. Hier heb ik me dan ook de afgelopen 3 blokken op gefocust. De programma’s waarmee ik heb gewerkt zijn: "
+      text="Hi, mijn naam is Geert en ik ben 22 jaar. Tijdens mijn stage ben ik erachter gekomen dat het maken van statische websites zonder enige interactie vaak niet onthouden wordt. Aangezien wij op school tot nu toe alleen hebben geleerd hoe we een statische website moesten ontwerpen en coderen wilde ik meer uitdaging. Door mijn studie MBO applicatie ontwikkelaar heb ik veel kunnen leren over front &amp; back -end van een applicatie. Naast het ontwerpen en ontwikkelen van de applicatie wilde ik deze minor graag invullen met vakgebieden waar ik persoonlijk niet of nauwelijks kennis over heb, zodat ik later een breder visie heb over wat ik wil worden. Daarom heb ik de volgende vakgebieden benaderd in deze minor."
       subject="Rebranding - Webdesign - Cinema 4D - After Effects"
     />
     <BlockImage
@@ -14,7 +14,7 @@
     <BlockIntro
       author="geert"
       title="Blok 1"
-      text="Aan het begin van de minor had ik nog helemaal geen ervaring met 3D. Er is een 3D artist waar ik heel enthousiast van werd en dat is extraweg. Ik had hem een privebericht gestuurd op instagram en hij heeft mij een beetje opweg geholpen met welk programma ik het best kan gebruiken en wat uitleg gegeven over computer voor renderwerk. Hieruit kwam dat ik met Cinema 4D ging werken. Zij hebben ook een gratis studenten licentie. Ik ben hierna veel tutorials gaan kijken om het programma een beetje te leren kennen. Maar merkte ik al snel dat ik beter werk wanneer ik naar een doel toe werk. Toen heb ik mezelf als doel gesteld om een sushi band te maken. Hieronder is het eind resultaat te zien."
+      text="Aan het begin van de minor had ik nog bijna geen ervaring met Adobee Illustrator en Photoshop. In dit blok heb ik deze twee programma's samen met Figma (een prototype ontwerp systeem) een rebranding gemaakt van de Bijenkorf. De Bijenkorf heeft mij altijd al geïnspireerd door hun minimalistische aanpak en toch doordringende uistraling van hun website en campagnes. Ik dacht als ik een rebranding kan maken van de Bijenkorf die al aan de top staat van mijn lijst en ik daar tevreden over kan zijn is deze opdracht voor mij geslaagd. Daarnaast heb ik een volledige stylguide gemaakt en een herontwerp van de website op mijn minimalistische manier. Door de PDF te downloaden kunt u mijn ontwerpproces bekijken."
       link="/pdf/geert/17026121-Geert-Heemskerk-KB-86.pdf"
       link-text="download pdf"
     />
@@ -27,7 +27,7 @@
       alt-image="redesign webshop"
     />
     <BlokBlocks
-      intro-text="In blok 3 ben ik opnieuw verder gegaan met 3D. Dit keer om meer te leren over texturen. Hier had ik nog niet veel mee gewerkt. Ik heb in dit blok gewerkt met UV-mapping en heb ook eigen texturen gemaakt door middel van foto’s bewerken. Het blad is een eigen gemaakte textuur."
+      intro-text="In dit blok heb ik ook photoshop gebruikt en heb het gemaakt logo geplaatst op een tas van de Bijenkorf en deze bewerkt met kleuren en mijn idealen. Daarnaast heb ik zoals u hierboven kunt zien cadeaukaarten ontworpen die matchen met de styleguide van de website en principes van de Bijenkorf."
       author="subcolor--geert"
       blok-image="/images/geert/shoppingbag.png"
       alt-image="shoppingbag"
@@ -35,7 +35,7 @@
     <BlockIntro
       author="geert"
       title="Blok 2"
-      text="Ik merkte in blok 2 dat er nog veel meer over animaties te leren viel, maar dat ik er toen niet genoeg tijd voor had. Daardoor heb ik de keuze gemaakt om verder te gaan met het leren coderen van animaties voor op websites, zodat ik mijn kennis nog meer kan verbreden en dus nog veel meer kan leren over dit onderwerp. Ik had het doel om aan de website van het vorige doel een aantal animaties toe te voegen, met de focus op moeilijkere animaties dan bij het vorige blok. Om mezelf echt verder te kunnen ontwikkelen, moest ik op een niveau hoger gaan werken. De deliverables voor dit blok waren het volgen van tutorials inclusief mogelijke uitwerkingen en drie animaties toevoegen aan de website."
+      text="In blok 1 werd ik geïnspireerd door klasgenoten en online voorbeelden van mockup animaties. Dit houdt in dat je een animatie afspeeld in een apparaat zoals een mobiele telefoon. Voor dit blok heb ik nog nooit gewerkt met mockup animaties en 3D ontwerpen. Hiervoor heb ik gebruikt gemaakt van C4D (Cinema 4D) en AAE (Adobe After Effects). De animatie die afspeeld op het scherm heb ik gemaakt in AAE. AAE en C4D heb ik binnen 5 weken moeten leren om tot dit eindresultaat te komen. Hiervoor heb ik in zo een korte tijd geleerd hoe ik materialen, licht, tijd, kijkhoeken, reflecties gebruik in C4D. Doordat ik C4D kon linken aan AEE kon ik makkelijk posities en animaties koppelen aan vereschillende soorten tijdstippen in het filmpje. Als u geïntresseerd ben in mijn werk kunt u mijn volledige ontwerpproces hieronder downloaden als PDF."
       link="/pdf/geert/17026121-Geert-Heemskerk-KB-86-3D-Animated.pdf"
       link-text="download pdf"
     />

@@ -40,7 +40,7 @@
       link-text="download pdf"
     />
     <MovieBlock
-      author="subcolor--geert"
+      author="geert"
       movie="/videos/geert/ScreenRecorded.mp4"
       alt-movie="shoppingbag"
     />

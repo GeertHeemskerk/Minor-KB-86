@@ -8,7 +8,7 @@
       subject="Logo’s ontwerpen - Animaties coderen"
     />
     <MovieBlock
-      author="subcolor--djenna"
+      author="djenna"
       movie="/videos/djenna/preloader.mov"
       alt-movie="preloader"
     />
@@ -62,7 +62,7 @@
       text="Ik merkte in blok 2 dat er nog veel meer over animaties te leren viel, maar dat ik er toen niet genoeg tijd voor had. Daardoor heb ik de keuze gemaakt om verder te gaan met het leren coderen van animaties voor op websites, zodat ik mijn kennis nog meer kan verbreden en dus nog veel meer kan leren over dit onderwerp. Ik had het doel om aan de website van het vorige doel een aantal animaties toe te voegen, met de focus op moeilijkere animaties dan bij het vorige blok. Om mezelf echt verder te kunnen ontwikkelen, moest ik op een niveau hoger gaan werken. De deliverables voor dit blok waren het volgen van tutorials inclusief mogelijke uitwerkingen en drie animaties toevoegen aan de website."
     />
     <MovieBlock
-      author="subcolor--djenna"
+      author="djenna"
       movie="/videos/djenna/preloader.mov"
       alt-movie="preloader"
     />

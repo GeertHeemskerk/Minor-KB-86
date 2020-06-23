@@ -24,7 +24,7 @@
     />
     <MovieBlock
       author="subcolor--sanne"
-      movie="/images/sanne/examplevideo.png"
+      movie="/videos/sanne/rendervideo.mp4"
       alt-movie="examplevideo"
     />
     <BlockIntro

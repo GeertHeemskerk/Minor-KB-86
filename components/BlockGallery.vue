@@ -65,7 +65,6 @@ section.djenna {
   }
 }
 
-
 @media only screen and (min-width: $mq-s-laptop) {
   .gallery {
     width: 60%;
@@ -86,7 +85,6 @@ section.djenna {
     }
   }
 }
-  
 
 @media only screen and (min-width: $mq-xl-laptop) {
   .gallery {

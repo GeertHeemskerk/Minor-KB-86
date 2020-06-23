@@ -33,6 +33,10 @@
       image="/images/djenna/landingpage-porfolio.png"
       alt-image="landingpage pagina"
     />
+    <BlockVideo
+      :full="false"
+      video="/images/djenna/landingpage-porfolio.png"
+    />
     <BlockIntro
       author="djenna"
       title="Blok 3"
@@ -50,6 +54,7 @@ import BlokBlocks from '~/components/BlokBlocks.vue';
 import ProjectIntro from '~/components/ProjectIntro.vue';
 import MovieBlock from '~/components/MovieBlock.vue';
 import BlockImage from '~/components/BlockImage.vue';
+import BlockVideo from '~/components/BlockVideo.vue';
 import Footer from '~/components/Footer.vue';
 
 export default {
@@ -60,6 +65,7 @@ export default {
     MovieBlock,
     BlockIntro,
     BlockImage,
+    BlockVideo,
     Footer,
   }
 }

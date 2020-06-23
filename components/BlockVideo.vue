@@ -2,7 +2,7 @@
   <section class="section__wrapper" :class="{ 'section__wrapper--in-content' : !full }">
     <figure class="block__figure">
       <video controls class="block__media">
-        <source :src="video">
+        <source :src="video" type="video/mp4">
       </video>
     </figure>
   </section>

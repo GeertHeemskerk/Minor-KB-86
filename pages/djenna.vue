@@ -21,7 +21,7 @@
       image="/images/djenna/logotypefaces.png"
       alt-image="landingpage pagina"
     />
-    <blockText
+    <BlockText
       author="djenna"
       text="Ik heb uiteindelijk vijf logo’s gemaakt, twee daarvan waren voor echte bedrijven en de andere drie waren voor fictieve bedrijven. Als ik weet voor wat voor bedrijf ik een logo moet maken, waar zij voor staan en wat zij willen uitstralen,
       is het voor mij voor makkelijker om daarmee aan de slag te gaan. Uiteindelijk ben ik super trots op de logo’s die ik gemaakt heb, en de twee bedrijven wa  arvoor ik logo’s maakte waren er ook blij en tevreden mee."
@@ -44,14 +44,17 @@
       link="https://djennabakker.github.io/codes/"
       linkText="Ga naar website"
     />
-    <BlockImage
+    <BlockVideo
       :full="false"
-      image="/images/djenna/landingpage-porfolio.png"
-      alt-image="landingpage pagina"
+      video="/videos/djenna/hero-sectie.mov"
     />
     <BlockVideo
       :full="false"
-      video="/images/djenna/landingpage-porfolio.png"
+      video="/videos/djenna/about-me-contact-secties.mov"
+    />
+    <BlockVideo
+      :full="false"
+      video="/videos/djenna/work-sectie.mov"
     />
     <BlockIntro
       author="djenna"
@@ -63,11 +66,19 @@
       movie="/videos/djenna/preloader.mov"
       alt-movie="preloader"
     />
-    <blockText
+    <BlockText
       author="djenna"
       text="Mijn doel was om een laadscherm te animeren, dus wanneer iemand op de website komt ziet hij eerst een laadscherm terwijl de hele pagina wordt ingeladen. Daarna wilde ik een grote achtergrond animatie toevoegen, maar ik kon geen tutorial vinden voor een animatie die toegevoegde waarde aan de website zou geven. Dus in plaats daarvan heb ik een aan de eerste sectie een typemachine animatie toegevoegd, waarmee ik de gebruiker begroet met verschillende termen. Tot slot wilde ik graag de progressie balken animeren, zodat ze van 0% naar het desbetreffende percentage zouden ‘schuiven’. Met behulp van een docent is dit uiteindelijk goed gelukt!"
       link="https://djennabakker.github.io/code/"
       linkText="Ga naar website"
+    />
+    <BlockVideo
+      :full="false"
+      video="/videos/djenna/progress-bar-animatie.mov"
+    />
+    <BlockVideo
+      :full="false"
+      video="/videos/djenna/typewriter-animation.mov"
     />
     <Footer
       author="subcolor--djenna"

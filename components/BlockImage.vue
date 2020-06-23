@@ -35,7 +35,7 @@ export default {
   }
 
   &__media {
-    max-width: 100%;
+    width: 100%;
     height: auto;
   }
 }
@@ -57,7 +57,7 @@ export default {
       margin: 3rem 0;
 
       &--in-content {
-        max-width: 820px;
+        max-width: 1030px;
         margin: 3rem auto; 
       }
     }

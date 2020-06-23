@@ -23,7 +23,7 @@
       alt-image="c4d"
     />
     <MovieBlock
-      author="subcolor--sanne"
+      author="sanne"
       movie="/videos/sanne/rendervideo.mp4"
       alt-movie="examplevideo"
     />
@@ -34,11 +34,14 @@
     />
     <Triplets
       left="/images/sanne/left.png"
+      left-alt="render of 3d eye"
       middle="/images/sanne/middle.png"
+      middle-alt="render of 3d face"
       right="/images/sanne/right.png"
+      right-alt="render of 3d lips"
     />
     <Footer
-      author="subcolor--sanne"
+      author="sanne"
     />
   </section>
 </template>

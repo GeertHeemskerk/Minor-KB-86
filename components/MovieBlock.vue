@@ -10,94 +10,72 @@
   </div>
 </template>
 <script>
-import Icons from '~/components/Icons.vue';
-
 export default {
-  components: {
-
-  },
   props: {
     author: String,
     movie: String,
     altMovie: String,
-  }
+  },
 }
 </script>
 <style lang="scss" scoped>
 
-  .movie__holder{
+  .movie__holder {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 380px;
+
+    &.sanne {
+      background-color: $c-sanne-light;
+    }
+
+    &.steven {
+      background-color: $c-steven;
+    }
+
+    &.geert {
+      background-color: $c-geert-light;
+    }
+
+    &.djenna {
+      background-color: $c-djenna-light;
+    }
   }
 
   video {
+    margin: 3rem 0;
     width: 80%;
-    height: 50%;
-    object-fit: fill;
+
     &:focus {
       outline: none;
     }
   }
-
-  .subcolor--steven {
-    background-color: $c-steven;
-  }
-
-  .subcolor--sanne {
-    background-color: $c-sanne-light;
-  }
-
-  .subcolor--geert {
-    background-color: $c-geert-light;
-  }
-
-  .subcolor--djenna {
-    background-color: $c-djenna-light;
-  }
-
+  
   @media only screen and (min-width: $mq-tablet) {
-    .movie__holder{
-      width: 100%;
-      height: 400px;
-    }
-
     video {
+      margin: 5rem 0;
       width: 70%;
-      height: 70%;
     }
   }
 
   @media only screen and (min-width: $mq-s-laptop) {
-    video {
+    video { 
+      margin: 7rem 0;
       width: 60%;
-      height: 75%;
     }
   }
 
   @media only screen and (min-width: $mq-xl-laptop) {
-    .movie__holder{
-      width: 100%;
-      height: 550px;
-    }
-
     video {
       width: 55%;
-      height: 80%;
     }
   }
 
   @media only screen and (min-width: $mq-desktop) {
-    .movie__holder{
-      width: 100%;
-      height: 750px;
-    }
-
     video {
-      width: 55%;
-      height: 80%;
+      margin: 6rem 0;
+      width: 48%;
     }
   }
 </style>

@@ -2,7 +2,7 @@
   <section class="section__personal">
     <Header class-name="header--personal" />
     <ProjectIntro
-      author="subcolor--geert"
+      author="geert"
       title= "Geert"
       text="Hi, mijn naam is Geert en ik ben 22 jaar. Tijdens mijn stage ben ik erachter gekomen dat het maken van statische websites zonder enige interactie vaak niet onthouden wordt. Aangezien wij op school tot nu toe alleen hebben geleerd hoe we een statische website moesten ontwerpen en coderen wilde ik meer uitdaging. Door mijn studie MBO applicatie ontwikkelaar heb ik veel kunnen leren over front &amp; back -end van een applicatie. Naast het ontwerpen en ontwikkelen van de applicatie wilde ik deze minor graag invullen met vakgebieden waar ik persoonlijk niet of nauwelijks kennis over heb, zodat ik later een breder visie heb over wat ik wil worden. Daarom heb ik de volgende vakgebieden benaderd in deze minor."
       subject="Rebranding - Webdesign - Cinema 4D - After Effects"
@@ -28,7 +28,7 @@
     />
     <BlokBlocks
       intro-text="In dit blok heb ik ook photoshop gebruikt en heb het gemaakt logo geplaatst op een tas van de Bijenkorf en deze bewerkt met kleuren en mijn idealen. Daarnaast heb ik zoals u hierboven kunt zien cadeaukaarten ontworpen die matchen met de styleguide van de website en principes van de Bijenkorf."
-      author="subcolor--geert"
+      author="geert"
       blok-image="/images/geert/shoppingbag.png"
       alt-image="shoppingbag"
     />

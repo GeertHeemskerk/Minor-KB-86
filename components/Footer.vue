@@ -1,19 +1,11 @@
 <template>
   <div>
     <div :class="author" class="section__wrapper">
-      <h1 :class="author" >KB-86</h1>
-      <nuxt-link :class="author" to="/sanne">
-        Sanne
-      </nuxt-link>
-      <nuxt-link  :class="author" to="/steven">
-        Steven
-      </nuxt-link>
-      <nuxt-link :class="author" to="/djenna">
-        Djenna
-      </nuxt-link>
-      <nuxt-link :class="author" to="/geert">
-        Geert
-      </nuxt-link>
+      <h1 :class="author">KB-86</h1>
+      <nuxt-link :class="author" to="/sanne">Sanne</nuxt-link>
+      <nuxt-link  :class="author" to="/steven">Steven</nuxt-link>
+      <nuxt-link :class="author" to="/djenna">Djenna</nuxt-link>
+      <nuxt-link :class="author" to="/geert">Geert</nuxt-link>
     </div>
   </div>
 </template>
@@ -59,6 +51,10 @@ export default {
 
   a {
     margin: 0 0.2rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   h1.steven, a.steven {

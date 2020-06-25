@@ -2,7 +2,7 @@
   <div>
     <div class="section__wrapper">
       <div class="blok__holder">
-        <p> {{ introText }}</p>
+        <p>{{ introText }}</p>
       </div>
       <div class="blok__holder" :class="author">
         <img :src="blokImage" :alt="altImage">
@@ -11,12 +11,7 @@
   </div>
 </template>
 <script>
-import Icons from '~/components/Icons.vue';
-
 export default {
-  components: {
-
-  },
   props: {
     introText: String,
     author: String,
@@ -39,28 +34,28 @@ export default {
     width: 100%;
     height: 400px;
     padding: 0 2rem;
+
+    &.sanne {
+      background-color: $c-sanne;
+    }
+
+    &.steven {
+      background-color: $c-steven;
+    }
+
+    &.geert {
+      background-color: $c-geert;
+    }
+
+    &.djenna {
+      background-color: $c-djenna;
+    }
   }
 
   img {
     width: 200px;
   }
-
-  .subcolor--steven {
-    background-color: $c-steven;
-  }
-
-  .subcolor--sanne {
-    background-color: $c-sanne;
-  }
-
-  .subcolor--geert {
-    background-color: $c-geert;
-  }
-
-  .subcolor--djenna {
-    background-color: $c-djenna-light;
-  }
-
+  
   p {
     font-size: .7rem;
     line-height: 1.3rem;

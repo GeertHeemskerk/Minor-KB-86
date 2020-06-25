@@ -8,12 +8,7 @@
   </div>
 </template>
 <script>
-import Icons from '~/components/Icons.vue';
-
 export default {
-  components: {
-
-  },
   props: {
     title: String,
     text: String,
@@ -43,24 +38,24 @@ export default {
 
   .subject {
     font-weight: bold;
-  }
 
-  .subcolor--steven {
-    color: $c-steven;
-  }
+    &.sanne {
+      color: $c-sanne;
+    }
 
-  .subcolor--sanne {
-    color: $c-sanne;
-  }
+    &.steven {
+      color: $c-steven;
+    }
 
-  .subcolor--geert {
-    color: $c-geert;
-  }
+    &.geert {
+      color: $c-geert;
+    }
 
-  .subcolor--djenna {
-    color: $c-djenna;
+    &.djenna {
+      color: $c-djenna;
+    }
   }
-
+  
   @media only screen and (min-width: $mq-tablet) {
     .section__wrapper {
       padding: 0.3rem 4rem 1.4rem 4rem;

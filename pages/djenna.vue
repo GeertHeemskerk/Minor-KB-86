@@ -2,7 +2,7 @@
   <section class="section__personal">
     <Header class-name="header--personal" />
     <ProjectIntro
-      author="subcolor--djenna"
+      author="djenna"
       title= "Djenna"
       text="De minor Visual Design &amp; Front-end Development is in mijn ogen de perfecte minor geweest om volledig te focussen aan zelfontwikkeling binnen de opleiding. In de afgelopen jaren heb ik op school veel projecten en vakken mogen volgen, maar die mij niet allemaal evenveel interesseerde. Deze minor gaf mij de kans om zelf te bepalen wat ik nog wil leren en waar ik nog in wil groeien, zonder dat er een door school bedachten les achter zit. "
       subject="Logo’s ontwerpen - Animaties coderen"
@@ -33,7 +33,7 @@
     />
     <BlokBlocks
       intro-text="In blok 2 wou ik meer leren over animeren. Ik wou een scene maken waarin verschillende animaties te zien zijn. Hier heb ik dit blok veel over geleerd, maar ook heb ik nog heel veel bij geleerd over modellen."
-      author="subcolor--djenna"
+      author="djenna"
       blok-image="/images/djenna/oog.png"
       alt-image="netlify"
     />
@@ -50,11 +50,11 @@
     />
     <BlockVideo
       :full="false"
-      video="/videos/djenna/about-me-contact-secties.mov"
+      video="/videos/djenna/work-sectie.mov"
     />
     <BlockVideo
       :full="false"
-      video="/videos/djenna/work-sectie.mov"
+      video="/videos/djenna/about-me-contact-secties.mov"
     />
     <BlockIntro
       author="djenna"
@@ -74,11 +74,11 @@
     />
     <BlockVideo
       :full="false"
-      video="/videos/djenna/progress-bar-animatie.mov"
+      video="/videos/djenna/typewriter-animation.mov"
     />
     <BlockVideo
       :full="false"
-      video="/videos/djenna/typewriter-animation.mov"
+      video="/videos/djenna/progress-bar-animatie.mov"
     />
     <Footer
       author="djenna"

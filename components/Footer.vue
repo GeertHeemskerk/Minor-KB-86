@@ -25,7 +25,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
   .section__wrapper {
     text-align: center;
     width: 100%;
@@ -63,7 +62,7 @@ export default {
   }
 
   h1.steven, a.steven {
-   color: black;
+    color: black;
   }
 
   @media only screen and (min-width: $mq-tablet) {

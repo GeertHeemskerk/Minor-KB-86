@@ -50,11 +50,11 @@
     />
     <BlockVideo
       :full="false"
-      video="/videos/djenna/about-me-contact-secties.mov"
+      video="/videos/djenna/work-sectie.mov"
     />
     <BlockVideo
       :full="false"
-      video="/videos/djenna/work-sectie.mov"
+      video="/videos/djenna/about-me-contact-secties.mov"
     />
     <BlockIntro
       author="djenna"
@@ -74,11 +74,11 @@
     />
     <BlockVideo
       :full="false"
-      video="/videos/djenna/progress-bar-animatie.mov"
+      video="/videos/djenna/typewriter-animation.mov"
     />
     <BlockVideo
       :full="false"
-      video="/videos/djenna/typewriter-animation.mov"
+      video="/videos/djenna/progress-bar-animatie.mov"
     />
     <Footer
       author="djenna"

@@ -46,6 +46,10 @@
       title="Blok 2"
       text="In blok 2 heb ik gekozen om richting front-end development te gaan. Tijdens mijn stage heb ik veel geleerd over Wordpress en thema maken. Daarmee wil ik verder gaan dus ik heb gekozen om een thema te maken van scratch voor onze minor website in Wordpress. Voor dit blok gebruik ik Wordpress, ACF en Timber om mijn thema te bouwen."
     />
+    <BlockLogo
+      author="steven"
+      :logos="logos"
+    />
     <BlockText
       author="steven"
       text="Voor dit blok gebruik ik Wordpress, ACF en Timber om mijn thema te bouwen. Eerst heb wat onderzoek gedaan hoe Wordpress hierarchy werkt, dit is heel belangrijk voor het bouwen van thema’s. Daarna heb ik wat schetsen gemaakt voor mijn pagina’s gebaseerd op opgezochte inspiraties. Vervolgens wat wireframes gemaakt zodat ik snel kon beginnen met de development fase. De plugins die ik voor mijn Wordpress gebruikte hielp me erg om het development proces te versnellen. ACF zorgde voor het maken van invoervelden in de achterkant van Wordpress. Hierdoor kon ik makkelijk data definiëren die ik nodig heb voor mijn eindresultaat. Met Timber kan ik makkelijker de content achterhalen voor mijn front-end. En de rest was de layout neerzetten met HTML en CSS."
@@ -101,6 +105,7 @@ import BlockText from '~/components/BlockText.vue';
 import Footer from '~/components/Footer.vue';
 import BlockGallery from '~/components/BlockGallery.vue';
 import BlockImage from '~/components/BlockImage.vue';
+import BlockLogo from '~/components/BlockLogo.vue';
 
 export default {
   // Used voor BlockGallery
@@ -123,6 +128,20 @@ export default {
           src: '/images/steven/sketch-results.png',
           alt: 'sketch of results page'
         },
+      ],
+      logos: [
+        {
+          src: '/images/steven/timber-logo.png',
+          alt: 'Timber logo',
+        },
+        {
+          src: '/images/steven/wp-logo.png',
+          alt: 'WordPress logo',
+        },
+        {
+          src: '/images/steven/acf-logo.png',
+          alt: 'ACF logo',
+        },
       ]
     }
   },
@@ -135,6 +154,7 @@ export default {
     Footer,
     BlockGallery,
     BlockImage,
+    BlockLogo,
   },
 }
 </script>

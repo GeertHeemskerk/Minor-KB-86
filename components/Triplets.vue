@@ -30,6 +30,7 @@ export default {
     width: 100%;
     height: auto;
     position: relative;
+    margin-bottom: 3rem;
   }
 
   @media only screen and (min-width: $mq-tablet) {
@@ -40,6 +41,7 @@ export default {
 
     img {
       width: 30%;
+      margin-bottom: 0;
     }
 
     img:nth-child(2) {

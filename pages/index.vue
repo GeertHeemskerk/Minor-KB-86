@@ -4,7 +4,7 @@
     <section class="content">
       <div class="content__wrapper">
         <div class="title__group">
-          <nuxt-link 
+          <nuxt-link
             to="/sanne"
             class="title__single title__single--hide"
             @mouseover.native="hover = 'sanne'; kb = false"
@@ -12,7 +12,7 @@
           >
             <span data-content="Sanne van Zeijl" aria-hidden="true"></span>Sanne van Zeijl
           </nuxt-link>
-          <nuxt-link 
+          <nuxt-link
             to="/steven"
             class="title__single title__single--hide"
             @mouseover.native="hover = 'steven'; kb = false"
@@ -20,13 +20,13 @@
           >
             <span data-content="Steven Wu" aria-hidden="true"></span>Steven Wu
           </nuxt-link>
-          <nuxt-link 
+          <nuxt-link
             to="/"
             class="title__single title__single--title"
           >
-            <span data-content="SSDG" aria-hidden="true"></span>SSDG
+            <span data-content="SSDG" aria-hidden="true"></span>KB-86 SSDG
           </nuxt-link>
-          <nuxt-link 
+          <nuxt-link
             to="/geert"
             class="title__single title__single--hide"
             @mouseover.native="hover = 'geert'; kb = false"
@@ -34,7 +34,7 @@
           >
             <span data-content="Geert Heemskerk" aria-hidden="true"></span>Geert Heemskerk
           </nuxt-link>
-          <nuxt-link 
+          <nuxt-link
             to="/djenna"
             class="title__single title__single--hide"
             @mouseover.native="hover = 'djenna'; kb = false"
@@ -119,7 +119,7 @@ export default {
     text-decoration: none;
     color: white;
     transition: transform .8s cubic-bezier(.23, 1, .32, 1);
-    
+
     &--hide {
       display: none;
     }
@@ -131,7 +131,7 @@ export default {
       overflow: hidden;
       transform: translateY(100%);
       transition: transform .8s cubic-bezier(.23, 1, .32, 1);
-      
+
       &::before {
         display: inline-block;
         content: attr(data-content);

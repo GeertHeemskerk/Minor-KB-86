@@ -24,7 +24,7 @@
             to="/"
             class="title__single title__single--title"
           >
-            <span data-content="SSDG" aria-hidden="true"></span>KB-86 SSDG
+            <span data-content="KB-86 SSDG" aria-hidden="true"></span>KB-86 SSDG
           </nuxt-link>
           <nuxt-link
             to="/geert"

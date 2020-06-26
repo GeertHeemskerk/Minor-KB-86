@@ -21,21 +21,24 @@
     <div v-if="open" class="container">
       <div class="container__wrapper">
         <div class="menu__items">
-          <nuxt-link to="/sanne" data-text="Sanne van Zeijl" @mouseover.native="sanne = true; kb = false"  @mouseleave.native="sanne = false; kb = true" >
-            Sanne van Zeijl
+          <nuxt-link to="/" data-text="KB-86 SSDG >>">
+            KB-86 SSDG >>
           </nuxt-link>
-          <nuxt-link to="/steven" data-text="Steven Wu" @mouseover.native="steven = true; kb = false"  @mouseleave.native="steven = false; kb = true">
-            Steven Wu
+          <nuxt-link to="/djenna" data-text="Djenna Bakker >>" @mouseover.native="djenna = true; kb = false"  @mouseleave.native="djenna = false; kb = true">
+            Djenna Bakker >>
           </nuxt-link>
-          <nuxt-link to="/" data-text="KB-86 SSDG">
-            KB-86 SSDG
+          <nuxt-link to="/geert" data-text="Geert Heemskerk >>" @mouseover.native="geert = true; kb = false"  @mouseleave.native="geert = false; kb = true">
+            Geert Heemskerk >>
           </nuxt-link>
-          <nuxt-link to="/djenna" data-text="Djenna Bakker" @mouseover.native="djenna = true; kb = false"  @mouseleave.native="djenna = false; kb = true">
-            Djenna Bakker
+
+          <nuxt-link to="/sanne" data-text="Sanne van Zeijl >>" @mouseover.native="sanne = true; kb = false"  @mouseleave.native="sanne = false; kb = true" >
+            Sanne van Zeijl >>
           </nuxt-link>
-          <nuxt-link to="/geert" data-text="Geert Heemskerk" @mouseover.native="geert = true; kb = false"  @mouseleave.native="geert = false; kb = true">
-            Geert Heemskerk
+          <nuxt-link to="/steven" data-text="Steven Wu >>" @mouseover.native="steven = true; kb = false"  @mouseleave.native="steven = false; kb = true">
+            Steven Wu  >>
           </nuxt-link>
+
+
         </div>
       </div>
       <div class="image__holder">
@@ -109,7 +112,7 @@ export default {
 
   &--personal {
     position: sticky;
-    
+
     .menu {
       color: black;
 

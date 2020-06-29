@@ -46,14 +46,14 @@
         <figure class="intro__figure">
           <img class="intro__media" :class="{ 'intro__media--hover': hover == 'sanne' }" src="~/assets/images/placeholder.png" alt="Foto van Sanne">
           <img class="intro__media" :class="{ 'intro__media--hover': hover == 'steven' }" src="~/assets/images/placeholder-landscape.jpg" alt="Foto van Steven">
-          <img class="intro__media" :class="{ 'intro__media--hover': hover == null }" src="~/assets/images/intro-image.png" alt="verf die samenkomt">
+          <img class="intro__media" :class="{ 'intro__media--hover': hover == null }" src="~/assets/images/intro-image.png" alt="Verf die samenkomt">
           <img class="intro__media" :class="{ 'intro__media--hover': hover == 'geert' }" src="~/assets/images/placeholder-portrait.jpg" alt="Foto van Geert">
           <img class="intro__media" :class="{ 'intro__media--hover': hover == 'djenna'}" src="~/assets/images/placeholder-portrait-girl.jpg" alt="Foto van Djenna">
         </figure>
         <section class="intro__text">
           <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'sanne' }">1 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
           <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'steven' }">2 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
-          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == null }">3 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == null }">De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
           <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'geert' }">4 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
           <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'djenna' }">5 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
         </section>
@@ -105,11 +105,13 @@ export default {
 
 .title {
   &__group {
-    position: absolute;
-    top: -1.4rem;
-    z-index: 2;
-    left: 50%;
-    transform: translateX(-50%);
+    // position: absolute;
+    // top: -1.4rem;
+    // z-index: 2;
+    // left: 50%;
+    // transform: translateX(-50%);
+    text-align: center;
+    margin-bottom: 1rem;
   }
 
   &__single {
@@ -163,7 +165,8 @@ export default {
 
   &__media {
     width: 100%;
-    height: 414px;
+    // height: 414px;
+    height: 300px;
     object-fit: cover;
     object-position: center;
     display: none;
@@ -174,16 +177,17 @@ export default {
   }
 
   &__text {
-    position: absolute;
-    bottom: -5rem;
-    width: 60%;
+    // position: absolute;
+    // bottom: -5rem;
+    width: 75%;
     text-align: center;
     z-index: 1;
-    left: 50%;
-    transform: translateX(-50%);
+    // left: 50%;
+    // transform: translateX(-50%);
     letter-spacing: 1px;
     font-size: 0.625rem;
     line-height: 185%;
+    margin: 1rem auto;
 
     &-content {
       display: none;
@@ -210,12 +214,17 @@ export default {
       margin: 2rem auto;
     }
 
+    &__media {
+      height: 414px;
+    }
+
     &__text {
       position: static;
       bottom: unset;
       transform: none;
       text-align: center;
       margin: 0 auto;
+      font-size: 1rem;
     }
   }
 }
@@ -239,6 +248,7 @@ export default {
       left: 0;
       top: 50%;
       transform: translateY(-50%);
+      z-index: 2;
     }
 
     &__single {
@@ -341,9 +351,16 @@ export default {
 }
 
 @media(min-width: $mq-xl-laptop) {
+
+  .title {
+    &__single {
+      font-size: 4rem;
+    }
+  }
+
   .intro {
     &__figure {
-      height: 550px;
+      height: 620px;
     }
   }
 

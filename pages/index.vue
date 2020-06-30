@@ -47,7 +47,7 @@
           <img class="intro__media" :class="{ 'intro__media--hover': hover == 'sanne' }" src="~/assets/images/placeholder.png" alt="Foto van Sanne">
           <img class="intro__media" :class="{ 'intro__media--hover': hover == 'steven' }" src="~/assets/images/placeholder-landscape.jpg" alt="Foto van Steven">
           <video class="intro__media" :class="{ 'intro__media--hover': hover == null }" autoplay loop muted playsinline >
-            <source src="~/assets/videos/homevideo.mp4">
+            <source src="~/assets/videos/homevideo.mp4" type="video/mp4">
           </video>
           <img class="intro__media" :class="{ 'intro__media--hover': hover == 'geert' }" src="~/assets/images/placeholder-portrait.jpg" alt="Foto van Geert">
           <img class="intro__media" :class="{ 'intro__media--hover': hover == 'djenna'}" src="~/assets/images/placeholder-portrait-girl.jpg" alt="Foto van Djenna">

@@ -21,43 +21,68 @@
     <div class="container" :class="{open: open}">
       <div class="container__wrapper">
         <div class="menu__items">
-          <nuxt-link class="menu__link" to="/" data-text="Minor VD&FD">
+          <nuxt-link 
+            class="menu__link" 
+            to="/" 
+          >
             <span data-content="Minor VD&FD" aria-hidden="true"></span>Minor VD&FD
             <Icons class-name="link__icon" type="arrow-right" />
           </nuxt-link>
-          <nuxt-link class="menu__link" to="/sanne" data-text="Sanne van Zeijl" @mouseover.native="sanne = true; kb = false"  @mouseleave.native="sanne = false; kb = true" >
+          <nuxt-link 
+            class="menu__link" 
+            to="/sanne"
+            @mouseover.native="hover = 'sanne'; kb = false"
+            @mouseleave.native="hover = null; kb = true"
+            ref="el"
+          >
             <span data-content="Sanne van Zeijl" aria-hidden="true"></span>Sanne van Zeijl
             <Icons class-name="link__icon" type="arrow-right" />
           </nuxt-link>
-          <nuxt-link class="menu__link" to="/steven" data-text="Steven Wu" @mouseover.native="steven = true; kb = false"  @mouseleave.native="steven = false; kb = true">
+          <nuxt-link 
+            class="menu__link" 
+            to="/steven" 
+            @mouseover.native="hover = 'steven'; kb = false"
+            @mouseleave.native="hover = null; kb = true"
+          >
             <span data-content="Steven Wu" aria-hidden="true"></span>Steven Wu
             <Icons class-name="link__icon" type="arrow-right" />
           </nuxt-link>
-          <nuxt-link class="menu__link" to="/djenna" data-text="Djenna Bakker" @mouseover.native="djenna = true; kb = false"  @mouseleave.native="djenna = false; kb = true">
+          <nuxt-link 
+            class="menu__link"
+            to="/djenna"
+            @mouseover.native="hover = 'djenna'; kb = false"
+            @mouseleave.native="hover = null; kb = true"
+          >
             <span data-content="Djenna Bakker" aria-hidden="true"></span>Djenna Bakker
             <Icons class-name="link__icon" type="arrow-right" />
           </nuxt-link>
-          <nuxt-link class="menu__link" to="/geert" data-text="Geert Heemskerk" @mouseover.native="geert = true; kb = false"  @mouseleave.native="geert = false; kb = true">
+          <nuxt-link 
+            class="menu__link" 
+            to="/geert"
+            @mouseover.native="hover = 'geert'; kb = false"
+            @mouseleave.native="hover = null; kb = true"
+          >
             <span data-content="Geert Heemskerk" aria-hidden="true"></span>Geert Heemskerk
             <Icons class-name="link__icon" type="arrow-right" />
           </nuxt-link>
+          <button class="test" @click="test">test</button>
         </div>
       </div>
       <div class="image__holder">
         <figure>
-          <img  v-bind:class="{ active: sanne }" id="sanne" src="~/assets/images/imgTest.png" alt="imgTest">
+          <img :class="{ active: hover == 'sanne' }" id="sanne" src="~/assets/images/imgTest.png" alt="imgTest" />
         </figure>
         <figure>
-          <img v-bind:class="{ active: steven }" id="steven" src="~/assets/images/placeholder.png" alt="imgTest">
+          <img :class="{ active: hover == 'steven'}" id="steven" src="~/assets/images/placeholder.png" alt="imgTest" />
         </figure>
         <figure>
-          <img v-bind:class="{ active: kb }" id="kb" src="~/assets/images/intro-image.png" alt="imgTest">
+          <img :class="{ active: hover == null }" id="kb" src="~/assets/images/intro-image.png" alt="imgTest" />
         </figure>
         <figure>
-          <img v-bind:class="{ active: djenna }" id="djenna" src="~/assets/images/imgTest.png" alt="imgTest">
+          <img :class="{ active: hover == 'djenna' }" id="djenna" src="~/assets/images/imgTest.png" alt="imgTest" />
         </figure>
         <figure>
-          <img v-bind:class="{ active: geert }" id="geert" src="~/assets/images/placeholder.png" alt="imgTest">
+          <img :class="{ active: hover == 'geert' }" id="geert" src="~/assets/images/placeholder.png" alt="imgTest" />
         </figure>
       </div>
     </div>
@@ -70,7 +95,7 @@ export default {
   data() {
     return {
       open: false,
-      sanne: false,
+      hover: 'sanne',
       steven: false,
       kb: true,
       djenna: false,
@@ -83,10 +108,20 @@ export default {
   props: {
     className: String
   },
+  methods: {
+    test() {
+      console.log(this.$refs.el);
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
 
+.test {
+  position: absolute;
+  z-index: 100;
+  color: red;
+}
 .nuxt-link-exact-active {
   color: white;
 
@@ -261,19 +296,6 @@ a {
     position: absolute;
   }
 
-  img {
-    transition: 1.3s;
-    opacity: 0;
-    transform: scale(0.8)
-  }
-
-  img.active {
-    transition-delay: 0.55s;
-    animation: zoomIn 1.3s;
-    opacity: 1;
-    transform: scale(1.0);
-  }
-
   a {
     font-size: 4rem;
     margin: 4.5rem 0;
@@ -313,6 +335,32 @@ a {
 }
 
 @media only screen and (min-width: $mq-l-laptop) {
+  figure {
+    width: 80%;
+    max-width: 1040px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    opacity: 0;
+    transform: scale(0.6) translateX(15%);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+
+    &.active { 
+      display: initial;
+      z-index: 1;
+      opacity: 1;
+      transition-delay: .2s;
+      transform: scale(1) translateX(0);
+    }
+  }
+
   .menu {
     &__link {
       position: relative;
@@ -369,6 +417,15 @@ a {
 
   .link__icon {
     display: none;
+  }
+}
+
+@media only screen and (min-width: $mq-xl-laptop) {
+  .menu {
+    &__link {
+      font-size: 4rem;
+      margin: 5rem 0;
+    }
   }
 }
 

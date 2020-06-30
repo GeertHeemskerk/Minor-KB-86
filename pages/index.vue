@@ -7,16 +7,16 @@
           <nuxt-link
             to="/sanne"
             class="title__single title__single--hide"
-            @mouseover.native="hover = 'sanne'; kb = false"
-            @mouseleave.native="hover = null; kb = true"
+            @mouseover.native="hover = 'sanne';"
+            @mouseleave.native="hover = null;"
           >
             <span data-content="Sanne van Zeijl" aria-hidden="true"></span>Sanne van Zeijl
           </nuxt-link>
           <nuxt-link
             to="/steven"
             class="title__single title__single--hide"
-            @mouseover.native="hover = 'steven'; kb = false"
-            @mouseleave.native="hover = null; kb = true"
+            @mouseover.native="hover = 'steven';"
+            @mouseleave.native="hover = null;"
           >
             <span data-content="Steven Wu" aria-hidden="true"></span>Steven Wu
           </nuxt-link>
@@ -29,16 +29,16 @@
           <nuxt-link
             to="/djenna"
             class="title__single title__single--hide"
-            @mouseover.native="hover = 'djenna'; kb = false"
-            @mouseleave.native="hover = null; kb = true"
+            @mouseover.native="hover = 'djenna';"
+            @mouseleave.native="hover = null;"
           >
             <span data-content="Djenna Bakker" aria-hidden="true"></span>Djenna Bakker
           </nuxt-link>
           <nuxt-link
             to="/geert"
             class="title__single title__single--hide"
-            @mouseover.native="hover = 'geert'; kb = false"
-            @mouseleave.native="hover = null; kb = true"
+            @mouseover.native="hover = 'geert';"
+            @mouseleave.native="hover = null;"
           >
             <span data-content="Geert Heemskerk" aria-hidden="true"></span>Geert Heemskerk
           </nuxt-link>

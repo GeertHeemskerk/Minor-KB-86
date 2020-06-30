@@ -15,7 +15,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
 .section{
   &__wrapper {
     display: flex;
@@ -47,28 +46,37 @@ export default {
   }
 }
 
-  @media(min-width: $mq-s-laptop) {
-    .block {
-      &__divider {
-        height: 2.2rem;
-      }
-      &__media {
-        width: 160px;
-        height: 160px;
-      }
+@media(min-width: $mq-s-laptop) {
+  .block {
+    &__divider {
+      height: 2.2rem;
+    }
+
+    &__media {
+      width: 160px;
+      height: 160px;
     }
   }
+}
 
-  @media only screen and (min-width: $mq-xl-laptop) {
-    .block {
-      &__divider {
-        margin: 2rem auto;
-      }
-      &__media {
-        width: 180px;
-        height: 180px;
-      }
+@media only screen and (min-width: $mq-l-laptop) {
+  .section {
+    &__wrapper {
+      margin-top: 2.5rem;
     }
   }
+}
 
+@media only screen and (min-width: $mq-xl-laptop) {
+  .block {
+    &__divider {
+      margin: 2rem auto;
+    }
+
+    &__media {
+      width: 180px;
+      height: 180px;
+    }
+  }
+}
 </style>

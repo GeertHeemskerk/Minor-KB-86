@@ -3,7 +3,7 @@
     <header class="header" :class="[className, { 'header--open': open }]">
       <div class="header__wrapper">
           <transition name="slide-fade">
-            <button class="menu__button button--clean" v-if="!open" key="on" @click="open = true">
+            <button class="menu__button button--clean" :class="this.$route.name" v-if="!open" key="on" @click="open = true">
               <div class="menu">
                 <p class="menu__text">Menu</p>
                 <Icons class-name="menu__icon" type="menu" />
@@ -30,15 +30,12 @@
           <nuxt-link to="/geert" data-text="Geert Heemskerk" @mouseover.native="geert = true; kb = false"  @mouseleave.native="geert = false; kb = true">
             Geert Heemskerk
           </nuxt-link>
-
           <nuxt-link to="/sanne" data-text="Sanne van Zeijl" @mouseover.native="sanne = true; kb = false"  @mouseleave.native="sanne = false; kb = true" >
             Sanne van Zeijl
           </nuxt-link>
           <nuxt-link to="/steven" data-text="Steven Wu" @mouseover.native="steven = true; kb = false"  @mouseleave.native="steven = false; kb = true">
             Steven Wu
           </nuxt-link>
-
-
         </div>
       </div>
       <div class="image__holder">
@@ -136,6 +133,25 @@ export default {
         stroke: white;
       }
     }
+  }
+}
+
+
+button {
+  &.sanne:hover {
+    cursor: url("~assets/cursors/hand-sanne.png"), auto;
+  }
+
+  &.steven:hover {
+    cursor: url("~assets/cursors/hand-steven.png"), auto;
+  }
+
+  &.geert:hover {
+    cursor: url("~assets/cursors/hand-geert.png"), auto;
+  }
+
+  &.djenna:hover {
+    cursor: url("~assets/cursors/hand-djenna.png"), auto;
   }
 }
 

@@ -19,40 +19,36 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
 a.sanne {
   color: $c-sanne;
-}
 
+  &:hover {
+    cursor: url("~assets/cursors/hand-sanne.png"), auto;
+  }
+}
 
 a.steven {
   color: $c-steven-darker;
-}
 
+  &:hover {
+    cursor: url("~assets/cursors/hand-steven.png"), auto;
+  }
+}
 
 a.geert {
   color: $c-geert;
-}
 
+  &:hover {
+    cursor: url("~assets/cursors/hand-geert.png"), auto;
+  }
+}
 
 a.djenna {
- color: $c-djenna;
-}
+  color: $c-djenna;
 
-a.sanne:hover{
-  cursor: url("~assets/cursors/hand-sanne.png"), auto;
-}
-
-a.steven:hover{
-  cursor: url("~assets/cursors/hand-steven.png"), auto;
-}
-
-a.geert:hover{
-  cursor: url("~assets/cursors/hand-geert.png"), auto;
-}
-
-a.djenna:hover{
-  cursor: url("~assets/cursors/hand-djenna.png"), auto;
+  &:hover {
+    cursor: url("~assets/cursors/hand-djenna.png"), auto;
+  }
 }
 
 .section {
@@ -102,9 +98,6 @@ a.djenna:hover{
 }
 
 @media(min-width: $mq-l-laptop) {}
-
 @media(min-width: $mq-xl-laptop) {}
-
 @media(min-width: $mq-desktop) {}
-
 </style>

@@ -61,6 +61,22 @@ export default {
     color: black;
   }
 
+  a.sanne:hover {
+    cursor: url("~assets/cursors/hand-sanne.png"), auto;
+  }
+
+  a.steven:hover {
+    cursor: url("~assets/cursors/hand-steven.png"), auto;
+  }
+
+  a.geert:hover {
+    cursor: url("~assets/cursors/hand-geert.png"), auto;
+  }
+
+  a.djenna:hover {
+    cursor: url("~assets/cursors/hand-djenna.png"), auto;
+  }
+
   @media only screen and (min-width: $mq-tablet) {
     .section__wrapper {
       padding: 4rem;

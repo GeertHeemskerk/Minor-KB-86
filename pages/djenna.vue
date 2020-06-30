@@ -117,8 +117,13 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .section__personal{
+  .section__personal {
     cursor: url("~assets/cursors/cursor-djenna.png"), auto;
-  }
 
+    button, a {
+      &:hover {
+        cursor: url("~assets/cursors/hand-djenna.png"), auto;
+      }
+    }
+  }
 </style>

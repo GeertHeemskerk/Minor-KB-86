@@ -117,5 +117,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+  .section__personal{
+    cursor: url("~assets/cursors/cursor-djenna.png"), auto;
+  }
 
 </style>

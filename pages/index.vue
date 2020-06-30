@@ -75,7 +75,7 @@ export default {
   }
 }
 </script>
-
+  
 <style scoped lang="scss">
 .main {
   background-color: $c-background;
@@ -142,7 +142,8 @@ export default {
     }
 
     &:hover {
-      transform: translateY(8%) translateX(-3%);
+      cursor: url("~assets/cursors/hand-home.png"), auto;
+      // transform: translateY(8%) translateX(-3%);
 
       span {
         transform: translateY(0);

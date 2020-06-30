@@ -1,6 +1,10 @@
 <template>
   <section class="section__personal">
     <Header class-name="header--personal" />
+    <Profile
+      image="/images/sanne/profile.png"
+      alt-image="Profiel foto"
+    />
     <ProjectIntro
       author="sanne"
       title= "Sanne"
@@ -47,6 +51,7 @@
 </template>
 <script>
 import Header from '~/components/Header.vue';
+import Profile from '~/components/Profile.vue';
 import BlockIntro from '~/components/BlockIntro.vue';
 import ProjectIntro from '~/components/ProjectIntro.vue';
 import BlokBlocks from '~/components/BlokBlocks.vue';
@@ -58,6 +63,7 @@ import Footer from '~/components/Footer.vue';
 export default {
   components: {
     Header,
+    Profile,
     ProjectIntro,
     MovieBlock,
     BlockIntro,

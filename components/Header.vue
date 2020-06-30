@@ -2,7 +2,7 @@
   <div>
     <header class="header" :class="[className, { 'header--open': open }]">
       <div class="header__wrapper">
-        <nuxt-link to="/" class="menu__button menu__button--home button--clean">
+        <nuxt-link to="/" class="menu__button menu__button--home button--clean" :class="this.$route.name">
           <div class="menu">
             <Icons class-name="menu__icon" type="home" />
             <p class="menu__text menu__text--home">Home</p>
@@ -142,31 +142,28 @@ export default {
   }
 }
 
-
-button {
-  &.sanne:hover {
-    cursor: url("~assets/cursors/hand-sanne.png"), auto;
-  }
-
-  &.steven:hover {
-    cursor: url("~assets/cursors/hand-steven.png"), auto;
-  }
-
-  &.geert:hover {
-    cursor: url("~assets/cursors/hand-geert.png"), auto;
-  }
-
-  &.djenna:hover {
-    cursor: url("~assets/cursors/hand-djenna.png"), auto;
-  }
-}
-
 .menu {
   display: flex;
   align-items: center;
 
   &__button {
     cursor: pointer;
+
+    &.sanne:hover {
+      cursor: url("~assets/cursors/hand-sanne.png"), auto;
+    }
+
+    &.steven:hover {
+      cursor: url("~assets/cursors/hand-steven.png"), auto;
+    }
+
+    &.geert:hover {
+      cursor: url("~assets/cursors/hand-geert.png"), auto;
+    }
+
+    &.djenna:hover {
+      cursor: url("~assets/cursors/hand-djenna.png"), auto;
+    }
 
     &--home {
       display: block;

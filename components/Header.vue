@@ -101,9 +101,9 @@ export default {
 }
 
 .header {
+  position: relative;
   height: 85px;
   width: 100%;
-  position: absolute;
   top: 0;
   z-index: 10;
 
@@ -117,6 +117,7 @@ export default {
 
     &.open {
       height: 100vh;
+      z-index: 10;
     }
   }
 
@@ -156,7 +157,7 @@ export default {
   }
 
   &--open {
-    position: absolute;
+    background-color: $c-background;
 
     .menu {
       color: white;
@@ -192,8 +193,8 @@ export default {
 .link {
   &__icon {
     margin-left: .3rem;
-    // width: 1.4rem;
-    // height: 1.4rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 
@@ -218,16 +219,17 @@ export default {
 .container {
   position: relative;
   margin: 0 auto;
-  min-height: 100vh;
+  height: calc(100% - 85px); // 100 - Height of header
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-color: $c-background;
   z-index: 9;
+  opacity: 0;
 
   &.open {
-    height: 100vh;
+    opacity: 1;
   }
 }
 

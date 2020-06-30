@@ -2,21 +2,27 @@
   <div>
     <header class="header" :class="[className, { 'header--open': open }]">
       <div class="header__wrapper">
-          <transition name="slide-fade">
-            <button class="menu__button button--clean" v-if="!open" key="on" @click="open = true">
-              <div class="menu">
-                <p class="menu__text">Menu</p>
-                <Icons class-name="menu__icon" type="menu" />
-              </div>
-            </button>
-            <button class="menu__button button--clean" v-else key="off" @click="open = false">
-              <div class="menu">
-                <p class="menu__text">Close Menu</p>
-                <Icons class-name="menu__icon" type="menu-close" />
-              </div>
-            </button>
-          </transition>
-        </div>
+        <nuxt-link to="/" class="menu__button menu__button--home button--clean" :class="this.$route.name">
+          <div class="menu">
+            <Icons class-name="menu__icon" type="home" />
+            <p class="menu__text menu__text--home">Home</p>
+          </div>
+        </nuxt-link>
+        <transition name="slide-fade">
+          <button class="menu__button button--clean" :class="this.$route.name" v-if="!open" key="on" @click="open = true">
+            <div class="menu">
+              <p class="menu__text">Menu</p>
+              <Icons class-name="menu__icon" type="menu" />
+            </div>
+          </button>
+          <button class="menu__button button--clean" v-else key="off" @click="open = false">
+            <div class="menu">
+              <p class="menu__text">Close Menu</p>
+              <Icons class-name="menu__icon" type="menu-close" />
+            </div>
+          </button>
+        </transition>
+      </div>
     </header>
     <div v-if="open" class="container">
       <div class="container__wrapper">
@@ -30,15 +36,12 @@
           <nuxt-link to="/geert" data-text="Geert Heemskerk" @mouseover.native="geert = true; kb = false"  @mouseleave.native="geert = false; kb = true">
             Geert Heemskerk
           </nuxt-link>
-
           <nuxt-link to="/sanne" data-text="Sanne van Zeijl" @mouseover.native="sanne = true; kb = false"  @mouseleave.native="sanne = false; kb = true" >
             Sanne van Zeijl
           </nuxt-link>
           <nuxt-link to="/steven" data-text="Steven Wu" @mouseover.native="steven = true; kb = false"  @mouseleave.native="steven = false; kb = true">
             Steven Wu
           </nuxt-link>
-
-
         </div>
       </div>
       <div class="image__holder">
@@ -94,7 +97,7 @@ export default {
   &__wrapper {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 90%;
     margin: 0 auto;
     height: 100%;
@@ -145,13 +148,39 @@ export default {
 
   &__button {
     cursor: pointer;
+
+    &.sanne:hover {
+      cursor: url("~assets/cursors/hand-sanne.png"), auto;
+    }
+
+    &.steven:hover {
+      cursor: url("~assets/cursors/hand-steven.png"), auto;
+    }
+
+    &.geert:hover {
+      cursor: url("~assets/cursors/hand-geert.png"), auto;
+    }
+
+    &.djenna:hover {
+      cursor: url("~assets/cursors/hand-djenna.png"), auto;
+    }
+
+    &--home {
+      display: block;
+      height: initial;
+      margin: 0;
+    }
   }
 
   &__text {
     font-family: $f-heading;
-    font-size: 0.625rem;
+    font-size: 0.7rem;
     letter-spacing: 1px;
-    padding-right: 1rem;
+    padding-right: .3rem;
+
+    &--home {
+      padding-left: .3rem;
+    }
   }
 
   &__icon {

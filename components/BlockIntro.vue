@@ -39,19 +39,19 @@ h2.djenna, a.djenna {
  color: $c-djenna;
 }
 
-a.sanne:hover{
+a.sanne:hover {
   cursor: url("~assets/cursors/hand-sanne.png"), auto;
 }
 
-a.steven:hover{
+a.steven:hover {
   cursor: url("~assets/cursors/hand-steven.png"), auto;
 }
 
-a.geert:hover{
+a.geert:hover {
   cursor: url("~assets/cursors/hand-geert.png"), auto;
 }
 
-a.djenna:hover{
+a.djenna:hover {
   cursor: url("~assets/cursors/hand-djenna.png"), auto;
 }
 

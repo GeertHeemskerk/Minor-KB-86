@@ -123,5 +123,4 @@ export default {
       width: 375px;
     }
   }
-
 </style>

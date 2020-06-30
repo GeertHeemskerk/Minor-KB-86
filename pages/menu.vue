@@ -27,9 +27,9 @@
       <figure>
         <img v-bind:class="{ active: steven }" id="steven" src="~/assets/images/placeholder.png" alt="imgTest">
       </figure>
-      <figure>
-        <img v-bind:class="{ active: kb }" id="kb" src="~/assets/images/intro-image.png" alt="imgTest">
-      </figure>
+      <video autoplay>
+        <source src="~/assets/videos/homevideo.mp4">
+      </video>
       <figure>
         <img v-bind:class="{ active: djenna }" id="djenna" src="~/assets/images/imgTest.png" alt="imgTest">
       </figure>

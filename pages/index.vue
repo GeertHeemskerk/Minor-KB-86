@@ -46,7 +46,7 @@
         <figure class="intro__figure">
           <img class="intro__media" :class="{ 'intro__media--hover': hover == 'sanne' }" src="~/assets/images/placeholder.png" alt="Foto van Sanne">
           <img class="intro__media" :class="{ 'intro__media--hover': hover == 'steven' }" src="~/assets/images/placeholder-landscape.jpg" alt="Foto van Steven">
-          <video class="intro__media" :class="{ 'intro__media--hover': hover == null }" autoplay loop>
+          <video class="intro__media" :class="{ 'intro__media--hover': hover == null }" autoplay loop muted playsinline >
             <source src="~/assets/videos/homevideo.mp4">
           </video>
           <img class="intro__media" :class="{ 'intro__media--hover': hover == 'geert' }" src="~/assets/images/placeholder-portrait.jpg" alt="Foto van Geert">

@@ -2,21 +2,27 @@
   <div>
     <header class="header" :class="[className, { 'header--open': open }]">
       <div class="header__wrapper">
-          <transition name="slide-fade">
-            <button class="menu__button button--clean" :class="this.$route.name" v-if="!open" key="on" @click="open = true">
-              <div class="menu">
-                <p class="menu__text">Menu</p>
-                <Icons class-name="menu__icon" type="menu" />
-              </div>
-            </button>
-            <button class="menu__button button--clean" v-else key="off" @click="open = false">
-              <div class="menu">
-                <p class="menu__text">Close Menu</p>
-                <Icons class-name="menu__icon" type="menu-close" />
-              </div>
-            </button>
-          </transition>
-        </div>
+        <nuxt-link to="/" class="menu__button menu__button--home button--clean">
+          <div class="menu">
+            <Icons class-name="menu__icon" type="home" />
+            <p class="menu__text menu__text--home">Home</p>
+          </div>
+        </nuxt-link>
+        <transition name="slide-fade">
+          <button class="menu__button button--clean" :class="this.$route.name" v-if="!open" key="on" @click="open = true">
+            <div class="menu">
+              <p class="menu__text">Menu</p>
+              <Icons class-name="menu__icon" type="menu" />
+            </div>
+          </button>
+          <button class="menu__button button--clean" v-else key="off" @click="open = false">
+            <div class="menu">
+              <p class="menu__text">Close Menu</p>
+              <Icons class-name="menu__icon" type="menu-close" />
+            </div>
+          </button>
+        </transition>
+      </div>
     </header>
     <div v-if="open" class="container">
       <div class="container__wrapper">
@@ -91,7 +97,7 @@ export default {
   &__wrapper {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 90%;
     margin: 0 auto;
     height: 100%;
@@ -161,13 +167,23 @@ button {
 
   &__button {
     cursor: pointer;
+
+    &--home {
+      display: block;
+      height: initial;
+      margin: 0;
+    }
   }
 
   &__text {
     font-family: $f-heading;
-    font-size: 0.625rem;
+    font-size: 0.7rem;
     letter-spacing: 1px;
-    padding-right: 1rem;
+    padding-right: .3rem;
+
+    &--home {
+      padding-left: .3rem;
+    }
   }
 
   &__icon {

@@ -3,13 +3,13 @@
     <header class="header" :class="[className, { 'header--open': open }]">
       <div class="header__wrapper">
           <transition name="slide-fade">
-            <button class="menu__button button--clean" v-if="!open" key="on" @click="open = true">
+            <button class="menu__button button--clean" v-if="!open" key="on" @click="openMenu">
               <div class="menu">
                 <p class="menu__text">Menu</p>
                 <Icons class-name="menu__icon" type="menu" />
               </div>
             </button>
-            <button class="menu__button button--clean" v-else key="off" @click="open = false">
+            <button class="menu__button button--clean" v-else key="off" @click="closeMenu">
               <div class="menu">
                 <p class="menu__text">Close Menu</p>
                 <Icons class-name="menu__icon" type="menu-close" />
@@ -24,6 +24,8 @@
           <nuxt-link 
             class="menu__link" 
             to="/" 
+            @mouseover.native="hover = null;"
+            @mouseleave.native="hover = route;"
           >
             <span data-content="Minor VD&FD" aria-hidden="true"></span>Minor VD&FD
             <Icons class-name="link__icon" type="arrow-right" />
@@ -31,9 +33,8 @@
           <nuxt-link 
             class="menu__link" 
             to="/sanne"
-            @mouseover.native="hover = 'sanne'; kb = false"
-            @mouseleave.native="hover = null; kb = true"
-            ref="el"
+            @mouseover.native="hover = 'sanne';"
+            @mouseleave.native="hover = route;"
           >
             <span data-content="Sanne van Zeijl" aria-hidden="true"></span>Sanne van Zeijl
             <Icons class-name="link__icon" type="arrow-right" />
@@ -41,8 +42,8 @@
           <nuxt-link 
             class="menu__link" 
             to="/steven" 
-            @mouseover.native="hover = 'steven'; kb = false"
-            @mouseleave.native="hover = null; kb = true"
+            @mouseover.native="hover = 'steven';"
+            @mouseleave.native="hover = route;"
           >
             <span data-content="Steven Wu" aria-hidden="true"></span>Steven Wu
             <Icons class-name="link__icon" type="arrow-right" />
@@ -50,8 +51,8 @@
           <nuxt-link 
             class="menu__link"
             to="/djenna"
-            @mouseover.native="hover = 'djenna'; kb = false"
-            @mouseleave.native="hover = null; kb = true"
+            @mouseover.native="hover = 'djenna';"
+            @mouseleave.native="hover = route;"
           >
             <span data-content="Djenna Bakker" aria-hidden="true"></span>Djenna Bakker
             <Icons class-name="link__icon" type="arrow-right" />
@@ -59,13 +60,12 @@
           <nuxt-link 
             class="menu__link" 
             to="/geert"
-            @mouseover.native="hover = 'geert'; kb = false"
-            @mouseleave.native="hover = null; kb = true"
+            @mouseover.native="hover = 'geert';"
+            @mouseleave.native="hover = route;"
           >
             <span data-content="Geert Heemskerk" aria-hidden="true"></span>Geert Heemskerk
             <Icons class-name="link__icon" type="arrow-right" />
           </nuxt-link>
-          <button class="test" @click="test">test</button>
         </div>
       </div>
       <div class="image__holder">
@@ -95,11 +95,8 @@ export default {
   data() {
     return {
       open: false,
-      hover: 'sanne',
-      steven: false,
-      kb: true,
-      djenna: false,
-      geert: false,
+      hover: null,
+      route: '',
     }
   },
   components: {
@@ -109,19 +106,18 @@ export default {
     className: String
   },
   methods: {
-    test() {
-      console.log(this.$refs.el);
+    openMenu() {
+      this.route = this.$route.name;
+      this.open = !this.open;
+      this.hover = this.route;
+    },
+    closeMenu() {
+      this.open = !this.open;
     }
   }
 }
 </script>
 <style lang="scss" scoped>
-
-.test {
-  position: absolute;
-  z-index: 100;
-  color: red;
-}
 .nuxt-link-exact-active {
   color: white;
 

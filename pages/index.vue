@@ -24,7 +24,7 @@
             to="/"
             class="title__single title__single--title"
           >
-            <span data-content="KB-86 SSDG" aria-hidden="true"></span>KB-86 SSDG
+            <span data-content="Minor VD&FD" aria-hidden="true"></span>Minor VD&FD
           </nuxt-link>
           <nuxt-link
             to="/djenna"
@@ -128,7 +128,7 @@ export default {
 
     span {
       position: absolute;
-      top: 0;
+      // top: 0;
       left: 0;
       overflow: hidden;
       transform: translateY(100%);

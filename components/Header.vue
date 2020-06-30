@@ -1,5 +1,5 @@
 <template>
-  <div class="header__section" :class="{open: open}" @scroll="handleScroll">
+  <div class="header__section" :class="{open: open}">
     <header class="header" :class="[className, { 'header--open': open }]">
       <div class="header__wrapper">
           <transition name="slide-fade">
@@ -21,24 +21,24 @@
     <div class="container" :class="{open: open}">
       <div class="container__wrapper">
         <div class="menu__items">
-          <nuxt-link to="/" data-text="KB-86 SSDG >>">
-            KB-86 SSDG
+          <nuxt-link class="menu__link" to="/" data-text="Minor VD&FD">
+            <span data-content="Minor VD&FD" aria-hidden="true"></span>Minor VD&FD
             <Icons class-name="link__icon" type="arrow-right" />
           </nuxt-link>
-          <nuxt-link to="/sanne" data-text="Sanne van Zeijl >>" @mouseover.native="sanne = true; kb = false"  @mouseleave.native="sanne = false; kb = true" >
-            Sanne van Zeijl
+          <nuxt-link class="menu__link" to="/sanne" data-text="Sanne van Zeijl" @mouseover.native="sanne = true; kb = false"  @mouseleave.native="sanne = false; kb = true" >
+            <span data-content="Sanne van Zeijl" aria-hidden="true"></span>Sanne van Zeijl
             <Icons class-name="link__icon" type="arrow-right" />
           </nuxt-link>
-          <nuxt-link to="/steven" data-text="Steven Wu >>" @mouseover.native="steven = true; kb = false"  @mouseleave.native="steven = false; kb = true">
-            Steven Wu
+          <nuxt-link class="menu__link" to="/steven" data-text="Steven Wu" @mouseover.native="steven = true; kb = false"  @mouseleave.native="steven = false; kb = true">
+            <span data-content="Steven Wu" aria-hidden="true"></span>Steven Wu
             <Icons class-name="link__icon" type="arrow-right" />
           </nuxt-link>
-          <nuxt-link to="/djenna" data-text="Djenna Bakker >>" @mouseover.native="djenna = true; kb = false"  @mouseleave.native="djenna = false; kb = true">
-            Djenna Bakker
+          <nuxt-link class="menu__link" to="/djenna" data-text="Djenna Bakker" @mouseover.native="djenna = true; kb = false"  @mouseleave.native="djenna = false; kb = true">
+            <span data-content="Djenna Bakker" aria-hidden="true"></span>Djenna Bakker
             <Icons class-name="link__icon" type="arrow-right" />
           </nuxt-link>
-          <nuxt-link to="/geert" data-text="Geert Heemskerk >>" @mouseover.native="geert = true; kb = false"  @mouseleave.native="geert = false; kb = true">
-            Geert Heemskerk
+          <nuxt-link class="menu__link" to="/geert" data-text="Geert Heemskerk" @mouseover.native="geert = true; kb = false"  @mouseleave.native="geert = false; kb = true">
+            <span data-content="Geert Heemskerk" aria-hidden="true"></span>Geert Heemskerk
             <Icons class-name="link__icon" type="arrow-right" />
           </nuxt-link>
         </div>
@@ -83,11 +83,6 @@ export default {
   props: {
     className: String
   },
-  methods: {
-    handleScroll() {
-      console.log('test');
-    },
-  }
 }
 </script>
 <style lang="scss" scoped>
@@ -234,7 +229,7 @@ export default {
 }
 
 a {
-  color: rgba($c-text, 0.5);
+  color: rgba($c-text, .5);
   text-decoration: none;
   display: flex;
   margin: 2.5rem 0rem;
@@ -248,6 +243,19 @@ a {
   display: none;
 }
 
+@media only screen and (min-width: $mq-tablet) {
+  a {
+    font-size: 3rem; 
+    margin: 3.5rem 0;
+  }
+
+  .link__icon {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
+  }
+}
+
 @media only screen and (min-width: $mq-s-laptop) {
   figure {
     position: absolute;
@@ -259,7 +267,7 @@ a {
     transform: scale(0.8)
   }
 
-  img.active{
+  img.active {
     transition-delay: 0.55s;
     animation: zoomIn 1.3s;
     opacity: 1;
@@ -267,61 +275,82 @@ a {
   }
 
   a {
-    font-size: 2rem;
-    height: 2rem;
-  }
-
-  a:before {
-    content: attr(data-text);
-    color: $c-text;
-    position: absolute;
-    height: 0;
-    overflow: hidden;
-    transition: 0.8s;
-    word-break: keep-all;
-  }
-
-  a:hover:before {
-    height: 2.5rem;
+    font-size: 4rem;
+    margin: 4.5rem 0;
   }
 
   .container {
     justify-content: center;
-    align-items: left;
     text-align: left;
 
     &__wrapper {
-      position: absolute;
+      // position: absolute;
       margin: 0rem 4.5rem;
       left: 0;
       z-index: 1;
     }
   }
 
-  .image__holder {
-    position: absolute;
-    visibility: visible;
-    display: block;
-    width: 880px;
-    height: 540px;
-    margin: 0rem 0rem 0rem 2rem;
-  }
+  // .image__holder {
+  //   position: absolute;
+  //   visibility: visible;
+  //   display: block;
+  //   width: 880px;
+  //   height: 540px;
+  //   margin: 0rem 0rem 0rem 2rem;
+  // }
 
   .menu {
     &__button {
       display: none;
     }
   }
+
+  .link__icon {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 @media only screen and (min-width: $mq-l-laptop) {
-  a {
-    font-size: 2.4rem;
-    margin: 4rem 0;
+  .menu {
+    &__link {
+      position: relative;
+      transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+
+      &:hover {
+        transform: translateY(8%) translateX(-3%);
+
+        span {
+          transform: translateY(0);
+          
+          &:before {
+            transform: translateY(0);
+          }
+        }
+      }
+
+      span {
+        position: absolute;
+        left: 0;
+        overflow: hidden;
+        transform: translateY(100%);
+        transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+
+        &:before {
+          display: inline-block;
+          content: attr(data-content);
+          color: white;
+          transform: translateY(-100%);
+          transition: transform .8s cubic-bezier(.23, 1, .32, 1);
+        }
+      }
+    }
   }
 
-  a:hover:before {
-    height: 2.9rem;
+  a {
+    font-size: 2.5rem;
+    margin: 4rem 0;
   }
 
   .container {
@@ -333,15 +362,17 @@ a {
   .image__holder {
     width: 1040px;
     height: 580px;
-    margin: 0rem 0rem 0rem 2rem;
+    position: absolute;
+    visibility: visible;
+    display: block;
+  }
+
+  .link__icon {
+    display: none;
   }
 }
 
 @media only screen and (min-width: $mq-desktop) {
-  a {
-    height: 4rem;
-  }
-
   .container {
     &__wrapper {
       margin: 0rem 8.5rem;

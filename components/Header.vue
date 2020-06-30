@@ -114,9 +114,6 @@ export default {
     left: 0;
     height: 85px;
     overflow: hidden;
-    // z-index: 2;
-    transition-delay: 1s;
-    transition: height 3s cubic-bezier(.23, 1, .32, 1);
 
     &.open {
       height: 100vh;
@@ -183,7 +180,7 @@ export default {
     font-family: $f-heading;
     font-size: 0.625rem;
     letter-spacing: 1px;
-    padding-right: 1rem;
+    padding-right: .2rem;
   }
 
   &__icon {

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="header__section" :class="{open: open}" @scroll="handleScroll">
     <header class="header" :class="[className, { 'header--open': open }]">
       <div class="header__wrapper">
           <transition name="slide-fade">
@@ -18,27 +18,29 @@
           </transition>
         </div>
     </header>
-    <div v-if="open" class="container">
+    <div class="container" :class="{open: open}">
       <div class="container__wrapper">
         <div class="menu__items">
           <nuxt-link to="/" data-text="KB-86 SSDG >>">
-            KB-86 SSDG >>
+            KB-86 SSDG
+            <Icons class-name="link__icon" type="arrow-right" />
           </nuxt-link>
-          <nuxt-link to="/djenna" data-text="Djenna Bakker >>" @mouseover.native="djenna = true; kb = false"  @mouseleave.native="djenna = false; kb = true">
-            Djenna Bakker >>
-          </nuxt-link>
-          <nuxt-link to="/geert" data-text="Geert Heemskerk >>" @mouseover.native="geert = true; kb = false"  @mouseleave.native="geert = false; kb = true">
-            Geert Heemskerk >>
-          </nuxt-link>
-
           <nuxt-link to="/sanne" data-text="Sanne van Zeijl >>" @mouseover.native="sanne = true; kb = false"  @mouseleave.native="sanne = false; kb = true" >
-            Sanne van Zeijl >>
+            Sanne van Zeijl
+            <Icons class-name="link__icon" type="arrow-right" />
           </nuxt-link>
           <nuxt-link to="/steven" data-text="Steven Wu >>" @mouseover.native="steven = true; kb = false"  @mouseleave.native="steven = false; kb = true">
-            Steven Wu  >>
+            Steven Wu
+            <Icons class-name="link__icon" type="arrow-right" />
           </nuxt-link>
-
-
+          <nuxt-link to="/djenna" data-text="Djenna Bakker >>" @mouseover.native="djenna = true; kb = false"  @mouseleave.native="djenna = false; kb = true">
+            Djenna Bakker
+            <Icons class-name="link__icon" type="arrow-right" />
+          </nuxt-link>
+          <nuxt-link to="/geert" data-text="Geert Heemskerk >>" @mouseover.native="geert = true; kb = false"  @mouseleave.native="geert = false; kb = true">
+            Geert Heemskerk
+            <Icons class-name="link__icon" type="arrow-right" />
+          </nuxt-link>
         </div>
       </div>
       <div class="image__holder">
@@ -80,16 +82,46 @@ export default {
   },
   props: {
     className: String
+  },
+  methods: {
+    handleScroll() {
+      console.log('test');
+    },
   }
 }
 </script>
 <style lang="scss" scoped>
+
+.nuxt-link-exact-active {
+  color: white;
+
+  & .link__icon {
+    transform: rotate(-180deg);
+  }
+}
+
 .header {
   height: 85px;
   width: 100%;
   position: absolute;
   top: 0;
   z-index: 10;
+
+  &__section {
+    position: fixed;
+    width: 100%;
+    top: 0; 
+    left: 0;
+    height: 85px;
+    overflow: hidden;
+    // z-index: 2;
+    transition-delay: 1s;
+    transition: height 3s cubic-bezier(.23, 1, .32, 1);
+
+    &.open {
+      height: 100vh;
+    }
+  }
 
   &__wrapper {
     display: flex;
@@ -160,6 +192,14 @@ export default {
   }
 }
 
+.link {
+  &__icon {
+    margin-left: .3rem;
+    // width: 1.4rem;
+    // height: 1.4rem;
+  }
+}
+
 .slide-fade-enter-active,
 .slide-fade-leave-active {
   transition: all .6s;
@@ -188,15 +228,20 @@ export default {
   text-align: center;
   background-color: $c-background;
   z-index: 9;
+
+  &.open {
+    height: 100vh;
+  }
 }
 
 a {
   color: rgba($c-text, 0.5);
   text-decoration: none;
-  display: block;
+  display: flex;
   margin: 2.5rem 0rem;
   font-family: $f-heading;
   font-size: 1.6rem;
+  align-items: center;
 }
 
 .image__holder {

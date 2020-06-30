@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <div class="section__wrapper">
-      <h1>{{ title }}</h1>
-      <p> {{ text }}</p>
-      <p :class="author" class="subject"> {{ subject }}</p>
-    </div>
+  <div class="section__wrapper">
+    <h1>{{ title }}</h1>
+    <p> {{ text }}</p>
+    <p :class="author" class="subject"> {{ subject }}</p>
   </div>
 </template>
 <script>
@@ -23,6 +21,7 @@ export default {
     padding: 0.2rem 2rem 1rem 2rem;
     max-width: 815px;
     margin: 0 auto;
+    margin-top: 85px; //Header height;
   }
 
   h1 {

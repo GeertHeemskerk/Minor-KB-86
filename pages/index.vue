@@ -27,20 +27,20 @@
             <span data-content="KB-86 SSDG" aria-hidden="true"></span>KB-86 SSDG
           </nuxt-link>
           <nuxt-link
-            to="/geert"
-            class="title__single title__single--hide"
-            @mouseover.native="hover = 'geert'; kb = false"
-            @mouseleave.native="hover = null; kb = true"
-          >
-            <span data-content="Geert Heemskerk" aria-hidden="true"></span>Geert Heemskerk
-          </nuxt-link>
-          <nuxt-link
             to="/djenna"
             class="title__single title__single--hide"
             @mouseover.native="hover = 'djenna'; kb = false"
             @mouseleave.native="hover = null; kb = true"
           >
             <span data-content="Djenna Bakker" aria-hidden="true"></span>Djenna Bakker
+          </nuxt-link>
+          <nuxt-link
+            to="/geert"
+            class="title__single title__single--hide"
+            @mouseover.native="hover = 'geert'; kb = false"
+            @mouseleave.native="hover = null; kb = true"
+          >
+            <span data-content="Geert Heemskerk" aria-hidden="true"></span>Geert Heemskerk
           </nuxt-link>
         </div>
         <figure class="intro__figure">

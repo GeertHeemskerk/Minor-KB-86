@@ -36,7 +36,7 @@
       alt-image="landingpage pagina"
     />
     <BlokBlocks
-      intro-text="In blok 2 wou ik meer leren over animeren. Ik wou een scene maken waarin verschillende animaties te zien zijn. Hier heb ik dit blok veel over geleerd, maar ook heb ik nog heel veel bij geleerd over modellen."
+      intro-text="In blok 2 wilde ik meer leren over animeren. Ik wilde een scene maken waarin verschillende animaties te zien zijn. Hier heb ik dit blok veel over geleerd, maar ook heb ik nog heel veel bij geleerd over modellen."
       author="djenna"
       blok-image="/images/djenna/oog.png"
       alt-image="netlify"

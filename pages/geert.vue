@@ -35,7 +35,7 @@
     <BlockIntro
       author="geert"
       title="Blok 2"
-      text="In blok 1 werd ik geïnspireerd door klasgenoten en online voorbeelden van mockup animaties. Dit houdt in dat je een animatie afspeeld in een apparaat zoals een mobiele telefoon. Voor dit blok heb ik nog nooit gewerkt met mockup animaties en 3D ontwerpen. Hiervoor heb ik gebruikt gemaakt van C4D (Cinema 4D) en AAE (Adobe After Effects). De animatie die afspeeld op het scherm heb ik gemaakt in AAE. AAE en C4D heb ik binnen 5 weken moeten leren om tot dit eindresultaat te komen. Hiervoor heb ik in zo een korte tijd geleerd hoe ik materialen, licht, tijd, kijkhoeken, reflecties gebruik in C4D. Doordat ik C4D kon linken aan AEE kon ik makkelijk posities en animaties koppelen aan vereschillende soorten tijdstippen in het filmpje. Als u geïntresseerd ben in mijn werk kunt u mijn volledige ontwerpproces hieronder downloaden als PDF."
+      text="In blok 1 werd ik geïnspireerd door klasgenoten en online voorbeelden van mockup animaties. Dit houdt in dat je een animatie afspeeld in een apparaat zoals een mobiele telefoon. Voor dit blok had ik nog nooit gewerkt met mockup animaties en 3D elementen. Hiervoor heb ik gebruikt gemaakt van C4D (Cinema 4D) en AAE (Adobe After Effects). De animatie die afspeeld op het scherm heb ik gemaakt in AAE. AAE en C4D heb ik binnen 5 weken moeten leren om tot dit eindresultaat te komen. Hiervoor heb ik in zo een korte tijd geleerd hoe ik materialen, licht, tijd, kijkhoeken, reflecties gebruik in C4D. Doordat ik C4D kon linken aan AEE kon ik makkelijk posities en animaties koppelen aan vereschillende soorten tijdstippen in het filmpje. Als u geïntresseerd ben in mijn werk kunt u mijn volledige ontwerpproces hieronder downloaden als PDF."
       link="/pdf/geert/17026121-Geert-Heemskerk-KB-86-3D-Animated.pdf"
       link-text="download pdf"
     />
@@ -73,7 +73,7 @@ export default {
 <style lang="scss" scoped>
 .section__personal {
   cursor: url("~assets/cursors/cursor-geert.png"), auto;
-  
+
   button, a {
     &:hover {
       cursor: url("~assets/cursors/hand-geert.png"), auto;

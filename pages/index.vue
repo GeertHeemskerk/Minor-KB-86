@@ -44,20 +44,20 @@
           </nuxt-link>
         </div>
         <figure class="intro__figure">
-          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'sanne' }" src="~/assets/images/placeholder.png" alt="Foto van Sanne">
+          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'sanne' }" src="~/assets/images/profile-sanne.png" alt="Foto van Sanne">
           <img class="intro__media" :class="{ 'intro__media--hover': hover == 'steven' }" src="~/assets/images/placeholder-landscape.jpg" alt="Foto van Steven">
           <video class="intro__media" :class="{ 'intro__media--hover': hover == null }" autoplay loop muted playsinline >
             <source src="~/assets/videos/homevideo.mp4" type="video/mp4">
           </video>
           <img class="intro__media" :class="{ 'intro__media--hover': hover == 'geert' }" src="~/assets/images/placeholder-portrait.jpg" alt="Foto van Geert">
-          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'djenna'}" src="~/assets/images/placeholder-portrait-girl.jpg" alt="Foto van Djenna">
+          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'djenna'}" src="~/assets/images/profile-djenna.png" alt="Foto van Djenna">
         </figure>
         <section class="intro__text">
           <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'sanne' }">1 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
           <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'steven' }">2 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
-          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == null }">3 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
-          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'geert' }">4 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
-          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'djenna' }">5 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == null }">In de minor Visual Design & Front-end Development mochten studenten zelf bepalen wat zij in een half jaar wilde leren. De animatie is een goede metafoor voor het samenkomen van het werk van vier studenten op een plek. Vanuit dit concept hebben we de website opgebouwd. Nieuwsgierig? Klik dan op een van de individuele pagina’s van de vier studenten!</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'geert' }">In 20 weken tijd heb ik nieuwe skills aangeleerd zoals 3D modellen in Cinema 4D gemaakt en deze geanimeerd met het gehele Adobe pakket. Daarnaast heb ik mijn kennis op het gebied van Front-end Development uitgebreid met NuxtJS(VueJS). Je kan mijn werk checken als je op mijn naam klikt!</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'djenna' }">In het afgelopen half jaar kreeg ik de vrijheid om te doen wat ík altijd al heb willen doen, maar geen tijd voor heb gehad/gemaakt. Ik heb logo’s gemaakt en heel veel geleerd over web animaties en deze uitgewerkt op twee websites! Klik op mijn naam om al mijn werk te lezen en zien!</p>
         </section>
       </div>
     </section>
@@ -77,7 +77,7 @@ export default {
   }
 }
 </script>
-  
+
 <style scoped lang="scss">
 .main {
   background-color: $c-background;

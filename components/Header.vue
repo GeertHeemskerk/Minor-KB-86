@@ -95,7 +95,7 @@ export default {
   data() {
     return {
       open: false,
-      hover: null,
+      hover: '',
       route: '',
     }
   },
@@ -113,6 +113,7 @@ export default {
     },
     closeMenu() {
       this.open = !this.open;
+      this.hover = '';
     }
   }
 }

@@ -61,7 +61,7 @@ export default {
     line-height: 1.3rem;
   }
 
-  @media only screen and (min-width: $mq-tablet) {
+  @media(min-width: $mq-tablet) {
     .section__wrapper {
       margin: 4rem 0rem;
     }
@@ -83,7 +83,7 @@ export default {
     }
   }
 
-  @media only screen and (min-width: $mq-s-laptop) {
+  @media(min-width: $mq-s-laptop) {
     .section__wrapper {
       display: flex;
       margin: 5rem 0rem;
@@ -94,7 +94,7 @@ export default {
     }
   }
 
-  @media only screen and (min-width: $mq-xl-laptop) {
+  @media(min-width: $mq-xl-laptop) {
     .section__wrapper {
       margin: 7rem 0rem;
     }
@@ -109,7 +109,7 @@ export default {
     }
   }
 
-  @media only screen and (min-width: $mq-desktop) {
+  @media(min-width: $mq-desktop) {
     .section__wrapper {
       margin: 9rem 0rem;
     }

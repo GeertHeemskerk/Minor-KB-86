@@ -233,7 +233,7 @@ a {
   display: none;
 }
 
-@media only screen and (min-width: $mq-s-laptop) {
+@media(min-width: $mq-s-laptop) {
   figure {
     position: absolute;
   }
@@ -299,7 +299,7 @@ a {
   }
 }
 
-@media only screen and (min-width: $mq-l-laptop) {
+@media(min-width: $mq-l-laptop) {
   a {
     font-size: 2.4rem;
     margin: 4rem 0;
@@ -322,7 +322,7 @@ a {
   }
 }
 
-@media only screen and (min-width: $mq-desktop) {
+@media(min-width: $mq-desktop) {
   a {
     height: 4rem;
   }

@@ -59,19 +59,19 @@ section.djenna {
   }
 }
 
-@media only screen and (min-width: $mq-tablet) {
+@media(min-width: $mq-tablet) {
   .gallery {
     width: 70%;
   }
 }
 
-@media only screen and (min-width: $mq-s-laptop) {
+@media(min-width: $mq-s-laptop) {
   .gallery {
     width: 60%;
   }
 }
 
-@media only screen and (min-width: $mq-l-laptop) {
+@media(min-width: $mq-l-laptop) {
   .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -86,7 +86,7 @@ section.djenna {
   }
 }
 
-@media only screen and (min-width: $mq-xl-laptop) {
+@media(min-width: $mq-xl-laptop) {
   .gallery {
     width: 55%;
 

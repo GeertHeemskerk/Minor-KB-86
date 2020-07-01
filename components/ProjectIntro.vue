@@ -56,7 +56,7 @@ p {
   }
 }
 
-@media only screen and (min-width: $mq-tablet) {
+@media(min-width: $mq-tablet) {
   .section__wrapper {
     padding: 0.3rem 4rem 1.4rem 4rem;
   }

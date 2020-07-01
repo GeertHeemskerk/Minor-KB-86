@@ -33,7 +33,7 @@ img {
   margin-bottom: 3rem;
 }
 
-@media only screen and (min-width: $mq-tablet) {
+@media(min-width: $mq-tablet) {
   .section__wrapper {
     display: flex;
     padding: 3rem 0 8rem 0;
@@ -50,19 +50,19 @@ img {
   }
 }
 
-@media only screen and (min-width: $mq-s-laptop) {
+@media(min-width: $mq-s-laptop) {
   img:nth-child(2) {
     top: 4rem;
   }
 }
 
-@media only screen and (min-width: $mq-xl-laptop) {
+@media(min-width: $mq-xl-laptop) {
   img:nth-child(2) {
     top: 5rem;
   }
 }
 
-@media only screen and (min-width: $mq-desktop) {
+@media(min-width: $mq-desktop) {
   img:nth-child(2) {
     top: 6rem;
   }

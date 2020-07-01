@@ -59,7 +59,7 @@ export default {
   }
 }
 
-@media only screen and (min-width: $mq-l-laptop) {
+@media(min-width: $mq-l-laptop) {
   .section {
     &__wrapper {
       margin-top: 2.5rem;
@@ -67,7 +67,7 @@ export default {
   }
 }
 
-@media only screen and (min-width: $mq-xl-laptop) {
+@media(min-width: $mq-xl-laptop) {
   .block {
     &__divider {
       margin: 2rem auto;

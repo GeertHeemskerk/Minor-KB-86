@@ -51,27 +51,27 @@ video {
   }
 }
 
-@media only screen and (min-width: $mq-tablet) {
+@media(min-width: $mq-tablet) {
   video {
     margin: 5rem 0;
     width: 70%;
   }
 }
 
-@media only screen and (min-width: $mq-s-laptop) {
+@media(min-width: $mq-s-laptop) {
   video { 
     margin: 7rem 0;
     width: 60%;
   }
 }
 
-@media only screen and (min-width: $mq-xl-laptop) {
+@media(min-width: $mq-xl-laptop) {
   video {
     width: 55%;
   }
 }
 
-@media only screen and (min-width: $mq-desktop) {
+@media(min-width: $mq-desktop) {
   video {
     margin: 6rem 0;
     width: 48%;

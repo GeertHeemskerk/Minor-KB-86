@@ -94,7 +94,7 @@ export default {
     }
   }
 
-  @media only screen and (min-width: $mq-tablet) {
+  @media(min-width: $mq-tablet) {
     .section__wrapper {
       padding: 4rem;
     }

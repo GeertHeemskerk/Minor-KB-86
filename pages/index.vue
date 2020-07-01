@@ -54,7 +54,7 @@
         </figure>
         <section class="intro__text">
           <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'sanne' }">1 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
-          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'steven' }">2 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'steven' }">In deze minor kon ik aan mijn eigen skills werken. Zo heb ik geleerd hoe je een dashboard moet inrichten door middel van een herontwerp. Daarnaast kon ik ook aan front-end development werken. Tools zoals WordPress, Timber, ACF en JAMstack kwamen aan bod. Check mijn werk door te klikken!</p>
           <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == null }">In de minor Visual Design & Front-end Development mochten studenten zelf bepalen wat zij in een half jaar wilde leren. De animatie is een goede metafoor voor het samenkomen van het werk van vier studenten op een plek. Vanuit dit concept hebben we de website opgebouwd. Nieuwsgierig? Klik dan op een van de individuele pagina’s van de vier studenten!</p>
           <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'geert' }">In 20 weken tijd heb ik nieuwe skills aangeleerd zoals 3D modellen in Cinema 4D gemaakt en deze geanimeerd met het gehele Adobe pakket. Daarnaast heb ik mijn kennis op het gebied van Front-end Development uitgebreid met NuxtJS(VueJS). Je kan mijn werk checken als je op mijn naam klikt!</p>
           <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'djenna' }">In het afgelopen half jaar kreeg ik de vrijheid om te doen wat ík altijd al heb willen doen, maar geen tijd voor heb gehad/gemaakt. Ik heb logo’s gemaakt en heel veel geleerd over web animaties en deze uitgewerkt op twee websites! Klik op mijn naam om al mijn werk te lezen en zien!</p>
@@ -77,7 +77,6 @@ export default {
   }
 }
 </script>
-
 <style scoped lang="scss">
 .main {
   background-color: $c-background;
@@ -120,7 +119,7 @@ export default {
     font-size: 2rem;
     text-decoration: none;
     color: white;
-    transition: transform .8s cubic-bezier(.23, 1, .32, 1);
+    transition: all .8s cubic-bezier(.23, 1, .32, 1);
 
     &--hide {
       display: none;
@@ -145,7 +144,7 @@ export default {
 
     &:hover {
       cursor: url("~assets/cursors/hand-home.png"), auto;
-      // transform: translateY(8%) translateX(-3%);
+      transform: translate(-4%, 8%);
 
       span {
         transform: translateY(0);

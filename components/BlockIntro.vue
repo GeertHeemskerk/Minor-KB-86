@@ -124,10 +124,6 @@ a.djenna:hover {
 }
 
 @media(min-width: $mq-l-laptop) {}
-
 @media(min-width: $mq-xl-laptop) {}
-
 @media(min-width: $mq-desktop) {}
-
-
 </style>

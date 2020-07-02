@@ -1,7 +1,12 @@
 <template>
   <section class="section__wrapper" :class="{ 'section__wrapper--in-content' : !full }">
-    <figure class="block__figure">
-      <img class="block__media" :src="image" :alt="altImage">
+    <figure v-lazy-container="{ selector: 'img' }" class="block__figure">
+      <img
+        class="block__media"
+        :data-src="image" 
+        :data-loading="imageLoading" 
+        :alt="altImage"
+      />
     </figure>
   </section>
 </template>
@@ -13,11 +18,16 @@ export default {
       default: true
     },
     image: String,
+    imageLoading: String,
     altImage: String
   }
 }
 </script>
 <style lang="scss" scoped>
+img[lazy='loading'] {
+  filter: blur(1rem);
+}
+
 .section {
   &__wrapper {
     width: 100%;

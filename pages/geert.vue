@@ -12,7 +12,8 @@
       subject="Rebranding - Webdesign - Cinema 4D - After Effects"
     />
     <BlockImage
-      image="/images/geert/redesign-webshop.png"
+      :image="require('~/assets/images/geert/redesign-webshop.png')"
+      :image-loading="require('~/assets/images/geert/redesign-webshop.png?sqip')"
       alt-image="redesign webshop"
     />
     <BlockIntro
@@ -22,13 +23,15 @@
       link="/pdf/geert/17026121-Geert-Heemskerk-KB-86.pdf"
       link-text="download pdf"
     />
-    <BlockImage
-      image="/images/geert/redesign-front.png"
-      alt-image="redesign webshop"
+    <BlockImage      
+      :image="require('~/assets/images/geert/redesign-front.png')"
+      :image-loading="require('~/assets/images/geert/redesign-front.png?sqip')"
+      alt-image="redesign front page"
     />
     <BlockImage
-      image="/images/geert/cards.png"
-      alt-image="redesign webshop"
+      :image="require('~/assets/images/geert/cards.png')"
+      :image-loading="require('~/assets/images/geert/cards.png?sqip')"
+      alt-image="card"
     />
     <BlokBlocks
       intro-text="In dit blok heb ik ook photoshop gebruikt en heb het gemaakt logo geplaatst op een tas van de Bijenkorf en deze bewerkt met kleuren en mijn idealen. Daarnaast heb ik zoals u hierboven kunt zien cadeaukaarten ontworpen die matchen met de styleguide van de website en principes van de Bijenkorf."

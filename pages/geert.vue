@@ -2,7 +2,7 @@
   <section class="section__personal">
     <Header class-name="header--personal" />
     <Profile
-      image="/images/djenna/profile.png"
+      image="/images/geert/profile.png"
       alt-image="Profiel foto"
     />
     <ProjectIntro

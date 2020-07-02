@@ -8,8 +8,8 @@
     <ProjectIntro
       author="steven"
       title="Steven"
-      text="Visual Design &amp; Front-end Development is een minor die goed bij mijn interesses aansluit. Binnen deze minor ben je gefocust op jezelf ontwikkelen en leer wat je graag wilt leren. Hi, mijn is Steven en ik ben CMD-student met liefde voor Front-end development. Ik wil graag mezelf verder ontwikkelen in het gebied van design en development en daarom is perfect voor mij. Deze minor is verdeeld in 4 blokken van 5 weken en elk blok mag je zelf een leerdoel kiezen en dit mag van alles zijn in het gebied van visual design en front-end development. Ik heb gekozen om in de eerste blok design te doen en de resterende blok heb ik gekozen om mijn development skills in praktijk te zetten."
-      subject="Applicatie - Wordpress Thema - JamStack"
+      text="Visual Design &amp; Front-end Development is een minor die goed aan mijn interesses sluit. Binnen deze minor ben je gefocust op zelfontwikkeling. Hi, mijn naam is Steven en ik ben CMD-student met liefde voor Front-end development. Ik wil graag mezelf verder ontwikkelen in het gebied van design en development en daarom is deze minor perfect voor mij. Deze minor is verdeeld in 4 blokken van 5 weken en elk blok mag je zelf een leerdoel kiezen. Dit mag van alles zijn binnen het gebied van visual design en front-end development. Ik heb gekozen om in de eerste blok design te ontwerpen en de resterende blok heb ik gekozen om mijn development skills in praktijk te zetten."
+      subject="Dashbord Design - Wordpress Theme - JAMstack Development"
     />
     <BlockImage
       image="/images/steven/dashboard-design-landing-final.png"

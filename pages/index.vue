@@ -49,7 +49,7 @@
           <video class="intro__media" :class="{ 'intro__media--hover': hover == null }" autoplay loop muted playsinline >
             <source src="~/assets/videos/homevideo.mp4" type="video/mp4">
           </video>
-          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'geert' }" src="~/assets/images/placeholder-portrait.jpg" alt="Foto van Geert">
+          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'geert' }" src="~/assets/images/profile-geert.png" alt="Foto van Geert">
           <img class="intro__media" :class="{ 'intro__media--hover': hover == 'djenna'}" src="~/assets/images/profile-djenna.png" alt="Foto van Djenna">
         </figure>
         <section class="intro__text">

@@ -1,8 +1,12 @@
 <template>
   <section class="section__wrapper" :class="author">
     <section class="gallery">
-      <figure class="gallery__figure" v-for="(img, index) in logos" :key="index">
-        <img class="gallery__media" :src="img.src" :alt="img.alt" />
+      <figure class="gallery__figure" v-lazy-container="{ selector: 'img' }" v-for="(img, index) in logos" :key="index">
+        <img 
+          class="gallery__media"
+          :data-src="img.src" 
+          :data-loading="img.srcLoading" 
+          :alt="img.alt">
       </figure>
     </section>
   </section>

@@ -2,8 +2,9 @@
   <section class="section__personal">
     <Header class-name="header--personal" />
     <Profile
-      image="/images/sanne/profile.png"
-      alt-image="Profiel foto"
+      :image="require('~/assets/images/sanne/profile.png')"
+      :image-loading="require('~/assets/images/sanne/profile.png?lqip')"
+      alt-image="Profiel foto van sanne"
     />
     <ProjectIntro
       author="sanne"
@@ -12,7 +13,8 @@
       subject="Cinema 4D - After Effects"
     />
     <BlockImage
-      image="/images/sanne/intro-block-image.png"
+      :image="require('~/assets/images/sanne/intro-block-image.png')"
+      :image-loading="require('~/assets/images/sanne/intro-block-image.png?lqip')"
       alt-image="3d render model face"
     />
     <BlockIntro
@@ -23,7 +25,8 @@
     <BlokBlocks
       intro-text="In blok 2 wou ik meer leren over animeren. Ik wou een scene maken waarin verschillende animaties te zien zijn. Hier heb ik dit blok veel over geleerd, maar ook heb ik nog heel veel bij geleerd over modellen."
       author="sanne"
-      blok-image="/images/sanne/c4d.png"
+      :blok-image="require('~/assets/images/sanne/c4d.png')"
+      :blok-image-loading="require('~/assets/images/sanne/c4d.png?lqip')"
       alt-image="c4d"
     />
     <MovieBlock
@@ -37,11 +40,14 @@
       text="In blok 3 ben ik opnieuw verder gegaan met 3D. Dit keer om meer te leren over texturen. Hier had ik nog niet veel mee gewerkt. Ik heb in dit blok gewerkt met UV-mapping en heb ook eigen texturen gemaakt door middel van foto’s bewerken. Het blad is een eigen gemaakte textuur."
     />
     <Triplets
-      left="/images/sanne/left.png"
+      :left="require('~/assets/images/sanne/left.png')"
+      :left-loading="require('~/assets/images/sanne/left.png?lqip')"
       left-alt="render of 3d eye"
-      middle="/images/sanne/middle.png"
+      :middle="require('~/assets/images/sanne/middle.png')"
+      :middle-loading="require('~/assets/images/sanne/middle.png?lqip')"
       middle-alt="render of 3d face"
-      right="/images/sanne/right.png"
+      :right="require('~/assets/images/sanne/right.png')"
+      :right-loading="require('~/assets/images/sanne/right.png?lqip')"
       right-alt="render of 3d lips"
     />
     <Footer

@@ -2,8 +2,9 @@
   <section class="section__personal">
     <Header class-name="header--personal" />
     <Profile
-      image="/images/geert/profile.png"
-      alt-image="Profiel foto"
+      :image="require('~/assets/images/geert/profile.png')"
+      :image-loading="require('~/assets/images/geert/profile.png?lqip')"
+      alt-image="Profiel foto van geert"
     />
     <ProjectIntro
       author="geert"
@@ -12,7 +13,8 @@
       subject="Rebranding - Webdesign - Cinema 4D - After Effects"
     />
     <BlockImage
-      image="/images/geert/redesign-webshop.png"
+      :image="require('~/assets/images/geert/redesign-webshop.png')"
+      :image-loading="require('~/assets/images/geert/redesign-webshop.png?lqip')"
       alt-image="redesign webshop"
     />
     <BlockIntro
@@ -22,18 +24,21 @@
       link="/pdf/geert/17026121-Geert-Heemskerk-KB-86.pdf"
       link-text="download pdf"
     />
-    <BlockImage
-      image="/images/geert/redesign-front.png"
-      alt-image="redesign webshop"
+    <BlockImage      
+      :image="require('~/assets/images/geert/redesign-front-page.png')"
+      :image-loading="require('~/assets/images/geert/redesign-front-page.png?lqip')"
+      alt-image="redesign front page"
     />
     <BlockImage
-      image="/images/geert/cards.png"
-      alt-image="redesign webshop"
+      :image="require('~/assets/images/geert/cards.png')"
+      :image-loading="require('~/assets/images/geert/cards.png?lqip')"
+      alt-image="card"
     />
     <BlokBlocks
       intro-text="In dit blok heb ik ook photoshop gebruikt en heb het gemaakt logo geplaatst op een tas van de Bijenkorf en deze bewerkt met kleuren en mijn idealen. Daarnaast heb ik zoals u hierboven kunt zien cadeaukaarten ontworpen die matchen met de styleguide van de website en principes van de Bijenkorf."
       author="geert"
-      blok-image="/images/geert/shoppingbag.png"
+      :blok-image="require('~/assets/images/geert/shoppingbag.png')"
+      :blok-image-loading="require('~/assets/images/geert/shoppingbag.png?lqip')"
       alt-image="shoppingbag"
     />
     <BlockIntro

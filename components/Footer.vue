@@ -7,7 +7,7 @@
       <nuxt-link :class="author" to="/djenna">Djenna</nuxt-link>
       <nuxt-link :class="author" to="/geert">Geert</nuxt-link>
       <div class="link__projects">
-        <h3>Bekijk ook projecten van onze medestudenten:</h3>
+        <h3 :class="author">Bekijk ook projecten van onze medestudenten:</h3>
         <a :class="author" href="#">Groep 1</a>
         <a :class="author" href="#">Groep 3</a>
         <a :class="author" href="#">Groep 4</a>
@@ -63,13 +63,17 @@ export default {
     }
   }
 
-  h1.steven, a.steven {
+  h2.steven, a.steven {
     color: black;
   }
 
   h3 {
     font-size: 1.3rem;
     padding-bottom: 2rem;
+
+    &.steven {
+      color: black;
+    }
   }
 
   a.sanne:hover {

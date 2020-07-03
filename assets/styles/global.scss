@@ -50,6 +50,11 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+img[lazy='loading'] {
+    filter: blur(1rem);
+    transition: filter .3s;
+}
+
 // To Copy and Paste
 // @media(min-width: $mq-tablet) {}
 // @media(min-width: $mq-s-laptop) {}

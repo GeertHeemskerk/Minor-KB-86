@@ -46,7 +46,7 @@
       </div>
       <div class="image__holder">
         <figure>
-          <img  v-bind:class="{ active: sanne }" id="sanne" src="~/assets/images/imgTest.png" alt="imgTest">
+          <img v-bind:class="{ active: sanne }" id="sanne" src="~/assets/images/imgTest.png" alt="imgTest">
         </figure>
         <figure>
           <img v-bind:class="{ active: steven }" id="steven" src="~/assets/images/placeholder.png" alt="imgTest">

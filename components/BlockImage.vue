@@ -24,10 +24,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-img[lazy='loading'] {
-  filter: blur(1rem);
-}
-
 .section {
   &__wrapper {
     width: 100%;

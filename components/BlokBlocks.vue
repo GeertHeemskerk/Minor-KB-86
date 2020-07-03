@@ -4,8 +4,12 @@
       <div class="blok__holder">
         <p>{{ introText }}</p>
       </div>
-      <div class="blok__holder" :class="author">
-        <img :src="blokImage" :alt="altImage">
+      <div v-lazy-container="{ selector: 'img' }" class="blok__holder" :class="author">
+        <img 
+          :data-src="blokImage" 
+          :data-loading="blokImageLoading" 
+          :src="blokImage" 
+          :alt="altImage">
       </div>
     </div>
   </div>
@@ -16,6 +20,7 @@ export default {
     introText: String,
     author: String,
     blokImage: String,
+    blokImageLoading: String,
     altImage: String,
   }
 }

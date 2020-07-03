@@ -1,7 +1,12 @@
 <template>
   <section class="section__wrapper">
-    <figure class="block__figure">
-      <img class="block__media" :src="image" :alt="altImage">
+    <figure v-lazy-container="{ selector: 'img' }" class="block__figure">
+      <img 
+        class="block__media"
+        :data-src="image" 
+        :data-loading="imageLoading" 
+        :alt="altImage" 
+      />
     </figure>
     <div class="block__divider"></div>
   </section>
@@ -10,6 +15,7 @@
 export default {
   props: {
     image: String,
+    imageLoading: String,
     altImage: String
   }
 }

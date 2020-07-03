@@ -1,4 +1,3 @@
-
 <template>
   <svg
       :class="className"

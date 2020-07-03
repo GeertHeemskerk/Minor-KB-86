@@ -2,8 +2,9 @@
   <section class="section__personal">
     <Header class-name="header--personal" />
     <Profile
-      image="/images/djenna/profile.png"
-      alt-image="Profiel foto"
+      :image="require('~/assets/images/steven/profile.png')"
+      :image-loading="require('~/assets/images/steven/profile.png?lqip')"
+      alt-image="Profiel foto van steven"
     />
     <ProjectIntro
       author="steven"
@@ -12,7 +13,8 @@
       subject="Dashbord Design - Wordpress Theme - JAMstack Development"
     />
     <BlockImage
-      image="/images/steven/dashboard-design-landing-final.png"
+      :image="require('~/assets/images/steven/dashboard-design-landing-final.png')"
+      :image-loading="require('~/assets/images/steven/dashboard-design-landing-final.png?lqip')"
       alt-image="inspiration for dashboard"
     />
     <BlockIntro
@@ -22,7 +24,8 @@
     />
     <BlockImage
       :full="false"
-      image="/images/steven/inspiration-dashboard.png"
+      :image="require('~/assets/images/steven/inspiration-dashboard.png')"
+      :image-loading="require('~/assets/images/steven/inspiration-dashboard.png?lqip')"
       alt-image="inspiration for dashboard"
     />
     <BlockGallery
@@ -37,12 +40,14 @@
     />
     <BlockImage
       :full="false"
-      image="/images/steven/dashboard-design-resultaten-final.png"
+      :image="require('~/assets/images/steven/dashboard-design-resultaten-final.png')"
+      :image-loading="require('~/assets/images/steven/dashboard-design-resultaten-final.png?lqip')"
       alt-image="OSIRIS dashboard design results page"
     />
     <BlockImage
       :full="false"
-      image="/images/steven/dashboard-design-resultaten-final.png"
+      :image="require('~/assets/images/steven/dashboard-design-resultaten-final.png')"
+      :image-loading="require('~/assets/images/steven/dashboard-design-resultaten-final.png?lqip')"
       alt-image="OSIRIS dashboard design results page"
     />
     <BlockIntro
@@ -61,13 +66,15 @@
       linkText="Ga naar website"
     />
     <BlockImage
-      image="/images/steven/wordpress-home-page.png"
+      :image="require('~/assets/images/steven/wordpress-home-page.png')"
+      :image-loading="require('~/assets/images/steven/wordpress-home-page.png?lqip')"
       alt-image="Wordpress home pagina"
     />
     <BlokBlocks
       intro-text="Tijdens een masterclass van onze minor heeft een van onze docenten over JAMstack gehad, een techniek die in laatste jaren veel wordt gebruikt om website te bouwen. De prestatie van de website vergeleken met andere website is heel hoog. Dus ik wou in dit blok zelf een website maken in JAMstack."
       author="steven"
-      blok-image="/images/steven/netlify.png"
+      :blok-image="require('~/assets/images/steven/netlify.png')"
+      :blok-image-loading="require('~/assets/images/steven/netlify.png?lqip')"
       alt-image="netlify image"
     />
     <BlockIntro
@@ -76,7 +83,8 @@
       text="Er zijn verschillende tools die je kan gebruiken voor het implementatie van JAMstack, ik heb gekozen om met Nuxt.js een framework van Vue en DatoCMS te gebruiken als CMS. Vroeger heb ik een paar cursussen van Vue.js gevolgd. Voor de ontwerp ik gekozen om de website van mijn vorige blok te gebruiken. Hierdoor besteed ik dus meer tijd in de technieken dan in het layout van de website."
     />
     <BlockImage
-      image="/images/steven/jamstack-blog-page.png"
+      :image="require('~/assets/images/steven/jamstack-blog-page.png')"
+      :image-loading="require('~/assets/images/steven/jamstack-blog-page.png?lqip')"
       alt-image="JAMstack blog pagina"
     />
     <BlockText
@@ -87,12 +95,14 @@
     />
     <BlockImage
       :full="false"
-      image="/images/steven/jamstack-blog-teaser.png"
+      :image="require('~/assets/images/steven/jamstack-blog-teaser.png')"
+      :image-loading="require('~/assets/images/steven/jamstack-blog-teaser.png?lqip')"
       alt-image="JAMstack blog teaser section"
     />
     <BlockImage
       :full="false"
-      image="/images/steven/jamstack-single-post.png"
+      :image="require('~/assets/images/steven/jamstack-single-post.png')"
+      :image-loading="require('~/assets/images/steven/jamstack-single-post.png?lqip')"
       alt-image="JAMstack single post pagina"
     />
     <Footer
@@ -113,38 +123,45 @@ import BlockImage from '~/components/BlockImage.vue';
 import BlockLogo from '~/components/BlockLogo.vue';
 
 export default {
-  // Used voor BlockGallery
+  // Used for BlockGallery
   data() {
     return {
       gallery: [
         {
-          src: '/images/steven/sketch-layout.png',
+          src: require('~/assets/images/steven/sketch-layout.png'),
+          srcLoading: require('~/assets/images/steven/sketch-layout.png?lqip'),
           alt: 'sketch of layout'
         },
         {
-          src: '/images/steven/sketch-details.png',
+          src: require('~/assets/images/steven/sketch-details.png'),
+          srcLoading: require('~/assets/images/steven/sketch-details.png?lqip'),
           alt: 'sketch of details page'
         },
         {
-          src: '/images/steven/sketch-catalogus.png',
+          src: require('~/assets/images/steven/sketch-catalogus.png'),
+          srcLoading: require('~/assets/images/steven/sketch-catalogus.png?lqip'),
           alt: 'sketch of catalogus page'
         },
         {
-          src: '/images/steven/sketch-results.png',
+          src: require('~/assets/images/steven/sketch-results.png'),
+          srcLoading: require('~/assets/images/steven/sketch-results.png?lqip'),
           alt: 'sketch of results page'
         },
       ],
       logos: [
         {
-          src: '/images/steven/timber-logo.png',
+          src: require('~/assets/images/steven/timber-logo.png'),
+          srcLoading: require('~/assets/images/steven/timber-logo.png?lqip'),
           alt: 'Timber logo',
         },
         {
-          src: '/images/steven/wp-logo.png',
+          src: require('~/assets/images/steven/wp-logo.png'),
+          srcLoading: require('~/assets/images/steven/timber-logo.png?lqip'),
           alt: 'WordPress logo',
         },
         {
-          src: '/images/steven/acf-logo.png',
+          src: require('~/assets/images/steven/acf-logo.png'),
+          srcLoading: require('~/assets/images/steven/timber-logo.png?lqip'),
           alt: 'ACF logo',
         },
       ]

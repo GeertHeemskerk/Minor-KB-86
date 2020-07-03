@@ -2,8 +2,8 @@
   <div>
     <div class="section__wrapper">
       <h1>{{ title }}</h1>
-      <p> {{ text }}</p>
-      <p :class="author" class="subject"> {{ subject }}</p>
+      <p>{{ text }}</p>
+      <p :class="author" class="subject">{{ subject }}</p>
     </div>
   </div>
 </template>

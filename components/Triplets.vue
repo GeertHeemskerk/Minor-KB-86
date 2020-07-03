@@ -1,9 +1,21 @@
 <template>
   <div>
-    <div class="section__wrapper">
-      <img :src="left" :alt="leftAlt">
-      <img :src="middle" :alt="middleAlt">
-      <img :src="right" :alt="rightAlt">
+    <div v-lazy-container="{ selector: 'img' }" class="section__wrapper">
+      <img 
+        :data-src="left" 
+        :data-loading="leftLoading" 
+        :alt="leftAlt" 
+      />
+      <img 
+        :data-src="middle" 
+        :data-loading="middleLoading" 
+        :alt="middleAlt" 
+      />
+      <img 
+        :data-src="right" 
+        :data-loading="rightLoading" 
+        :alt="rightAlt" 
+      />
     </div>
   </div>
 </template>
@@ -11,10 +23,13 @@
 export default {
   props: {
     left: String,
+    leftLoading: String,
     leftAlt: String,
     middle: String,
+    middleLoading: String,
     middleAlt: String,
     right: String,
+    rightLoading: String,
     rightAlt: String,
   },
 }

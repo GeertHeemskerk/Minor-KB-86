@@ -43,14 +43,45 @@
             <span data-content="Djenna Bakker" aria-hidden="true"></span>Djenna Bakker
           </nuxt-link>
         </div>
-        <figure class="intro__figure">
-          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'sanne' }" src="~/assets/images/profile-sanne.png" alt="Foto van Sanne">
-          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'steven' }" src="~/assets/images/placeholder-landscape.jpg" alt="Foto van Steven">
-          <video class="intro__media" :class="{ 'intro__media--hover': hover == null }" autoplay loop muted playsinline >
+        <figure v-lazy-container="{ selector: 'img' }" class="intro__figure">
+          <img 
+            class="intro__media" 
+            :class="{ 'intro__media--hover': hover == 'sanne' }" 
+            :data-src="require('~/assets/images/profile-sanne.png')"
+            :data-loading="require('~/assets/images/profile-sanne.png?lqip')"
+            alt="Foto van Sanne"
+          />
+          <img 
+            class="intro__media"
+            :class="{ 'intro__media--hover': hover == 'steven' }"
+            :data-src="require('~/assets/images/profile-steven.jpg')"
+            :data-loading="require('~/assets/images/profile-steven.jpg?lqip')"
+            alt="Foto van Steven"
+          />
+          <video
+            class="intro__media"
+            :class="{ 'intro__media--hover': hover == null }"
+            autoplay
+            loop
+            muted
+            playsinline
+          >
             <source src="~/assets/videos/homevideo.mp4" type="video/mp4">
           </video>
-          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'geert' }" src="~/assets/images/profile-geert.png" alt="Foto van Geert">
-          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'djenna'}" src="~/assets/images/profile-djenna.png" alt="Foto van Djenna">
+          <img 
+            class="intro__media" 
+            :class="{ 'intro__media--hover': hover == 'geert' }" 
+            :data-src="require('~/assets/images/profile-geert.png')"
+            :data-loading="require('~/assets/images/profile-geert.png?lqip')"
+            alt="Foto van Geert"
+          />
+          <img 
+            class="intro__media" 
+            :class="{ 'intro__media--hover': hover == 'djenna'}" 
+            :data-src="require('~/assets/images/profile-djenna.png')"
+            :data-loading="require('~/assets/images/profile-djenna.png?lqip')"
+            alt="Foto van Djenna"
+          />
         </figure>
         <section class="intro__text">
           <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'sanne' }">Hier vind je het werk van Sanne, zij heeft zich dit blok vooral gefocust op het leren van 3D motion design. Voor de minor had ze nog helemaal geen ervaring maar heeft in de afgelopen 15 weken veel geleerd! Klik en zie haar werk.</p>

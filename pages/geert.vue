@@ -25,8 +25,8 @@
       link-text="download pdf"
     />
     <BlockImage      
-      :image="require('~/assets/images/geert/redesign-front.png')"
-      :image-loading="require('~/assets/images/geert/redesign-front.png?lqip')"
+      :image="require('~/assets/images/geert/redesign-front-page.png')"
+      :image-loading="require('~/assets/images/geert/redesign-front-page.png?lqip')"
       alt-image="redesign front page"
     />
     <BlockImage

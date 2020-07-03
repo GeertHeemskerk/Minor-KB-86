@@ -159,7 +159,6 @@ export default {
 
     span {
       position: absolute;
-      // top: 0;
       left: 0;
       overflow: hidden;
       transform: translateY(100%);

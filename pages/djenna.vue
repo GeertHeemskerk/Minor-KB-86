@@ -38,19 +38,23 @@
       :image-loading="require('~/assets/images/djenna/logos.png?lqip')"
       alt-image="landingpage pagina"
     />
+    <BlockIntro
+      author="djenna"
+      title="Blok 2"
+      text="Een ander leerdoel van mij was om te leren hoe ik animatie kan coderen, met name voor op websites. Ik vind coderen heel leuk, maar ik heb nog heel veel om te leren binnen het vak. Een van deze dingen zijn animaties, oftewel bewegende elementen op een pagina, heeft mij altijd al geïnteresseerd en aangesproken. Dit kan bijvoorbeeld tekst zijn die binnen komt vallen, een animatie die laat zien dat iets aan het laden is, of een bewegende achtergrond. In de afgelopen schooljaren is er weinig tijd voor geweest om deze stof te leren, en deze minor was het perfecte moment om hier meer over te leren. Mijn deliverables voor dit blok was een onderzoeksportfolio, tutorials inclusief uitwerkingen en een website met animaties erop."
+    />
     <BlokBlocks
-      intro-text="In blok 2 wilde ik meer leren over animeren. Ik wilde een scene maken waarin verschillende animaties te zien zijn. Hier heb ik dit blok veel over geleerd, maar ook heb ik nog heel veel bij geleerd over modellen."
+      intro-text="Tekst hier moet nog"
       author="djenna"
       :blok-image="require('~/assets/images/djenna/oog.png')"
       :blok-image-loading="require('~/assets/images/djenna/oog.png?lqip')"
       alt-image="oog design"
     />
-    <BlockIntro
+    <BlockText
       author="djenna"
-      title="Blok 2"
-      text="Ik merkte in blok 2 dat er nog veel meer over animaties te leren viel, maar dat ik er toen niet genoeg tijd voor had. Daardoor heb ik de keuze gemaakt om verder te gaan met het leren coderen van animaties voor op websites, zodat ik mijn kennis nog meer kan verbreden en dus nog veel meer kan leren over dit onderwerp. Ik had het doel om aan de website van het vorige doel een aantal animaties toe te voegen, met de focus op moeilijkere animaties dan bij het vorige blok. Om mezelf echt verder te kunnen ontwikkelen, moest ik op een niveau hoger gaan werken. De deliverables voor dit blok waren het volgen van tutorials inclusief mogelijke uitwerkingen en drie animaties toevoegen aan de website."
+      text="Omdat ik nog geen voorkennis van animaties, heb ik tientallen tutorials gevolgd om van alles te leren over animaties. Zowel over de geschiedenis van animaties, hoe animaties geëvalueerd zijn en hoe ze nu gebruikt worden op websites. Ik heb vervolgens een simpel design gemaakt voor een portfolio achtige website, waar ik dan uiteindelijk animaties op kon plaatsen. Met deze website heb ik kunnen bewijzen hoeveel ik geleerd heb in dat blok en hoe ik deze geïmplementeerd heb op een website."
       link="https://djennabakker.github.io/codes/"
-      linkText="Ga naar website"
+      linkText="Bekijk de website"
     />
     <BlockVideo
       :full="false"

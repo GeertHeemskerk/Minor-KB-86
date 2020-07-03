@@ -4,8 +4,12 @@
       <div class="blok__holder">
         <p>{{ introText }}</p>
       </div>
-      <div class="blok__holder" :class="author">
-        <img :src="blokImage" :alt="altImage">
+      <div v-lazy-container="{ selector: 'img' }" class="blok__holder" :class="author">
+        <img 
+          :data-src="blokImage" 
+          :data-loading="blokImageLoading" 
+          :src="blokImage" 
+          :alt="altImage">
       </div>
     </div>
   </div>
@@ -16,6 +20,7 @@ export default {
     introText: String,
     author: String,
     blokImage: String,
+    blokImageLoading: String,
     altImage: String,
   }
 }
@@ -61,7 +66,7 @@ export default {
     line-height: 1.3rem;
   }
 
-  @media only screen and (min-width: $mq-tablet) {
+  @media(min-width: $mq-tablet) {
     .section__wrapper {
       margin: 4rem 0rem;
     }
@@ -83,7 +88,7 @@ export default {
     }
   }
 
-  @media only screen and (min-width: $mq-s-laptop) {
+  @media(min-width: $mq-s-laptop) {
     .section__wrapper {
       display: flex;
       margin: 5rem 0rem;
@@ -94,7 +99,7 @@ export default {
     }
   }
 
-  @media only screen and (min-width: $mq-xl-laptop) {
+  @media(min-width: $mq-xl-laptop) {
     .section__wrapper {
       margin: 7rem 0rem;
     }
@@ -109,7 +114,7 @@ export default {
     }
   }
 
-  @media only screen and (min-width: $mq-desktop) {
+  @media(min-width: $mq-desktop) {
     .section__wrapper {
       margin: 9rem 0rem;
     }
@@ -123,5 +128,4 @@ export default {
       width: 375px;
     }
   }
-
 </style>

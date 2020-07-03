@@ -1,6 +1,11 @@
 <template>
   <section class="section__personal">
     <Header class-name="header--personal" />
+    <Profile
+      :image="require('~/assets/images/djenna/profile.png')"
+      :image-loading="require('~/assets/images/djenna/profile.png?lqip')"
+      alt-image="Profiel foto van djenna"
+    />
     <ProjectIntro
       author="djenna"
       title= "Djenna"
@@ -18,7 +23,8 @@
       text="Voor het eerste blok van deze minor heb ik gekomen om logo’s te maken en meer leren over de theorie en technieken erachter. Eerst ben ik op zoek gegaan naar verschillende theorieën en trend bij het maken van logo’s. Er waren veel regels die ik nog niet wist over het maken, zoals bijvoorbeeld kleurgebruik, positie en betekenis. Met deze nieuwe kennis heb ik, naar mijn mening, veel betere logo’s kunnen maken. Mijn deliverables voor dit blok was het volgen van tutorials inclusief de uitwerkingen ervan en het vijf uitgewerkte logo’s."
     />
     <BlockImage
-      image="/images/djenna/logotypefaces.png"
+      :image="require('~/assets/images/djenna/logotypefaces.png')"
+      :image-loading="require('~/assets/images/djenna/logotypefaces.png?lqip')"
       alt-image="landingpage pagina"
     />
     <BlockText
@@ -28,14 +34,16 @@
     />
     <BlockImage
       :full="false"
-      image="/images/djenna/logos.png"
+      :image="require('~/assets/images/djenna/logos.png')"
+      :image-loading="require('~/assets/images/djenna/logos.png?lqip')"
       alt-image="landingpage pagina"
     />
     <BlokBlocks
-      intro-text="In blok 2 wou ik meer leren over animeren. Ik wou een scene maken waarin verschillende animaties te zien zijn. Hier heb ik dit blok veel over geleerd, maar ook heb ik nog heel veel bij geleerd over modellen."
+      intro-text="In blok 2 wilde ik meer leren over animeren. Ik wilde een scene maken waarin verschillende animaties te zien zijn. Hier heb ik dit blok veel over geleerd, maar ook heb ik nog heel veel bij geleerd over modellen."
       author="djenna"
-      blok-image="/images/djenna/oog.png"
-      alt-image="netlify"
+      :blok-image="require('~/assets/images/djenna/oog.png')"
+      :blok-image-loading="require('~/assets/images/djenna/oog.png?lqip')"
+      alt-image="oog design"
     />
     <BlockIntro
       author="djenna"
@@ -87,6 +95,7 @@
 </template>
 <script>
 import Header from '~/components/Header.vue';
+import Profile from '~/components/Profile.vue';
 import BlockIntro from '~/components/BlockIntro.vue';
 import BlokBlocks from '~/components/BlokBlocks.vue';
 import ProjectIntro from '~/components/ProjectIntro.vue';
@@ -99,6 +108,7 @@ import BlockText from '~/components/BlockText.vue';
 export default {
   components: {
     Header,
+    Profile,
     ProjectIntro,
     BlokBlocks,
     MovieBlock,
@@ -111,5 +121,13 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+  .section__personal {
+    cursor: url("~assets/cursors/cursor-djenna.png"), auto;
 
+    button, a {
+      &:hover {
+        cursor: url("~assets/cursors/hand-djenna.png"), auto;
+      }
+    }
+  }
 </style>

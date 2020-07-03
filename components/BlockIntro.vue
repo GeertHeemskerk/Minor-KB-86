@@ -39,6 +39,22 @@ h2.djenna, a.djenna {
  color: $c-djenna;
 }
 
+a.sanne:hover {
+  cursor: url("~assets/cursors/hand-sanne.png"), auto;
+}
+
+a.steven:hover {
+  cursor: url("~assets/cursors/hand-steven.png"), auto;
+}
+
+a.geert:hover {
+  cursor: url("~assets/cursors/hand-geert.png"), auto;
+}
+
+a.djenna:hover {
+  cursor: url("~assets/cursors/hand-djenna.png"), auto;
+}
+
 .section {
   &__wrapper {
     padding: 5rem 2.8rem 2rem 2.8rem;
@@ -108,10 +124,6 @@ h2.djenna, a.djenna {
 }
 
 @media(min-width: $mq-l-laptop) {}
-
 @media(min-width: $mq-xl-laptop) {}
-
 @media(min-width: $mq-desktop) {}
-
-
 </style>

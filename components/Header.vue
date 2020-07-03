@@ -2,21 +2,27 @@
   <div class="header__section" :class="{open: open}">
     <header class="header" :class="[className, { 'header--open': open }]">
       <div class="header__wrapper">
-          <transition name="slide-fade">
-            <button class="menu__button button--clean" v-if="!open" key="on" @click="openMenu">
-              <div class="menu">
-                <p class="menu__text">Menu</p>
-                <Icons class-name="menu__icon" type="menu" />
-              </div>
-            </button>
-            <button class="menu__button button--clean" v-else key="off" @click="closeMenu">
-              <div class="menu">
-                <p class="menu__text">Close Menu</p>
-                <Icons class-name="menu__icon" type="menu-close" />
-              </div>
-            </button>
-          </transition>
-        </div>
+        <nuxt-link to="/" class="menu__button menu__button--home button--clean" :class="this.$route.name">
+          <div class="menu">
+            <Icons class-name="menu__icon" type="home" />
+            <p class="menu__text menu__text--home">Home</p>
+          </div>
+        </nuxt-link>
+        <transition name="slide-fade">
+          <button class="menu__button button--clean" :class="this.$route.name" v-if="!open" key="on" @click="openMenu">
+            <div class="menu">
+              <p class="menu__text">Menu</p>
+              <Icons class-name="menu__icon" type="menu" />
+            </div>
+          </button>
+          <button class="menu__button button--clean" v-else key="off" @click="closeMenu">
+            <div class="menu">
+              <p class="menu__text">Close Menu</p>
+              <Icons class-name="menu__icon" type="menu-close" />
+            </div>
+          </button>
+        </transition>
+      </div>
     </header>
     <div class="container" :class="{open: open}">
       <div class="container__wrapper">
@@ -69,20 +75,52 @@
         </div>
       </div>
       <div class="image__holder">
-        <figure>
-          <img :class="{ active: hover == 'sanne' }" id="sanne" src="~/assets/images/imgTest.png" alt="imgTest" />
+        <figure v-lazy-container="{ selector: 'img' }">
+          <img 
+            :class="{ active: hover == 'sanne' }"
+            id="sanne"
+            :data-src="require('~/assets/images/profile-sanne.png')"
+            :data-loading="require('~/assets/images/profile-sanne.png?lqip')"
+            alt="Foto van Sanne" 
+          />
         </figure>
-        <figure>
-          <img :class="{ active: hover == 'steven'}" id="steven" src="~/assets/images/placeholder.png" alt="imgTest" />
+        <figure v-lazy-container="{ selector: 'img' }">
+          <img 
+            :class="{ active: hover == 'steven'}"
+            id="steven"
+            :data-src="require('~/assets/images/profile-steven.jpg')"
+            :data-loading="require('~/assets/images/profile-steven.jpg?lqip')"
+            alt="Foto van Steven"
+          />
         </figure>
-        <figure>
-          <img :class="{ active: hover == null }" id="kb" src="~/assets/images/intro-image.png" alt="imgTest" />
+        <figure v-lazy-container="{ selector: 'img' }">
+          <video
+            :class="{ 'active': hover == null }"
+            autoplay
+            loop
+            muted
+            playsinline
+          >
+            <source src="~/assets/videos/homevideo.mp4" type="video/mp4">
+          </video>
         </figure>
-        <figure>
-          <img :class="{ active: hover == 'djenna' }" id="djenna" src="~/assets/images/imgTest.png" alt="imgTest" />
+        <figure v-lazy-container="{ selector: 'img' }">
+          <img
+            :class="{ active: hover == 'djenna' }" 
+            id="djenna"
+            :data-src="require('~/assets/images/profile-djenna.png')"
+            :data-loading="require('~/assets/images/profile-djenna.png?lqip')"
+            alt="Foto van Djenna" 
+          />
         </figure>
-        <figure>
-          <img :class="{ active: hover == 'geert' }" id="geert" src="~/assets/images/placeholder.png" alt="imgTest" />
+        <figure v-lazy-container="{ selector: 'img' }">
+          <img 
+            :class="{ active: hover == 'geert' }" 
+            id="geert"
+            :data-src="require('~/assets/images/profile-geert.png')"
+            :data-loading="require('~/assets/images/profile-geert.png?lqip')"
+            alt="Foto van Geert" 
+          />
         </figure>
       </div>
     </div>
@@ -151,7 +189,7 @@ export default {
   &__wrapper {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 90%;
     margin: 0 auto;
     height: 100%;
@@ -165,10 +203,19 @@ export default {
         stroke: white;
       }
     }
+
+    & .menu__button--home {
+      display: none;
+    }
+
+    & .header__wrapper {
+      justify-content: flex-end;
+    }
   }
 
   &--personal {
     position: sticky;
+    background-color: white;
 
     .menu {
       color: black;
@@ -202,13 +249,39 @@ export default {
 
   &__button {
     cursor: pointer;
+
+    &.sanne:hover {
+      cursor: url("~assets/cursors/hand-sanne.png"), auto;
+    }
+
+    &.steven:hover {
+      cursor: url("~assets/cursors/hand-steven.png"), auto;
+    }
+
+    &.geert:hover {
+      cursor: url("~assets/cursors/hand-geert.png"), auto;
+    }
+
+    &.djenna:hover {
+      cursor: url("~assets/cursors/hand-djenna.png"), auto;
+    }
+
+    &--home {
+      display: block;
+      height: initial;
+      margin: 0;
+    }
   }
 
   &__text {
     font-family: $f-heading;
-    font-size: 0.625rem;
+    font-size: 0.7rem;
     letter-spacing: 1px;
-    padding-right: .2rem;
+    padding-right: .3rem;
+
+    &--home {
+      padding-left: .3rem;
+    }
   }
 
   &__icon {
@@ -275,11 +348,30 @@ a {
   display: none;
 }
 
-@media only screen and (min-width: $mq-tablet) {
+@media(min-width: $mq-tablet) {
   a {
     font-size: 3rem; 
-    margin: 3.5rem 0;
+    margin: 3.5rem 0; 
   }
+}
+
+@media(min-width: $mq-s-laptop) {
+  figure {
+    position: absolute;
+  }
+
+  // img {
+  //   transition: 1.3s;
+  //   opacity: 0;
+  //   transform: scale(0.8)
+  // }
+
+  // img.active{
+  //   transition-delay: 0.55s;
+  //   animation: zoomIn 1.3s;
+  //   opacity: 1;
+  //   transform: scale(1.0);
+  // }
 
   .link__icon {
     width: 2rem;
@@ -288,7 +380,7 @@ a {
   }
 }
 
-@media only screen and (min-width: $mq-s-laptop) {
+@media(min-width: $mq-s-laptop) {
   figure {
     position: absolute;
   }
@@ -331,13 +423,18 @@ a {
   }
 }
 
-@media only screen and (min-width: $mq-l-laptop) {
+@media(min-width: $mq-l-laptop) {
   figure {
     width: 80%;
     max-width: 1040px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
+  }
+
+  a {
+    font-size: 2.4rem;
+    margin: 4rem 0;
   }
 
   img {
@@ -355,6 +452,32 @@ a {
       opacity: 1;
       transition-delay: .2s;
       transform: scale(1) translateX(0);
+    }
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    opacity: 0;
+    transform: scale(0.6) translateX(15%);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+
+    &.active { 
+      display: initial;
+      z-index: 1;
+      opacity: 1;
+      transition-delay: .2s;
+      transform: scale(1) translateX(0);
+    }
+  }
+
+  .container {
+    justify-content: flex-start;
+
+    &__wrapper {
+      margin: 0 8rem;
     }
   }
 
@@ -398,18 +521,15 @@ a {
     margin: 4rem 0;
   }
 
-  .container {
-    &__wrapper {
-      margin: 0rem 5.5rem;
-    }
-  }
-
   .image__holder {
     width: 1040px;
     height: 580px;
     position: absolute;
     visibility: visible;
     display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .link__icon {
@@ -417,16 +537,7 @@ a {
   }
 }
 
-@media only screen and (min-width: $mq-xl-laptop) {
-  .menu {
-    &__link {
-      font-size: 4rem;
-      margin: 5rem 0;
-    }
-  }
-}
-
-@media only screen and (min-width: $mq-desktop) {
+@media(min-width: $mq-desktop) {
   .container {
     &__wrapper {
       margin: 0rem 8.5rem;
@@ -442,6 +553,15 @@ a {
   figure, img {
     width: 100%;
     height: 100%;
+  }
+}
+
+@media(min-width: $mq-xl-laptop) {
+  .menu {
+    &__link {
+      font-size: 4rem;
+      margin: 5rem 0;
+    }
   }
 }
 </style>

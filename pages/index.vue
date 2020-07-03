@@ -5,6 +5,12 @@
       <div class="content__wrapper">
         <div class="title__group">
           <nuxt-link
+            to="/"
+            class="title__single title__single--title"
+          >
+            <span data-content="Minor VD&FD" aria-hidden="true"></span>Minor VD&FD
+          </nuxt-link>
+          <nuxt-link
             to="/sanne"
             class="title__single title__single--hide"
             @mouseover.native="hover = 'sanne';"
@@ -19,12 +25,6 @@
             @mouseleave.native="hover = null;"
           >
             <span data-content="Steven Wu" aria-hidden="true"></span>Steven Wu
-          </nuxt-link>
-          <nuxt-link
-            to="/"
-            class="title__single title__single--title"
-          >
-            <span data-content="Minor VD&FD" aria-hidden="true"></span>Minor VD&FD
           </nuxt-link>
           <nuxt-link
             to="/djenna"
@@ -43,25 +43,57 @@
             <span data-content="Geert Heemskerk" aria-hidden="true"></span>Geert Heemskerk
           </nuxt-link>
         </div>
-        <figure class="intro__figure">
-          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'sanne' }" src="~/assets/images/placeholder.png" alt="Foto van Sanne">
-          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'steven' }" src="~/assets/images/placeholder-landscape.jpg" alt="Foto van Steven">
-          <img class="intro__media" :class="{ 'intro__media--hover': hover == null }" src="~/assets/images/intro-image.png" alt="Verf die samenkomt">
-          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'geert' }" src="~/assets/images/placeholder-portrait.jpg" alt="Foto van Geert">
-          <img class="intro__media" :class="{ 'intro__media--hover': hover == 'djenna'}" src="~/assets/images/placeholder-portrait-girl.jpg" alt="Foto van Djenna">
+        <figure v-lazy-container="{ selector: 'img' }" class="intro__figure">
+          <img 
+            class="intro__media" 
+            :class="{ 'intro__media--hover': hover == 'sanne' }" 
+            :data-src="require('~/assets/images/profile-sanne.png')"
+            :data-loading="require('~/assets/images/profile-sanne.png?lqip')"
+            alt="Foto van Sanne"
+          />
+          <img 
+            class="intro__media"
+            :class="{ 'intro__media--hover': hover == 'steven' }"
+            :data-src="require('~/assets/images/profile-steven.jpg')"
+            :data-loading="require('~/assets/images/profile-steven.jpg?lqip')"
+            alt="Foto van Steven"
+          />
+          <video
+            class="intro__media"
+            :class="{ 'intro__media--hover': hover == null }"
+            autoplay
+            loop
+            muted
+            playsinline
+          >
+            <source src="~/assets/videos/homevideo.mp4" type="video/mp4">
+          </video>
+          <img 
+            class="intro__media" 
+            :class="{ 'intro__media--hover': hover == 'geert' }" 
+            :data-src="require('~/assets/images/profile-geert.png')"
+            :data-loading="require('~/assets/images/profile-geert.png?lqip')"
+            alt="Foto van Geert"
+          />
+          <img 
+            class="intro__media" 
+            :class="{ 'intro__media--hover': hover == 'djenna'}" 
+            :data-src="require('~/assets/images/profile-djenna.png')"
+            :data-loading="require('~/assets/images/profile-djenna.png?lqip')"
+            alt="Foto van Djenna"
+          />
         </figure>
         <section class="intro__text">
-          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'sanne' }">1 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
-          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'steven' }">2 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
-          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == null }">De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
-          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'geert' }">4 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
-          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'djenna' }">5 De foto van de verf die samenkomt is een goede metafoor voor deze website. Een website die het werk van 4 leerlingen samenvoegt. In 3 blokken van 5 weken mochten de leerlingen hun eigen leerdoelen samen stellen. Nieuwsgierig? Kijk snel verder.</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'sanne' }">Hier vind je het werk van Sanne, zij heeft zich dit blok vooral gefocust op het leren van 3D motion design. Voor de minor had ze nog helemaal geen ervaring maar heeft in de afgelopen 15 weken veel geleerd! Klik en zie haar werk.</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'steven' }">Steven, een toekomstige front-end developer wil zich verder ontwikkelen in het gebied van design en development. Zo heeft hij in de half jaar veel geleerd over ontwerpen en website bouwen. Klik verder om zijn werk te zien.</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == null }">In de minor Visual Design & Front-end Development mochten studenten zelf bepalen wat zij in een half jaar wilde leren. De animatie is een goede metafoor voor het samenkomen van het werk van vier studenten op een plek. Vanuit dit concept hebben we de website opgebouwd. Nieuwsgierig? Klik dan op een van de individuele pagina’s van de vier studenten!</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'geert' }">In de afgelopen maanden heeft Geert met Cinema 4D, adobe pakket Photoshop, aftereffects, XD en gewerkt, en met front-end technieken zoals SASS en NuxtJS(VueJS) gewerkt en is flink gegroeid binnen deze technieken. Klik en zie zijn werk.</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'djenna' }">Djenna heeft zich de afgelopen maanden gefocust op het maken van logo’s en van web animaties. Van web animaties wist Djenna nog helemaal niets, en in de afgelopen weken in haar kennis hiervan flink gegroeid! Klik en zie haar werk.</p>
         </section>
       </div>
     </section>
   </main>
 </template>
-
 <script>
 import Header from '~/components/Header.vue';
 export default {
@@ -75,7 +107,6 @@ export default {
   }
 }
 </script>
-
 <style scoped lang="scss">
 .main {
   background-color: $c-background;
@@ -120,7 +151,7 @@ export default {
     font-size: 2rem;
     text-decoration: none;
     color: white;
-    transition: transform .8s cubic-bezier(.23, 1, .32, 1);
+    transition: all .8s cubic-bezier(.23, 1, .32, 1);
 
     &--hide {
       display: none;
@@ -144,7 +175,8 @@ export default {
     }
 
     &:hover {
-      transform: translateY(8%) translateX(-3%);
+      cursor: url("~assets/cursors/hand-home.png"), auto;
+      transform: translate(-4%, 8%);
 
       span {
         transform: translateY(0);
@@ -165,8 +197,7 @@ export default {
 
   &__media {
     width: 100%;
-    // height: 414px;
-    height: 300px;
+    height: 390px;
     object-fit: cover;
     object-position: center;
     display: none;
@@ -177,17 +208,16 @@ export default {
   }
 
   &__text {
-    // position: absolute;
-    // bottom: -5rem;
-    width: 75%;
+    position: absolute;
+    bottom: -5rem;
+    width: 60%;
     text-align: center;
     z-index: 1;
-    // left: 50%;
-    // transform: translateX(-50%);
+    left: 50%;
+    transform: translateX(-50%);
     letter-spacing: 1px;
     font-size: 0.625rem;
     line-height: 185%;
-    margin: 1rem auto;
 
     &-content {
       display: none;
@@ -351,7 +381,6 @@ export default {
 }
 
 @media(min-width: $mq-xl-laptop) {
-
   .title {
     &__single {
       font-size: 4rem;

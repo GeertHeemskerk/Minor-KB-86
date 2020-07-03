@@ -1,6 +1,11 @@
 <template>
   <section class="section__personal">
     <Header class-name="header--personal" />
+    <Profile
+      :image="require('~/assets/images/geert/profile.png')"
+      :image-loading="require('~/assets/images/geert/profile.png?lqip')"
+      alt-image="Profiel foto van geert"
+    />
     <ProjectIntro
       author="geert"
       title= "Geert"
@@ -8,7 +13,8 @@
       subject="Rebranding - Webdesign - Cinema 4D - After Effects"
     />
     <BlockImage
-      image="/images/geert/redesign-webshop.png"
+      :image="require('~/assets/images/geert/redesign-webshop.png')"
+      :image-loading="require('~/assets/images/geert/redesign-webshop.png?lqip')"
       alt-image="redesign webshop"
     />
     <BlockIntro
@@ -18,24 +24,27 @@
       link="/pdf/geert/17026121-Geert-Heemskerk-KB-86.pdf"
       link-text="download pdf"
     />
-    <BlockImage
-      image="/images/geert/redesign-front.png"
-      alt-image="redesign webshop"
+    <BlockImage      
+      :image="require('~/assets/images/geert/redesign-front-page.png')"
+      :image-loading="require('~/assets/images/geert/redesign-front-page.png?lqip')"
+      alt-image="redesign front page"
     />
     <BlockImage
-      image="/images/geert/cards.png"
-      alt-image="redesign webshop"
+      :image="require('~/assets/images/geert/cards.png')"
+      :image-loading="require('~/assets/images/geert/cards.png?lqip')"
+      alt-image="card"
     />
     <BlokBlocks
       intro-text="In dit blok heb ik ook photoshop gebruikt en heb het gemaakt logo geplaatst op een tas van de Bijenkorf en deze bewerkt met kleuren en mijn idealen. Daarnaast heb ik zoals u hierboven kunt zien cadeaukaarten ontworpen die matchen met de styleguide van de website en principes van de Bijenkorf."
       author="geert"
-      blok-image="/images/geert/shoppingbag.png"
+      :blok-image="require('~/assets/images/geert/shoppingbag.png')"
+      :blok-image-loading="require('~/assets/images/geert/shoppingbag.png?lqip')"
       alt-image="shoppingbag"
     />
     <BlockIntro
       author="geert"
       title="Blok 2"
-      text="In blok 1 werd ik geïnspireerd door klasgenoten en online voorbeelden van mockup animaties. Dit houdt in dat je een animatie afspeeld in een apparaat zoals een mobiele telefoon. Voor dit blok heb ik nog nooit gewerkt met mockup animaties en 3D ontwerpen. Hiervoor heb ik gebruikt gemaakt van C4D (Cinema 4D) en AAE (Adobe After Effects). De animatie die afspeeld op het scherm heb ik gemaakt in AAE. AAE en C4D heb ik binnen 5 weken moeten leren om tot dit eindresultaat te komen. Hiervoor heb ik in zo een korte tijd geleerd hoe ik materialen, licht, tijd, kijkhoeken, reflecties gebruik in C4D. Doordat ik C4D kon linken aan AEE kon ik makkelijk posities en animaties koppelen aan vereschillende soorten tijdstippen in het filmpje. Als u geïntresseerd ben in mijn werk kunt u mijn volledige ontwerpproces hieronder downloaden als PDF."
+      text="In blok 1 werd ik geïnspireerd door klasgenoten en online voorbeelden van mockup animaties. Dit houdt in dat je een animatie afspeeld in een apparaat zoals een mobiele telefoon. Voor dit blok had ik nog nooit gewerkt met mockup animaties en 3D elementen. Hiervoor heb ik gebruikt gemaakt van C4D (Cinema 4D) en AAE (Adobe After Effects). De animatie die afspeeld op het scherm heb ik gemaakt in AAE. AAE en C4D heb ik binnen 5 weken moeten leren om tot dit eindresultaat te komen. Hiervoor heb ik in zo een korte tijd geleerd hoe ik materialen, licht, tijd, kijkhoeken, reflecties gebruik in C4D. Doordat ik C4D kon linken aan AEE kon ik makkelijk posities en animaties koppelen aan vereschillende soorten tijdstippen in het filmpje. Als u geïntresseerd ben in mijn werk kunt u mijn volledige ontwerpproces hieronder downloaden als PDF."
       link="/pdf/geert/17026121-Geert-Heemskerk-KB-86-3D-Animated.pdf"
       link-text="download pdf"
     />
@@ -51,6 +60,7 @@
 </template>
 <script>
 import Header from '~/components/Header.vue';
+import Profile from '~/components/Profile.vue';
 import BlockIntro from '~/components/BlockIntro.vue';
 import ProjectIntro from '~/components/ProjectIntro.vue';
 import BlokBlocks from '~/components/BlokBlocks.vue';
@@ -61,6 +71,7 @@ import Footer from '~/components/Footer.vue';
 export default {
   components: {
     Header,
+    Profile,
     ProjectIntro,
     BlokBlocks,
     MovieBlock,
@@ -71,4 +82,13 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.section__personal {
+  cursor: url("~assets/cursors/cursor-geert.png"), auto;
+
+  button, a {
+    &:hover {
+      cursor: url("~assets/cursors/hand-geert.png"), auto;
+    }
+  }
+}
 </style>

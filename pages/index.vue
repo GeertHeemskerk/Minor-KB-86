@@ -54,8 +54,8 @@
           <img
             class="intro__media"
             :class="{ 'intro__media--hover': hover == 'steven' }"
-            :data-src="require('~/assets/images/profile-steven.jpg')"
-            :data-loading="require('~/assets/images/profile-steven.jpg?lqip')"
+            :data-src="require('~/assets/images/profile-steven.png')"
+            :data-loading="require('~/assets/images/profile-steven.png?lqip')"
             alt="Foto van Steven"
           />
           <video
@@ -85,7 +85,7 @@
         </figure>
         <section class="intro__text">
           <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'sanne' }">Hier vind je het werk van Sanne, zij heeft zich dit blok vooral gefocust op het leren van 3D motion design. Voor de minor had ze nog helemaal geen ervaring maar heeft in de afgelopen 15 weken veel geleerd! Klik en zie haar werk.</p>
-          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'steven' }">Steven, een toekomstige front-end developer wil zich verder ontwikkelen in het gebied van design en development. Zo heeft hij in de half jaar veel geleerd over ontwerpen en website bouwen. Klik verder om zijn werk te zien.</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'steven' }">Steven, een toekomstige front-end developer die zich verder willen ontwikkelen in het gebied van design en development. Zo heeft hij in afgelopen half jaar veel geleerd over ontwerpen en website bouwen. Klik verder om zijn werk te zien.</p>
           <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == null }">In de minor Visual Design & Front-end Development mochten studenten zelf bepalen wat zij in een half jaar wilde leren. De animatie is een goede metafoor voor het samenkomen van het werk van vier studenten op een plek. Vanuit dit concept hebben we de website opgebouwd. Nieuwsgierig? Klik dan op een van de individuele pagina’s van de vier studenten!</p>
           <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'geert' }">In de afgelopen maanden heeft Geert met Cinema 4D, Adobe pakket Photoshop, After Effects, XD en gewerkt, en met front-end technieken zoals SASS en NuxtJS(VueJS) gewerkt en is flink gegroeid binnen deze technieken. Klik en zie zijn werk.</p>
           <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'djenna' }">Djenna heeft zich de afgelopen maanden gefocust op het maken van logo’s en van web animaties. Van web animaties wist Djenna nog helemaal niets, en in de afgelopen weken in haar kennis hiervan flink gegroeid! Klik en zie haar werk.</p>
@@ -159,7 +159,6 @@ export default {
 
     span {
       position: absolute;
-      // top: 0;
       left: 0;
       overflow: hidden;
       transform: translateY(100%);

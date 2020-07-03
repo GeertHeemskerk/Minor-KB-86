@@ -56,6 +56,7 @@ export default {
   }
 
   a {
+    font-size: .7rem;
     margin: 0 0.2rem;
 
     &:hover {
@@ -99,6 +100,10 @@ export default {
   }
 
   @media(min-width: $mq-tablet) {
+    a {
+      font-size: 1rem;
+    }
+
     .section__wrapper {
       padding: 4rem;
     }

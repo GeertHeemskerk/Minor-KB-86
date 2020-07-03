@@ -88,8 +88,8 @@
           <img 
             :class="{ active: hover == 'steven'}"
             id="steven"
-            :data-src="require('~/assets/images/profile-steven.jpg')"
-            :data-loading="require('~/assets/images/profile-steven.jpg?lqip')"
+            :data-src="require('~/assets/images/profile-steven.png')"
+            :data-loading="require('~/assets/images/profile-steven.png?lqip')"
             alt="Foto van Steven"
           />
         </figure>

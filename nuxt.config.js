@@ -44,13 +44,14 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    '@aceforth/nuxt-optimized-images',
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
     '@nuxtjs/style-resources',
-    '@aceforth/nuxt-optimized-images'
+    '@aceforth/nuxt-optimized-images',
   ],
   styleResources: {
     scss: [

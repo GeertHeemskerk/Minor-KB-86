@@ -22,8 +22,17 @@
       title="Blok 1"
       text="Aan het begin van de minor had ik nog helemaal geen ervaring met 3D. Er is een 3D artist waar ik heel enthousiast van werd en dat is extraweg. Ik had hem een privebericht gestuurd op instagram en hij heeft mij een beetje opweg geholpen met welk programma ik het best kan gebruiken en wat uitleg gegeven over computer voor renderwerk. Hieruit kwam dat ik met Cinema 4D ging werken. Zij hebben ook een gratis studenten licentie. Ik ben hierna veel tutorials gaan kijken om het programma een beetje te leren kennen. Maar merkte ik al snel dat ik beter werk wanneer ik naar een doel toe werk. Toen heb ik mezelf als doel gesteld om een sushi band te maken. Hieronder is het eind resultaat te zien."
     />
+    <BlockVideo
+      :full="false"
+      video="/videos/sanne/sushi-table-animation.mp4"
+    />
+    <BlockIntro
+      author="sanne"
+      title="Blok 2"
+      text="In blok 2 wou ik meer leren over animeren. Ik wou een scene maken waarin verschillende animaties te zien zijn. Hier heb ik dit blok veel over geleerd, maar ook heb ik nog heel veel bij geleerd over modellen."
+    />
     <BlokBlocks
-      intro-text="In blok 2 wou ik meer leren over animeren. Ik wou een scene maken waarin verschillende animaties te zien zijn. Hier heb ik dit blok veel over geleerd, maar ook heb ik nog heel veel bij geleerd over modellen."
+      intro-text="Hiernaast is te zien hoe ik de scene er buiten de camera uitziet. De groene lijnen zijn het gezichtsveld van de camera, en die beweegt door de gang heen naar het eind. Hierin gebeuren dus verschillende animaties en zie je verschillende objecten. Hieronder is het eindresultaat te zien."
       author="sanne"
       :blok-image="require('~/assets/images/sanne/c4d.png')"
       :blok-image-loading="require('~/assets/images/sanne/c4d.png?lqip')"
@@ -63,6 +72,7 @@ import ProjectIntro from '~/components/ProjectIntro.vue';
 import BlokBlocks from '~/components/BlokBlocks.vue';
 import MovieBlock from '~/components/MovieBlock.vue';
 import BlockImage from '~/components/BlockImage.vue';
+import BlockVideo from '~/components/BlockVideo.vue';
 import Triplets from '~/components/Triplets.vue';
 import Footer from '~/components/Footer.vue';
 
@@ -74,6 +84,7 @@ export default {
     MovieBlock,
     BlockIntro,
     BlockImage,
+    BlockVideo,
     BlokBlocks,
     Triplets,
     Footer,

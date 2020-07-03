@@ -5,42 +5,42 @@
       <div class="content__wrapper">
         <div class="title__group">
           <nuxt-link
+            to="/"
+            class="title__single title__single--title"
+          >
+            <span data-content="Minor VD&FD" aria-hidden="true"></span>Minor VD&FD
+          </nuxt-link>
+          <nuxt-link
             to="/sanne"
             class="title__single title__single--hide"
-            @mouseover.native="hover = 'sanne'; kb = false"
-            @mouseleave.native="hover = null; kb = true"
+            @mouseover.native="hover = 'sanne';"
+            @mouseleave.native="hover = null;"
           >
             <span data-content="Sanne van Zeijl" aria-hidden="true"></span>Sanne van Zeijl
           </nuxt-link>
           <nuxt-link
             to="/steven"
             class="title__single title__single--hide"
-            @mouseover.native="hover = 'steven'; kb = false"
-            @mouseleave.native="hover = null; kb = true"
+            @mouseover.native="hover = 'steven';"
+            @mouseleave.native="hover = null;"
           >
             <span data-content="Steven Wu" aria-hidden="true"></span>Steven Wu
           </nuxt-link>
           <nuxt-link
-            to="/"
-            class="title__single title__single--title"
+            to="/djenna"
+            class="title__single title__single--hide"
+            @mouseover.native="hover = 'djenna';"
+            @mouseleave.native="hover = null;"
           >
-            <span data-content="KB-86 SSDG" aria-hidden="true"></span>KB-86 SSDG
+            <span data-content="Djenna Bakker" aria-hidden="true"></span>Djenna Bakker
           </nuxt-link>
           <nuxt-link
             to="/geert"
             class="title__single title__single--hide"
-            @mouseover.native="hover = 'geert'; kb = false"
-            @mouseleave.native="hover = null; kb = true"
+            @mouseover.native="hover = 'geert';"
+            @mouseleave.native="hover = null;"
           >
             <span data-content="Geert Heemskerk" aria-hidden="true"></span>Geert Heemskerk
-          </nuxt-link>
-          <nuxt-link
-            to="/djenna"
-            class="title__single title__single--hide"
-            @mouseover.native="hover = 'djenna'; kb = false"
-            @mouseleave.native="hover = null; kb = true"
-          >
-            <span data-content="Djenna Bakker" aria-hidden="true"></span>Djenna Bakker
           </nuxt-link>
         </div>
         <figure v-lazy-container="{ selector: 'img' }" class="intro__figure">
@@ -85,16 +85,15 @@
         </figure>
         <section class="intro__text">
           <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'sanne' }">Hier vind je het werk van Sanne, zij heeft zich dit blok vooral gefocust op het leren van 3D motion design. Voor de minor had ze nog helemaal geen ervaring maar heeft in de afgelopen 15 weken veel geleerd! Klik en zie haar werk.</p>
-          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'steven' }">Steven, een toekomstige front-end developer wil zich verder ontwikkelen in het gebied van design en development. Zo heeft hij in de afgelopen maanden veel geleerd over ontwerpen en website bouwen. Klik verder om zijn werk te zien.</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'steven' }">Steven, een toekomstige front-end developer wil zich verder ontwikkelen in het gebied van design en development. Zo heeft hij in de half jaar veel geleerd over ontwerpen en website bouwen. Klik verder om zijn werk te zien.</p>
           <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == null }">In de minor Visual Design & Front-end Development mochten studenten zelf bepalen wat zij in een half jaar wilde leren. De animatie is een goede metafoor voor het samenkomen van het werk van vier studenten op een plek. Vanuit dit concept hebben we de website opgebouwd. Nieuwsgierig? Klik dan op een van de individuele pagina’s van de vier studenten!</p>
-          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'geert' }">In 20 weken tijd heb ik nieuwe skills aangeleerd zoals 3D modellen in Cinema 4D gemaakt en deze geanimeerd met het gehele Adobe pakket. Daarnaast heb ik mijn kennis op het gebied van Front-end Development uitgebreid met NuxtJS(VueJS). Je kan mijn werk checken als je op mijn naam klikt!</p>
-          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'djenna' }">In het afgelopen half jaar kreeg ik de vrijheid om te doen wat ík altijd al heb willen doen, maar geen tijd voor heb gehad/gemaakt. Ik heb logo’s gemaakt en heel veel geleerd over web animaties en deze uitgewerkt op twee websites! Klik op mijn naam om al mijn werk te lezen en zien!</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'geert' }">In de afgelopen maanden heeft Geert met Cinema 4D, adobe pakket Photoshop, aftereffects, XD en gewerkt, en met front-end technieken zoals SASS en NuxtJS(VueJS) gewerkt en is flink gegroeid binnen deze technieken. Klik en zie zijn werk.</p>
+          <p class="intro__text-content" :class="{ 'intro__text-content--hover': hover == 'djenna' }">Djenna heeft zich de afgelopen maanden gefocust op het maken van logo’s en van web animaties. Van web animaties wist Djenna nog helemaal niets, en in de afgelopen weken in haar kennis hiervan flink gegroeid! Klik en zie haar werk.</p>
         </section>
       </div>
     </section>
   </main>
 </template>
-
 <script>
 import Header from '~/components/Header.vue';
 export default {
@@ -137,11 +136,13 @@ export default {
 
 .title {
   &__group {
-    position: absolute;
-    top: -1.4rem;
-    z-index: 2;
-    left: 50%;
-    transform: translateX(-50%);
+    // position: absolute;
+    // top: -1.4rem;
+    // z-index: 2;
+    // left: 50%;
+    // transform: translateX(-50%);
+    text-align: center;
+    margin-bottom: 1rem;
   }
 
   &__single {
@@ -158,7 +159,7 @@ export default {
 
     span {
       position: absolute;
-      top: 0;
+      // top: 0;
       left: 0;
       overflow: hidden;
       transform: translateY(100%);
@@ -196,7 +197,7 @@ export default {
 
   &__media {
     width: 100%;
-    height: 414px;
+    height: 390px;
     object-fit: cover;
     object-position: center;
     display: none;
@@ -243,12 +244,17 @@ export default {
       margin: 2rem auto;
     }
 
+    &__media {
+      height: 414px;
+    }
+
     &__text {
       position: static;
       bottom: unset;
       transform: none;
       text-align: center;
       margin: 0 auto;
+      font-size: 1rem;
     }
   }
 }
@@ -272,6 +278,7 @@ export default {
       left: 0;
       top: 50%;
       transform: translateY(-50%);
+      z-index: 2;
     }
 
     &__single {
@@ -374,9 +381,15 @@ export default {
 }
 
 @media(min-width: $mq-xl-laptop) {
+  .title {
+    &__single {
+      font-size: 4rem;
+    }
+  }
+
   .intro {
     &__figure {
-      height: 550px;
+      height: 620px;
     }
   }
 

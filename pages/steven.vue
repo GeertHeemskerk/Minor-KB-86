@@ -36,7 +36,7 @@
       author="steven"
       text="Na veel feedback sessies met onze docenten heb de herontwerp van de OSIRIS dashboard afgerond. Dit blok heb ik veel geleerd over het ontwerpen van dashboard en het inrichten van belangrijke data maar ook het gebruiken van verschillende kleuren. Ik ben heel trots op mijn designs en hoeveel ik heb geleerd binnen dit blok."
       link="https://www.figma.com/file/BnfsALBcUPH7ONN4hHJLyz/HHS-Osiris-Dashboard-Redesign?node-id=0%3A1/"
-      linkText="zie alle schermen"
+      linkText="Bekijk alle schermen"
     />
     <BlockImage
       :full="false"
@@ -63,7 +63,7 @@
       author="steven"
       text="Voor dit blok gebruik ik Wordpress, ACF en Timber om mijn thema te bouwen. Eerst heb wat onderzoek gedaan hoe Wordpress hierarchy werkt, dit is heel belangrijk voor het bouwen van thema’s. Daarna heb ik wat schetsen gemaakt voor mijn pagina’s gebaseerd op opgezochte inspiraties. Vervolgens wat wireframes gemaakt zodat ik snel kon beginnen met de development fase. De plugins die ik voor mijn Wordpress gebruikte hielp me erg om het development proces te versnellen. ACF zorgde voor het maken van invoervelden in de achterkant van Wordpress. Hierdoor kon ik makkelijk data definiëren die ik nodig heb voor mijn eindresultaat. Met Timber kan ik makkelijker de content achterhalen voor mijn front-end. En de rest was de layout neerzetten met HTML en CSS."
       link="https://hhs-kb-86.000webhostapp.com/"
-      linkText="Ga naar website"
+      linkText="Bekijk de website"
     />
     <BlockImage
       :image="require('~/assets/images/steven/wordpress-home-page.png')"
@@ -91,7 +91,7 @@
       author="steven"
       text="Na een paar tutorials en het goed lezen van de documentaties kon ik de website van blok 2 herbouwen in Nuxt.js en DatoCMS. De JAMstack website vergeleken met Wordpress website van blok 2 is sneller en de implementatie van progressive image loading was makkelijk met DatoCMS.Er waren wel sommige dingen die ik niet in DatoCMS kon doen. JAMstack ga ik de toekomst zeker gebruiken en misschien een combinatie van JAMstack met Wordpress dan krijg ik beste van beide wereld."
       link="https://kb-86.netlify.app/"
-      linkText="Ga naar website"
+      linkText="Bekijk de website"
     />
     <BlockImage
       :full="false"

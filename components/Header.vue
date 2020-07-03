@@ -170,7 +170,6 @@ export default {
   height: 85px;
   width: 100%;
   top: 0;
-  z-index: 10;
 
   &__section {
     position: fixed;
@@ -179,6 +178,7 @@ export default {
     left: 0;
     height: 85px;
     overflow: hidden;
+    z-index: 10;
 
     &.open {
       height: 100vh;

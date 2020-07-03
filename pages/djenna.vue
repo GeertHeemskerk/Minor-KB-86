@@ -82,7 +82,7 @@
       author="djenna"
       text="Mijn doel was om een laadscherm te animeren, dus wanneer iemand op de website komt ziet hij eerst een laadscherm terwijl de hele pagina wordt ingeladen. Daarna wilde ik een grote achtergrond animatie toevoegen, maar ik kon geen tutorial vinden voor een animatie die toegevoegde waarde aan de website zou geven. Dus in plaats daarvan heb ik een aan de eerste sectie een typemachine animatie toegevoegd, waarmee ik de gebruiker begroet met verschillende termen. Tot slot wilde ik graag de progressie balken animeren, zodat ze van 0% naar het desbetreffende percentage zouden ‘schuiven’. Met behulp van een docent is dit uiteindelijk goed gelukt!"
       link="https://djennabakker.github.io/code/"
-      linkText="Ga naar website"
+      linkText="Bekijk de website"
     />
     <BlockVideo
       :full="false"

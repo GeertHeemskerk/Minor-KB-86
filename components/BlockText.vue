@@ -1,7 +1,7 @@
 <template>
   <div class="section__wrapper">
     <p class="block__text">{{ text }}</p>
-    <a class="block__link" :class="author" v-if="link" :href="link" target="_blank">
+    <a class="block__link block__link--button" :class="author" v-if="link" :href="link" target="_blank" rel="noopener">
       <span v-if="linkText">
         {{ linkText }}
       </span>
@@ -21,14 +21,13 @@ export default {
 <style lang="scss" scoped>
 a.sanne {
   color: $c-sanne;
-
   &:hover {
     cursor: url("~assets/cursors/hand-sanne.png"), auto;
   }
 }
 
 a.steven {
-  color: $c-steven-darker;
+  color: black;
 
   &:hover {
     cursor: url("~assets/cursors/hand-steven.png"), auto;
@@ -36,16 +35,12 @@ a.steven {
 }
 
 a.geert {
-  color: $c-geert;
-
   &:hover {
     cursor: url("~assets/cursors/hand-geert.png"), auto;
   }
 }
 
 a.djenna {
-  color: $c-djenna;
-
   &:hover {
     cursor: url("~assets/cursors/hand-djenna.png"), auto;
   }
@@ -54,6 +49,7 @@ a.djenna {
 .section {
   &__wrapper {
     padding: 5rem 2.8rem 2rem 2.8rem;
+    text-align: center;
   }
 }
 
@@ -69,6 +65,62 @@ a.djenna {
     display: block;
     text-align: center;
     font-weight: bold;
+
+    &--button {
+      color: white;
+      position: relative;
+      padding: .8rem 2rem;
+      text-align: center;
+      display: inline-block;
+      text-decoration: none;
+      border: 2px solid black;
+      font-family: $f-heading;
+      font-weight: normal;
+      letter-spacing: 1px;
+      font-size: .8rem;
+
+      &:hover {
+        &:before {
+          transform: translate(0, 0);
+        }
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 101%; //Some reason it has a gap
+        height: 101%; //Some reason it has a gap
+        transform: translate(7px, 7px);
+        top: 0; 
+        left: 0;
+        z-index: -1;
+        transition: transform .4s cubic-bezier(.23, 1, .32, 1);
+      }
+
+      &.sanne {
+        &:before {
+          background-color: $c-sanne;
+        }
+      }
+
+      &.steven {
+        &:before {
+          background-color: $c-steven;
+        }
+      }
+
+      &.djenna {
+        &:before {
+          background-color: $c-djenna;
+        }
+      }
+
+      &.geert {
+        &:before {
+          background-color: $c-geert;
+        }
+      }
+    }
   }
 }
 
@@ -85,6 +137,10 @@ a.djenna {
     &__text {
       font-size: 1rem;
       line-height: 1.85rem;
+    }
+
+    &__link {
+      font-size: 1rem;
     }
   }
 }

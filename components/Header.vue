@@ -28,8 +28,9 @@
       <div class="container__wrapper">
         <div class="menu__items">
           <nuxt-link 
-            class="menu__link" 
-            to="/" 
+            class="menu__link"
+            :class="this.$route.name"
+            to="/"
             @mouseover.native="hover = null;"
             @mouseleave.native="hover = route;"
           >
@@ -37,7 +38,8 @@
             <Icons class-name="link__icon" type="arrow-right" />
           </nuxt-link>
           <nuxt-link 
-            class="menu__link" 
+            class="menu__link"
+            :class="this.$route.name"
             to="/sanne"
             @mouseover.native="hover = 'sanne';"
             @mouseleave.native="hover = route;"
@@ -46,8 +48,9 @@
             <Icons class-name="link__icon" type="arrow-right" />
           </nuxt-link>
           <nuxt-link 
-            class="menu__link" 
-            to="/steven" 
+            class="menu__link"
+            :class="this.$route.name"
+            to="/steven"
             @mouseover.native="hover = 'steven';"
             @mouseleave.native="hover = route;"
           >
@@ -56,6 +59,7 @@
           </nuxt-link>
           <nuxt-link 
             class="menu__link"
+            :class="this.$route.name"
             to="/djenna"
             @mouseover.native="hover = 'djenna';"
             @mouseleave.native="hover = route;"
@@ -64,7 +68,8 @@
             <Icons class-name="link__icon" type="arrow-right" />
           </nuxt-link>
           <nuxt-link 
-            class="menu__link" 
+            class="menu__link"
+            :class="this.$route.name"
             to="/geert"
             @mouseover.native="hover = 'geert';"
             @mouseleave.native="hover = route;"
@@ -292,7 +297,7 @@ export default {
 
 .link {
   &__icon {
-    margin-left: .3rem;
+    margin-left: .5rem;
     width: 1.5rem;
     height: 1.5rem;
   }
@@ -360,31 +365,6 @@ a {
     position: absolute;
   }
 
-  // img {
-  //   transition: 1.3s;
-  //   opacity: 0;
-  //   transform: scale(0.8)
-  // }
-
-  // img.active{
-  //   transition-delay: 0.55s;
-  //   animation: zoomIn 1.3s;
-  //   opacity: 1;
-  //   transform: scale(1.0);
-  // }
-
-  .link__icon {
-    width: 2rem;
-    height: 2rem;
-    margin-left: 1rem;
-  }
-}
-
-@media(min-width: $mq-s-laptop) {
-  figure {
-    position: absolute;
-  }
-
   a {
     font-size: 4rem;
     margin: 4.5rem 0;
@@ -420,6 +400,7 @@ a {
   .link__icon {
     width: 3rem;
     height: 3rem;
+    margin-left: 1rem;
   }
 }
 
@@ -485,6 +466,30 @@ a {
     &__link {
       position: relative;
       transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+
+      &.sanne {
+        &:hover {
+          cursor: url("~assets/cursors/hand-sanne.png"), auto;
+        }
+      }
+
+      &.steven {
+        &:hover {
+          cursor: url("~assets/cursors/hand-steven.png"), auto;
+        }
+      }
+
+      &.djenna {
+        &:hover {
+          cursor: url("~assets/cursors/hand-djenna.png"), auto;
+        }
+      }
+
+      &.geert {
+        &:hover {
+          cursor: url("~assets/cursors/hand-geert.png"), auto;
+        }
+      }
 
       &:hover {
         transform: translateY(8%) translateX(-3%);

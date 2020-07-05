@@ -1,7 +1,7 @@
 <template>
   <div class="section__wrapper">
     <p class="block__text">{{ text }}</p>
-    <a class="block__link block__link--button" :class="author" v-if="link" :href="link" target="_blank" rel="noopener">
+    <a class="block__link block__link--button" :class="author" v-if="link" :href="link" target="_blank" rel="noopener" :title="linkTitle">
       <span v-if="linkText">
         {{ linkText }}
       </span>
@@ -14,7 +14,8 @@ export default {
     author: String,
     text: String,
     link: String,
-    linkText: String
+    linkText: String,
+    linkTitle: String,
   }
 }
 </script>

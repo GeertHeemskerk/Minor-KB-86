@@ -2,7 +2,7 @@
   <div class="header__section" :class="{open: open}">
     <header class="header" :class="[className, { 'header--open': open }]">
       <div class="header__wrapper">
-        <nuxt-link to="/" class="menu__button menu__button--home button--clean" :class="this.$route.name">
+        <nuxt-link to="/" class="menu__button menu__button--home button--clean" :class="this.$route.name" title="Ga naar de start pagina">
           <div class="menu">
             <Icons class-name="menu__icon" type="home" />
             <p class="menu__text menu__text--home">Home</p>
@@ -31,6 +31,7 @@
             class="menu__link"
             :class="this.$route.name"
             to="/"
+            title="Ga naar de start pagina"
             @mouseover.native="hover = null;"
             @mouseleave.native="hover = route;"
           >
@@ -41,6 +42,7 @@
             class="menu__link"
             :class="this.$route.name"
             to="/sanne"
+            title="Ga naar het werk van Sanne van Zeijl"
             @mouseover.native="hover = 'sanne';"
             @mouseleave.native="hover = route;"
           >
@@ -51,6 +53,7 @@
             class="menu__link"
             :class="this.$route.name"
             to="/steven"
+            title="Ga naar het werk van Steven Wu"
             @mouseover.native="hover = 'steven';"
             @mouseleave.native="hover = route;"
           >
@@ -61,6 +64,7 @@
             class="menu__link"
             :class="this.$route.name"
             to="/djenna"
+            title="Ga naar het werk van Djenna Bakker"
             @mouseover.native="hover = 'djenna';"
             @mouseleave.native="hover = route;"
           >
@@ -71,6 +75,7 @@
             class="menu__link"
             :class="this.$route.name"
             to="/geert"
+            title="Ga naar het werk van Geert Heemskerk"
             @mouseover.native="hover = 'geert';"
             @mouseleave.native="hover = route;"
           >

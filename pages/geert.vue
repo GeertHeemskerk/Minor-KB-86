@@ -23,6 +23,7 @@
       text="Aan het begin van de minor had ik nog bijna geen ervaring met Adobee Illustrator en Photoshop. In dit blok heb ik deze twee programma's samen met Figma (een prototype ontwerp systeem) een rebranding gemaakt van de Bijenkorf. De Bijenkorf heeft mij altijd al geïnspireerd door hun minimalistische aanpak en toch doordringende uistraling van hun website en campagnes. Ik dacht als ik een rebranding kan maken van de Bijenkorf die al aan de top staat van mijn lijst en ik daar tevreden over kan zijn is deze opdracht voor mij geslaagd. Daarnaast heb ik een volledige stylguide gemaakt en een herontwerp van de website op mijn minimalistische manier. Door de PDF te downloaden kunt u mijn ontwerpproces bekijken."
       link="/pdf/geert/17026121-Geert-Heemskerk-KB-86.pdf"
       link-text="Download pdf"
+      link-title="Download pdf over het proces van Geert in dit blok"
     />
     <BlockImage      
       :image="require('~/assets/images/geert/redesign-front-page.png')"
@@ -47,6 +48,7 @@
       text="In blok 1 werd ik geïnspireerd door klasgenoten en online voorbeelden van mockup animaties. Dit houdt in dat je een animatie afspeeld in een apparaat zoals een mobiele telefoon. Voor dit blok had ik nog nooit gewerkt met mockup animaties en 3D elementen. Hiervoor heb ik gebruikt gemaakt van C4D (Cinema 4D) en AAE (Adobe After Effects). De animatie die afspeeld op het scherm heb ik gemaakt in AAE. AAE en C4D heb ik binnen 5 weken moeten leren om tot dit eindresultaat te komen. Hiervoor heb ik in zo een korte tijd geleerd hoe ik materialen, licht, tijd, kijkhoeken, reflecties gebruik in C4D. Doordat ik C4D kon linken aan AEE kon ik makkelijk posities en animaties koppelen aan vereschillende soorten tijdstippen in het filmpje. Als u geïntresseerd ben in mijn werk kunt u mijn volledige ontwerpproces hieronder downloaden als PDF."
       link="/pdf/geert/17026121-Geert-Heemskerk-KB-86-3D-Animated.pdf"
       link-text="Download pdf"
+      link-title="Download pdf over het proces van Geert in dit blok"
     />
     <MovieBlock
       author="geert"

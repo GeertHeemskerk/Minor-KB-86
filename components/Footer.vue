@@ -8,9 +8,9 @@
       <nuxt-link :class="author" to="/geert" title="Ga naar het werk van Geert">Geert</nuxt-link>
       <div class="link__projects">
         <h3 :class="author">Bekijk ook portfolio van onze medestudenten:</h3>
-        <a class="footer__link--portfolio" :class="author" href="https://wendylange.github.io/minor.kb-86/" target="_blank" rel="noopener" title="Ga naar portfolio website van Dave, Ploy, Tim en Wendy">Dave, Ploy, Tim en Wendy</a>
-        <a class="footer__link--portfolio" :class="author" href="https://portfolio-steel-five.vercel.app/" target="_blank" rel="noopener" title="Ga naar portfolio website van Bo, Matthew en Wendy">Bo, Matthew en Wenyi</a>
-        <a class="footer__link--portfolio" :class="author" href="#" title="Ga naar portfolio website van Andrew, Calvin, Shantusha en Stijn">Andrew, Calvin, Shantusha en Stijn</a>
+        <a class="footer__link--portfolio" :class="author" href="https://wendylange.github.io/minor.kb-86/" target="_blank" rel="noopener" title="Ga naar de portfolio website van Dave, Ploy, Tim en Wendy">Dave, Ploy, Tim en Wendy</a>
+        <a class="footer__link--portfolio" :class="author" href="https://portfolio-steel-five.vercel.app/" target="_blank" rel="noopener" title="Ga naar de portfolio website van Bo, Matthew en Wenyi">Bo, Matthew en Wenyi</a>
+        <a class="footer__link--portfolio" :class="author" href="#" title="Ga naar de portfolio website van Andrew, Calvin, Shantusha en Stijn">Andrew, Calvin, Shantusha en Stijn</a>
       </div>
     </div>
   </div>

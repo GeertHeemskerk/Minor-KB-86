@@ -11,7 +11,7 @@
           :alt="altImage"
         />
       </div>
-      <div class="blok__holder blok__holder--video" :class="author">
+      <div v-if="blokVideo" class="blok__holder blok__holder--video" :class="author">
         <video 
           class="video" 
           controls

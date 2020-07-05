@@ -44,7 +44,7 @@
       text="Een ander leerdoel van mij was om te leren hoe ik animatie kan coderen, met name voor op websites. Ik vind coderen heel leuk, maar ik heb nog heel veel om te leren binnen het vak. Een van deze dingen zijn animaties, oftewel bewegende elementen op een pagina, heeft mij altijd al geïnteresseerd en aangesproken. Dit kan bijvoorbeeld tekst zijn die binnen komt vallen, een animatie die laat zien dat iets aan het laden is, of een bewegende achtergrond. In de afgelopen schooljaren is er weinig tijd voor geweest om deze stof te leren, en deze minor was het perfecte moment om hier meer over te leren. Mijn deliverables voor dit blok was een onderzoeksportfolio, tutorials inclusief uitwerkingen en een website met animaties erop."
     />
     <BlokBlocks
-      intro-text="Tekst hier moet nog"
+      intro-text="Op Skillshare vond ik een tutorial waar animaties gemaakt werden met pure CSS. Dit was voor mij goed om te beginnen, omdat het best makkelijk is om animaties te maken met CSS en het niet altijd nodig is om animaties te maken in JavaScript. Met het oog had ik het zwarte gedeelte geanimeerd, waardoor het leek alsof het oog naar dingen keek."
       author="djenna"
       :blok-image="require('~/assets/images/djenna/oog.png')"
       :blok-image-loading="require('~/assets/images/djenna/oog.png?lqip')"

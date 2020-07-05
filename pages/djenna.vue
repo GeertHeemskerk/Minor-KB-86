@@ -47,7 +47,6 @@
       intro-text="Op Skillshare vond ik een tutorial waar animaties gemaakt werden met pure CSS. Dit was voor mij goed om te beginnen, omdat het best makkelijk is om animaties te maken met CSS en het niet altijd nodig is om animaties te maken in JavaScript. Met het oog had ik het zwarte gedeelte geanimeerd, waardoor het leek alsof het oog naar dingen keek."
       author="djenna"
       blok-video="/videos/djenna/oog.mov"
-      alt-image="oog design"
     />
     <BlockText
       author="djenna"

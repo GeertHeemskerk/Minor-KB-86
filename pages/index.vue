@@ -7,12 +7,14 @@
           <nuxt-link
             to="/"
             class="title__single title__single--title"
+            title="Ga naar de start pagina"
           >
             <span data-content="Minor VD&FD" aria-hidden="true"></span>Minor VD&FD
           </nuxt-link>
           <nuxt-link
             to="/sanne"
             class="title__single title__single--hide"
+            title="Ga naar het werk van Sanne van Zeijl"
             @mouseover.native="hover = 'sanne';"
             @mouseleave.native="hover = null;"
           >
@@ -21,6 +23,7 @@
           <nuxt-link
             to="/steven"
             class="title__single title__single--hide"
+            title="Ga naar het werk van Steven Wu"
             @mouseover.native="hover = 'steven';"
             @mouseleave.native="hover = null;"
           >
@@ -29,6 +32,7 @@
           <nuxt-link
             to="/djenna"
             class="title__single title__single--hide"
+            title="Ga naar het werk van Djenna Bakker"
             @mouseover.native="hover = 'djenna';"
             @mouseleave.native="hover = null;"
           >
@@ -37,6 +41,7 @@
           <nuxt-link
             to="/geert"
             class="title__single title__single--hide"
+            title="Ga naar het werk van Geert Heemskerk"
             @mouseover.native="hover = 'geert';"
             @mouseleave.native="hover = null;"
           >

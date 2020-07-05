@@ -3,7 +3,7 @@
     <h2 class="block__title" :class="author">{{ title }}</h2>
     <div class="block__divider"></div>
     <p class="block__text">{{ text }}</p>
-    <a class="block__link block__link--button" :class="author" v-if="link" :href="link" target="_blank" rel="noopener">
+    <a class="block__link block__link--button" :class="author" v-if="link" :href="link" target="_blank" rel="noopener" :title="linkTitle">
       <span v-if="linkText">
         {{ linkText }}
       </span>
@@ -17,7 +17,8 @@ export default {
     title: String,
     text: String,
     link: String,
-    linkText: String
+    linkText: String,
+    linkTitle: String,
   }
 }
 </script>

@@ -46,9 +46,7 @@
     <BlokBlocks
       intro-text="Op Skillshare vond ik een tutorial waar animaties gemaakt werden met pure CSS. Dit was voor mij goed om te beginnen, omdat het best makkelijk is om animaties te maken met CSS en het niet altijd nodig is om animaties te maken in JavaScript. Met het oog had ik het zwarte gedeelte geanimeerd, waardoor het leek alsof het oog naar dingen keek."
       author="djenna"
-      :blok-image="require('~/assets/images/djenna/oog.png')"
-      :blok-image-loading="require('~/assets/images/djenna/oog.png?lqip')"
-      alt-image="oog design"
+      blok-video="/videos/djenna/oog.mov"
     />
     <BlockText
       author="djenna"

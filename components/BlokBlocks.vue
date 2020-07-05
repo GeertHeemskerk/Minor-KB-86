@@ -4,12 +4,23 @@
       <div class="blok__holder">
         <p>{{ introText }}</p>
       </div>
-      <div v-lazy-container="{ selector: 'img' }" class="blok__holder" :class="author">
+      <div v-if="blokImage" v-lazy-container="{ selector: 'img' }" class="blok__holder" :class="author">
         <img 
           :data-src="blokImage" 
           :data-loading="blokImageLoading" 
-          :src="blokImage" 
-          :alt="altImage">
+          :alt="altImage"
+        />
+      </div>
+      <div v-if="blokVideo" class="blok__holder blok__holder--video" :class="author">
+        <video 
+          class="video" 
+          controls
+          autoplay
+          muted
+          loop
+        >
+          <source :src="blokVideo" type="video/mp4">
+        </video>
       </div>
     </div>
   </div>
@@ -22,6 +33,7 @@ export default {
     blokImage: String,
     blokImageLoading: String,
     altImage: String,
+    blokVideo: String,
   }
 }
 </script>
@@ -40,6 +52,10 @@ export default {
     height: 400px;
     padding: 0 2rem;
 
+    &--video {
+      padding: 0;
+    }
+
     &.sanne {
       background-color: $c-sanne;
     }
@@ -55,6 +71,13 @@ export default {
     &.djenna {
       background-color: $c-djenna;
     }
+  }
+
+  .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   img {
@@ -76,6 +99,10 @@ export default {
       align-items: center;
       flex-direction: row;
       padding: 0rem 4rem;
+      
+      &--video {
+        padding: 0;
+      }
     }
 
     img {
@@ -107,6 +134,10 @@ export default {
     .blok__holder {
       padding: 0rem 7rem;
       height: 550px;
+
+      &--video {
+        padding: 0;
+      }
     }
 
     img {
@@ -122,6 +153,10 @@ export default {
     .blok__holder {
       padding: 0rem 14rem;
       height: 750px;
+
+      &--video {
+        padding: 0;
+      }
     }
 
     img {
